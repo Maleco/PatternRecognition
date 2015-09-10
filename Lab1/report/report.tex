@@ -12,7 +12,7 @@
 \title{Pattern Recognition practical 1}
 \author{Maikel Withagen \and Steven Bosch}
 \date{September 2015}
-\lstset{frame=single}
+\lstset{frame=single, numbers=left,language=Matlab}
 
 \begin{document}
 
@@ -86,10 +86,43 @@ A similar kind of relationship can be seen in figure \ref{fig1.3b}, between the 
 \subsection{}
 \subsection{}
 \subsection{}
+\subsubsection{}
+\begin{lstlisting}[title = Code for set S]
+for i = 1:1000
+    person = randi([1,20]);
+    row1 = randi([1,20]);
+    row2 = row1;
+    while(row1 == row2)
+        row2 = randi([1,20]);
+    end
+    load(sprintf('person%02d.mat',person));
+    
+    hd_s(i) = sum(abs(iriscode(row1,:)-iriscode(row2,:)));
+end
+\end{lstlisting}
+\subsubsection{}
+\begin{lstlisting}[title = Code for set D]
+for i = 1:1000
+for i = 1:1000
+    person1 = randi([1,20]);
+    row1 = randi([1,20]);
+    row2 = randi([1,20]);
+    person2 = person1;
+    while(person1 == person2)
+        person2 = randi([1,20]);
+    end
+    load(sprintf('person%02d.mat',person1));
+    x = iriscode(row1,:);
+    load(sprintf('person%02d.mat',person2));
+    y = iriscode(row2,:);
+    hd_d(i) = sum(abs(x-y));
+end
+\end{lstlisting}
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{plot2_4.png}
-\label{fig1.4b}
+\label{fig2.4}
 \end{figure}
 \subsection{}
 \subsection{}
