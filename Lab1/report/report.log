@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.2)  15 SEP 2015 15:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.2)  15 SEP 2015 17:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -439,52 +439,35 @@ Package pdftex.def Info: plot_1_3_b.png used on input line 71.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./plot_1_3_a.jpg> <./p
-lot_1_3_b.png (PNG copy)>]
-
-Package caption Warning: \label without proper \caption on input line 123.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig2.4' on page 3 undefined on input line 119.
-
-<plot2_4.png, id=19, 1445.4pt x 736.25063pt>
+lot_1_3_b.png (PNG copy)>] <plot2_4.png, id=19, 741.4902pt x 552.1428pt>
 File: plot2_4.png Graphic file (type png)
- <use plot2_4.png>
-Package pdftex.def Info: plot2_4.png used on input line 122.
-(pdftex.def)             Requested size: 469.75502pt x 239.27861pt.
 
-
-Package caption Warning: \label without proper \caption on input line 123.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig2.4' on page 3 undefined on input line 125.
-
-[3 <./plot2_4.png (PNG copy)>] [4] (./report.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+<use plot2_4.png>
+Package pdftex.def Info: plot2_4.png used on input line 125.
+(pdftex.def)             Requested size: 469.75502pt x 349.80641pt.
+ [3] [4 <./plot2_4.png (PNG copy)>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 5095 strings out of 493917
- 72152 string characters out of 6157789
- 158898 words of memory out of 5000000
- 8312 multiletter control sequences out of 15000+600000
+ 5096 strings out of 493917
+ 72160 string characters out of 6157789
+ 159890 words of memory out of 5000000
+ 8313 multiletter control sequences out of 15000+600000
  8540 words of font info for 30 fonts, out of 8000000 for 9000
  788 hyphenation exceptions out of 8191
  38i,8n,40p,239b,1605s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (4 pages, 138108 bytes).
+</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on report.pdf (4 pages, 158672 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
