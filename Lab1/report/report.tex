@@ -8,6 +8,7 @@
 \usepackage{subcaption}
 
 \renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\alph{subsubsection}}
 
 \title{Pattern Recognition practical 1}
 \author{Maikel Withagen \and Steven Bosch}
@@ -73,19 +74,15 @@ The two features for which the correlation is the second largest are the second 
 \end{subfigure}
 \caption{}
 \end{figure}
-
-
 From a scatterplot alone it is hard to draw conclusions about any possible relationships between the different features. 
 We do get indications though; figure \ref{fig1.3a} shows that there is likely to be a correlation between the weight and the height.
 An increase in weight seems to correspond to a (somewhat linear) increase in height. 
 A similar kind of relationship can be seen in figure \ref{fig1.3b}, between the factors weight and age.
 
 \section{Assignment 2}
-\subsection{}
-
-\subsection{}
-\subsection{}
-\subsection{}
+\setcounter{subsection}{2}
+\subsection{Sets S and D}
+The following subsections show the code we used to acquire the 1000 Hamming distances for set S and D.
 \subsubsection{}
 \begin{lstlisting}[title = Code for set S]
 for i = 1:1000
@@ -118,12 +115,14 @@ for i = 1:1000
     hd_d(i) = sum(abs(x-y));
 end
 \end{lstlisting}
-
+\subsection{Histogram}
+Figure \ref{fig2.4} shows the histogram of sets S and D.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{plot2_4.png}
 \label{fig2.4}
 \end{figure}
+
 \subsection{}
 \subsection{}
 \subsection{}
