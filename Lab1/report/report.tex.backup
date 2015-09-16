@@ -8,7 +8,7 @@
 \usepackage{subcaption}
 
 %\renewcommand{\thesubsection}{\arabic{subsection}}
-\renewcommand{\thesubsubsection}{\alph{subsubsection})}
+\renewcommand{\thesubsubsection}{\alph{subsubsection}}
 
 \title{Pattern Recognition practical 1}
 \author{Maikel Withagen \and Steven Bosch}
@@ -35,44 +35,44 @@ This yields us the following table of correlation coefficients:
 %   0.7156    0.5142    1.0000
 %\end{lstlisting}
 \begin{table}[H]
-\caption{\textit{Pair-wise correlation coefficients}}
-\vspace{0.1cm}
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
- & Length & Age & Weight \\
-\hline
-Length & 1 & -0.0615 & 0.7156 \\
-\hline
-Age & -0.615 & 1 & 0.5142 \\
-\hline
-Weight & 0.7156 & 0.5142 & 1 \\ 
-\hline
-\end{tabular}
-\label{tab1.2}
+	\caption{\textit{Pair-wise correlation coefficients}}
+	\vspace{0.1cm}
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		& Length & Age & Weight \\
+		\hline
+		Length & 1 & -0.0615 & 0.7156 \\
+		\hline
+		Age & -0.615 & 1 & 0.5142 \\
+		\hline
+		Weight & 0.7156 & 0.5142 & 1 \\ 
+		\hline
+	\end{tabular}
+	\label{tab1.2}
 \end{table}
 
 \subsection{}
 
 \begin{figure}[H]
-\centering
+	\centering
 
-\begin{subfigure}[b]{.45\linewidth}
-The two features for which the correlation is the largest are the first and third column, respectively the height and the weight.
-\centering
-\includegraphics[width=\columnwidth]{plot_1_3_a.jpg}
-\caption{Scatterplot of weight to length}
-\label{fig1.3a}
-\end{subfigure}%
-\quad
-\begin{subfigure}[b]{.45\linewidth}
-The two features for which the correlation is the second largest are the second and third column, respectively the height and the weight.
-\centering
-\includegraphics[width=\linewidth]{plot_1_3_b.png}
-\caption{Scatterplot of weight to age}
-\label{fig1.3b}
-\end{subfigure}
-\caption{}
+	\begin{subfigure}[b]{.45\linewidth}
+		The two features for which the correlation is the largest are the first and third column, respectively the height and the weight.
+		\centering
+		\includegraphics[width=\columnwidth]{plot_1_3_a.jpg}
+		\caption{Scatterplot of weight to length}
+		\label{fig1.3a}
+	\end{subfigure}%
+	\quad
+	\begin{subfigure}[b]{.45\linewidth}
+		The two features for which the correlation is the second largest are the second and third column, respectively the height and the weight.
+		\centering
+		\includegraphics[width=\linewidth]{plot_1_3_b.png}
+		\caption{Scatterplot of weight to age.}
+		\label{fig1.3b}
+	\end{subfigure}
+	\caption{}
 \end{figure}
 From a scatterplot alone it is hard to draw conclusions about any possible relationships between the different features. 
 We do get indications though; figure \ref{fig1.3a} shows that there is likely to be a correlation between the weight and the height.
@@ -87,15 +87,15 @@ The following subsections show the code we used to acquire the 1000 Hamming dist
 \begin{lstlisting}[title = Code for set S]
 hd_s = zeros(1,1000);
 for i = 1:1000
-    person = randi([1,20]);
-    row1 = randi([1,20]);
-    row2 = row1;
-    while(row1 == row2)
-        row2 = randi([1,20]);
-    end
-    load(sprintf('person%02d.mat',person));
-    
-    hd_s(i) = sum(abs(iriscode(row1,:)-iriscode(row2,:)));
+person = randi([1,20]);
+row1 = randi([1,20]);
+row2 = row1;
+while(row1 == row2)
+row2 = randi([1,20]);
+end
+load(sprintf('person%02d.mat',person));
+
+hd_s(i) = sum(abs(iriscode(row1,:)-iriscode(row2,:)));
 end
 hd_s = hd_s/30;
 \end{lstlisting}
@@ -103,29 +103,30 @@ hd_s = hd_s/30;
 \begin{lstlisting}[title = Code for set D]
 hd_d = zeros(1,1000);
 for i = 1:1000
-    person1 = randi([1,20]);
-    row1 = randi([1,20]);
-    row2 = randi([1,20]);
-    person2 = person1;
-    while(person1 == person2)
-        person2 = randi([1,20]);
-    end
-    load(sprintf('person%02d.mat',person1));
-    x = iriscode(row1,:);
-    load(sprintf('person%02d.mat',person2));
-    y = iriscode(row2,:);
-    hd_d(i) = sum(abs(x-y));
+person1 = randi([1,20]);
+row1 = randi([1,20]);
+row2 = randi([1,20]);
+person2 = person1;
+while(person1 == person2)
+person2 = randi([1,20]);
+end
+load(sprintf('person%02d.mat',person1));
+x = iriscode(row1,:);
+load(sprintf('person%02d.mat',person2));
+y = iriscode(row2,:);
+hd_d(i) = sum(abs(x-y));
 end
 hd_d = hd_d/30;
 \end{lstlisting}
+
 \subsection{Histogram}
-Figure \ref{fig2.4} shows the histogram of sets S and D. The figure shows that the two distributions overlap very little, most of it around $hd = 5,6$.
 \begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{plot2_4.png}
-\caption{Histogram of sets S and D (30 bins}
-\label{fig2.4}
+	\centering
+	\includegraphics[width=\linewidth]{plot2_4.png}
+	\caption{Histogram of sets S and D.}
+	\label{fig2.4}
 \end{figure}
+Figure \ref{fig2.4} shows the histogram of sets S and D. The figure shows that the two distributions overlap very little, most of it around $hd = 5,6$.
 
 \subsection{}
 The means and variances of both of the sets are the following:
@@ -142,11 +143,36 @@ The means and variances of both of the sets are the following:
  \caption{Means and variances of both of the sets}
  \label{tab2.5}
 \end{table}
-The prior probability of two bits being the same between persons the following is: $1-0.4946=0.5054$.
+\noindent The prior probability of two bits being the same between persons the following is: $1-0.4946=0.5054$.
 Using the formula $n=p(1-p)/\sigma^2$ we get $n=(0.4946*(1-0.4946))/(0.0886^2)\approx 31.84$ statistically independent bits that are needed to encode an iris pattern. This means that the current number of bits in the iris vectors is insufficient.
 
 \subsection{}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{2_6.png}
+	\caption{The histograms of sets S and D plotted with two Gaussian functions using the mean and variances.}
+	\label{fig2.6}
+\end{figure}
+Figure \ref{fig2.6} shows the plot of the combined histograms and gaussian functions (note that the plot is slightly different from the previous subsections, because we reran the script in Matlab). The scaling is done by dividing the maximum value of the D and S sets by the maximum value of the initial Gaussian functions. This way the maximum value of the new Gaussian functions is the same as the maximum value of the D and S sets, so that the the Gaussians are nicely scaled to the histograms.
 
 \subsection{}
 \subsection{}
+
+\section{Assignment 3}
+\subsection{Background}
+The topic of biometric identification has been receiving a lot of attention lately. % Mooie opening xD
+The use of fingerprints, facial features, and iris recognition are considered appropriate for identification.
+Of these three, fingerprints and iris recognition are considered to be more accurate than facial features,
+while facial featuresare more flexible, e.g.\ for the use in surveillance scenarios.
+A possible improvement for the performance of facial feature identification is the combination of information from multiple sources,
+for instance the ear.
+Ear images can be obtained in a similar maner to face images, 
+and a recent study suggests that they are comparable in recognition power\cite{chang2003comparison},
+and a combination of the sources gives a significant improvement over their individual performance.
+\subsection{Method}
+\subsection{Achieved Results}
+\subsection{Conclusion}
+
+\bibliographystyle{plain}
+\bibliography{cite}
 \end{document}
