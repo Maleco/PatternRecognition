@@ -21,8 +21,6 @@
 
 \section{Assignment 1}
 \subsection{}
-Consider it done
-\subsection{}
 To compute the pair-wise correlation coefficients we used the following command:
 \begin{lstlisting}[title= Input]
 load('lab1_1.mat')
@@ -80,41 +78,42 @@ An increase in weight seems to correspond to a (somewhat linear) increase in hei
 A similar kind of relationship can be seen in figure \ref{fig1.3b}, between the factors weight and age.
 
 \section{Assignment 2}
-\setcounter{subsection}{2}
 \subsection{Sets S and D}
 The following subsections show the code we used to acquire the 1000 Hamming distances for set S and D.
 \subsubsection{}
+To compute the set S we first create the set and fill it with zeros (line 1). Then for every element in the set we randomly pick a person and two random rows within that person and consequently load the actual content of these rows (lines 2-9). Then we compute the hamming distance for those two rows and store it within the appropriate place in the set (line 11). Finally the whole set is scaled so that every element in the set reflects the hamming distance between two elements instead of two rows.
 \begin{lstlisting}[title = Code for set S]
 hd_s = zeros(1,1000);
 for i = 1:1000
-person = randi([1,20]);
-row1 = randi([1,20]);
-row2 = row1;
-while(row1 == row2)
-row2 = randi([1,20]);
-end
-load(sprintf('person%02d.mat',person));
+  person = randi([1,20]);
+  row1 = randi([1,20]);
+  row2 = row1;
+  while(row1 == row2)
+    row2 = randi([1,20]);
+  end
+  load(sprintf('person%02d.mat',person));
 
-hd_s(i) = sum(abs(iriscode(row1,:)-iriscode(row2,:)));
+  hd_s(i) = sum(abs(iriscode(row1,:)-iriscode(row2,:)));
 end
 hd_s = hd_s/30;
 \end{lstlisting}
 \subsubsection{}
+To compute the set D we first create the set and fill it with zeros (line 1). Then for every element in the set we randomly pick two persons and two random rows within that person and consequently load the actual content of these rows (lines 2-9). Then we compute the hamming distance for those two rows and store it within the appropriate place in the set (line 11). Finally the whole set is scaled so that every element in the set reflects the hamming distance between two elements instead of two rows.
 \begin{lstlisting}[title = Code for set D]
 hd_d = zeros(1,1000);
 for i = 1:1000
-person1 = randi([1,20]);
-row1 = randi([1,20]);
-row2 = randi([1,20]);
-person2 = person1;
-while(person1 == person2)
-person2 = randi([1,20]);
-end
-load(sprintf('person%02d.mat',person1));
-x = iriscode(row1,:);
-load(sprintf('person%02d.mat',person2));
-y = iriscode(row2,:);
-hd_d(i) = sum(abs(x-y));
+  person1 = randi([1,20]);
+  row1 = randi([1,20]);
+  row2 = randi([1,20]);
+  person2 = person1;
+  while(person1 == person2)
+    person2 = randi([1,20]);
+  end
+  load(sprintf('person%02d.mat',person1));
+  x = iriscode(row1,:);
+  load(sprintf('person%02d.mat',person2));
+  y = iriscode(row2,:);
+  hd_d(i) = sum(abs(x-y));
 end
 hd_d = hd_d/30;
 \end{lstlisting}
@@ -147,7 +146,46 @@ The means and variances of both of the sets are the following:
 Using the formula $n=p(1-p)/\sigma^2$ we get $n=(0.4946*(1-0.4946))/(0.0886^2)\approx 31.84$ statistically independent bits that are needed to encode an iris pattern. This means that the current number of bits in the iris vectors is insufficient.
 
 \subsection{}
-We used the following Matlab code to create the graph in figure \ref{fig2.6}:
+We acquired the graph in figure \ref{fig2.6} (see the appendix for the matlab code we used).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{2_6.png}
+	\caption{The histograms of sets S and D plotted with two Gaussian functions using the mean and variances.}
+	\label{fig2.6}
+\end{figure}
+Figure \ref{fig2.6} shows the plot of the combined histograms and gaussian functions (note that the plot is slightly different from the previous subsections, because we reran the script in Matlab). The scaling is done by dividing the maximum value of the D and S sets by the maximum value of the initial Gaussian functions. This way the maximum value of the new Gaussian functions is the same as the maximum value of the D and S sets, so that the the Gaussians are nicely scaled to the histograms.
+
+\subsection{}
+\subsubsection{}
+To estimate the value of the decision criterion we used the following code:
+\begin{lstlisting}
+
+\end{lstlisting}
+This yielded the following value for the criterion: 0.185. This means that below a hamming distance of 0.185, we will erroneously classify two irisses as being from the same person.
+
+\subsection{}
+Using the criterion of 0.185, we get a false rejection rate of 0.0072.
+
+\section{Assignment 3}
+\subsection{Background}
+The topic of biometric identification has been receiving a lot of attention lately. % Mooie opening xD
+The use of fingerprints, facial features, and iris recognition are considered appropriate for identification.
+Of these three, fingerprints and iris recognition are considered to be more accurate than facial features,
+while facial featuresare more flexible, e.g.\ for the use in surveillance scenarios.
+A possible improvement for the performance of facial feature identification is the combination of information from multiple sources,
+for instance the ear.
+Ear images can be obtained in a similar maner to face images, 
+and a recent study suggests that they are comparable in recognition power\cite{chang2003comparison},
+and a combination of the sources gives a significant improvement over their individual performance.
+\subsection{Method}
+\subsection{Achieved Results}
+\subsection{Conclusion}
+
+\bibliographystyle{plain}
+\bibliography{cite}
+
+\section*{Appendix}
 \begin{lstlisting}
 hold off;
 
@@ -167,37 +205,4 @@ plot([0:0.01:1],normd*(x1/max(normd)));
 
 legend('hd_s', 'hd_d', 'hd_s normd', 'hd_d normd');
 \end{lstlisting}
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{2_6.png}
-	\caption{The histograms of sets S and D plotted with two Gaussian functions using the mean and variances.}
-	\label{fig2.6}
-\end{figure}
-Figure \ref{fig2.6} shows the plot of the combined histograms and gaussian functions (note that the plot is slightly different from the previous subsections, because we reran the script in Matlab). The scaling is done by dividing the maximum value of the D and S sets by the maximum value of the initial Gaussian functions. This way the maximum value of the new Gaussian functions is the same as the maximum value of the D and S sets, so that the the Gaussians are nicely scaled to the histograms.
-
-\subsection{}
-\subsubsection{}
-
-
-\subsection{}
-
-\section{Assignment 3}
-\subsection{Background}
-The topic of biometric identification has been receiving a lot of attention lately. % Mooie opening xD
-The use of fingerprints, facial features, and iris recognition are considered appropriate for identification.
-Of these three, fingerprints and iris recognition are considered to be more accurate than facial features,
-while facial featuresare more flexible, e.g.\ for the use in surveillance scenarios.
-A possible improvement for the performance of facial feature identification is the combination of information from multiple sources,
-for instance the ear.
-Ear images can be obtained in a similar maner to face images, 
-and a recent study suggests that they are comparable in recognition power\cite{chang2003comparison},
-and a combination of the sources gives a significant improvement over their individual performance.
-\subsection{Method}
-\subsection{Achieved Results}
-\subsection{Conclusion}
-
-\bibliographystyle{plain}
-\bibliography{cite}
 \end{document}
