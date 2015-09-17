@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
 \usepackage{float}
@@ -13,7 +13,7 @@
 \title{Pattern Recognition practical 1}
 \author{Maikel Withagen (s1867733) \and Steven Bosch (s1861948)}
 \date{September 2015}
-\lstset{frame=single, numbers=left,language=Matlab}
+\lstset{frame=single, numbers=left,language=Matlab,basicstyle=\small, title=\lstname}
 
 \begin{document}
 
@@ -156,7 +156,6 @@ We acquired the graph in figure \ref{fig2.6} (see the appendix for the matlab co
 \end{figure}
 Figure \ref{fig2.6} shows the plot of the combined histograms and gaussian functions (note that the plot is slightly different from the previous subsections, because we reran the script in Matlab). The scaling is done by dividing the maximum value of the D and S sets by the maximum value of the initial Gaussian functions. This way the maximum value of the new Gaussian functions is the same as the maximum value of the D and S sets, so that the the Gaussians are nicely scaled to the histograms.
 
-\subsection{}
 \subsubsection{}
 To estimate the value of the decision criterion we used the following code:
 \begin{lstlisting}
@@ -187,7 +186,6 @@ It is clear that the the iris code of testperson most likely belongs to person 5
 Next we compute a set for person 5 just as we did for set S and set D. Finally we use this set and the HDmin value we got from the previous steps (0.0275) to calculate the integral below it, which gives us a significance value of $7.0872e-07$. This means that we can most likely reject the null hypothesis that the persons are different.
 
 
-\newpage
 \section{Assignment 3}
 \subsection{Background}
 The topic of biometric identification has been receiving a lot of attention lately. % Mooie opening xD
@@ -231,7 +229,7 @@ Achieved results are reported in percentages of correct identification, both fal
 The first box in Table 3 displays the results of manually selecting common ear images from the gallery and selecting the best fitting identity for the probe image,
 and the results of the suggested SIFT approach as described in Bustard (2008).
 The second box shows the results of the three setups as described in Akkermans and Schobben (2015).
-\begin{table}
+\begin{table}{b}
 	\centering
 	\begin{tabular}{|l|l|l|}
 		\hline
@@ -261,7 +259,6 @@ in less optimal circumstances.
 In conclusion we can say that the attention in this field produces ever increasing results, 
 and the use of the ear as identification can certainly be deemed possible in the future.
 However, more research is needed to further improve and test the currently known techniques.
-\newpage
 \bibliographystyle{plain}
 \bibliography{cite}
 
@@ -318,7 +315,8 @@ for i = 1:20
            HDmin = HDtemp;
            person = i;
            row = j;
-           if HDmin == 0; % print the persons and rows with the lowest HDmin possible
+           % print the persons and rows with the lowest HDmin possible
+           if HDmin == 0; 
                person
                row
            end
