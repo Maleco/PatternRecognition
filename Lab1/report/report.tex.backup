@@ -78,7 +78,7 @@ An increase in weight seems to correspond to a (somewhat linear) increase in hei
 A similar kind of relationship can be seen in figure \ref{fig1.3b}, between the factors weight and age.
 
 \section{Assignment 2}
-\subsection{Sets S and D}
+\subsection{}
 The following subsections show the code we used to acquire the 1000 Hamming distances for set S and D.
 \subsubsection{}
 To compute the set S we first create the set and fill it with zeros (line 1). Then for every element in the set we randomly pick a person and two random rows within that person and consequently load the actual content of these rows (lines 2-9). Then we compute the hamming distance between those two rows and store it within the appropriate place in the set (line 11). Finally the whole set is scaled so that every element in the set reflects the hamming distance between two elements instead of two rows.
@@ -118,10 +118,10 @@ end
 hd_d = hd_d/30;
 \end{lstlisting}
 
-\subsection{Histogram}
+\subsection{}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{plot2_4.png}
+	\includegraphics[width=.7\linewidth]{plot2_4.png}
 	\caption{Histogram of sets S and D.}
 	\label{fig2.4}
 \end{figure}
@@ -150,7 +150,7 @@ We acquired the graph in figure \ref{fig2.6} (see the appendix for the matlab co
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{2_6.png}
+	\includegraphics[width=.7\linewidth]{2_6.png}
 	\caption{The histograms of sets S and D plotted with two Gaussian functions using the mean and variances.}
 	\label{fig2.6}
 \end{figure}
@@ -160,15 +160,35 @@ Figure \ref{fig2.6} shows the plot of the combined histograms and gaussian funct
 \subsubsection{}
 To estimate the value of the decision criterion we used the following code:
 \begin{lstlisting}
-% Calculate the cumulative distribution function for the given x-value (range 0.000 - 1.000, with stepsize 0.001)
+% Calculate the cumulative distribution function for the 
+% given x-value (range 0.000 - 1.000, with stepsize 0.001)
 normc = normcdf([0:0.001:1],mean(hd_d),std(hd_d));
-% Count the amount of x-values below the threshold value, minus 1 to correct from starting from 0.000, and divide by 1000 to get a nice propability number
-d = (sum(normc(:) <= 0.0005)-1)/1000;d
+% Count the amount of x-values below the threshold value, minus 1 to correct 
+% from starting from 0.000, and divide by 1000 to get the decision criterion
+d = (sum(normc(:) <= 0.0005)-1)/1000;
 \end{lstlisting}
-This yielded the following value for the criterion: 0.185. This means that below a hamming distance of 0.185, we will erroneously classify two irisses as being from the same person.
+This yielded the value 0.185 as criterion. This means that below a hamming distance of 0.185, we will erroneously classify two irisses as being from the same person.
 
 \subsection{}
-Using the criterion of 0.185, we get a false rejection rate of 0.0072.
+Using the criterion of 0.185, we get a false rejection rate of 0.00072, using the following code:
+\begin{lstlisting}
+% Same as before, now for set S
+normc = normcdf([0:0.001:1],mean(hd_s),std(hd_s));
+% False rejection is integral of HD > d is 1 - normc(d)
+1 - normc((d*1000)+1)
+\end{lstlisting}
+This means that up to 0.072\% is falsely classified as being from two different persons.
+
+\subsection{}
+Using the code in the appendix we get a minimum hamming distance of $0$, which we find in person 5, rows 1, 2, 3, 5, 6, 8, 10, 11, 12, 15, 17 and 18. Indeed, every known bit in testperson is the same as the bit in the same place in for example person 5, row 1:
+\begin{lstlisting}
+>> load(sprintf('person%02d.mat',5))
+>> iriscode(1,:)
+ans = 0     1     0     1     0     1     0     1     1     1     0     0     1     1     0     1     0     1     0     1     0     1     0     1     1     1     0     0     0     0
+>> x
+x =   0     2     0     2     0     1     0     1     1     1     2     0     2     1     0     2     0     2     0     1     0     2     0     1     2     2     0     0     2     0
+\end{lstlisting}
+Since HDmin is $0$, there is no HD for which $HD <= HDmin$ hence the integral is $0$ and  the significance level is also 0\%.
 
 \section{Assignment 3}
 \subsection{Background}
@@ -209,4 +229,44 @@ plot([0:0.01:1],normd*(x1/max(normd)));
 
 legend('hd_s', 'hd_d', 'hd_s normd', 'hd_d normd');
 \end{lstlisting}
+
+Code for assignment 2.6:
+\begin{lstlisting}
+% Load the testperson's iriscode
+load(sprintf('testperson.mat')); 
+x = iriscode(1,:);
+
+% Initialize variables
+HDmin = 30; % HDmin starts at the maximum HD
+person = 0; % The person with the minimum HD
+row = 0; % The row within that person with HDmin
+
+% Loop over all persons
+for i = 1:20
+    load(sprintf('person%02d.mat',i));
+    % Loop over all rows within the persons
+    for j = 1:20
+       y = iriscode(j,:);
+       HDtemp = 0; % HD for this specific row
+       % Loop over every element, only the HD to HDtemp if the element in
+       % testperson is not 2 (since that bit is unknown)
+       for k = 1:30
+           if x(1,k) ~= 2
+               HDtemp = HDtemp + abs(x(1,k)-y(1,k));
+           end
+       end
+       % If the HD of the current row is the lowest, replace HDmin with
+       % that and update the person and row
+       if HDtemp < HDmin
+           HDmin = HDtemp;
+           person = i;
+           row = j;
+       end
+    end
+end
+% Normalize HDmin to the amount of known bits in testperson (which is 20,
+% because there are 10 unknown bits)
+HDmin = HDmin/20;
+\end{lstlisting}
+
 \end{document}

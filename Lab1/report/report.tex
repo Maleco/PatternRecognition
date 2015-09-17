@@ -180,15 +180,11 @@ normc = normcdf([0:0.001:1],mean(hd_s),std(hd_s));
 This means that up to 0.072\% is falsely classified as being from two different persons.
 
 \subsection{}
-Using the code in the appendix we get a minimum hamming distance of $0$, which we find in person 5, row 1. Indeed, every known bit in testperson is the same as the bit in the same place in person 5, row 1.
-\begin{lstlisting}
->> load(sprintf('person%02d.mat',5))
->> iriscode(1,:)
-ans = 0     1     0     1     0     1     0     1     1     1     0     0     1     1     0     1     0     1     0     1     0     1     0     1     1     1     0     0     0     0
->> x
-x =   0     2     0     2     0     1     0     1     1     1     2     0     2     1     0     2     0     2     0     1     0     2     0     1     2     2     0     0     2     0
-\end{lstlisting}
-Since HDmin is $0$, there is no HD for which $HD <= HDmin$ hence the integral is $0$ and  the significance level is also 0\%.
+Using the first part of the code in the appendix for assignment 2.6 we get a minimum hamming distance of $0$, which we find in person 5, rows 1, 2, 3, 5, 6, 8, 10, 11, 12, 15, 17 and 18. Indeed, every known bit in testperson is the same as the bit in the same place in for example person 5, row 1:
+
+It is clear that the the iris code of testperson most likely belongs to person 5. Now we use the second part of the code to calculate the average normalized hamming distance of the testperson to every row of person 5, which gives us a hamming distance of 0.0275.
+
+Next we compute a set for person 5 just as we did for set S and set D. Finally we use this set and the HDmin value we got from the previous steps (0.0275) to calculate the integral below it, which gives us a significance value of $7.0872e-07$. This means that we can most likely reject the null hypothesis that the persons are different.
 
 \section{Assignment 3}
 \subsection{Background}
@@ -248,7 +244,7 @@ for i = 1:20
     for j = 1:20
        y = iriscode(j,:);
        HDtemp = 0; % HD for this specific row
-       % Loop over every element, only the HD to HDtemp if the element in
+       % Loop over every element, only add the HD to HDtemp if the element in
        % testperson is not 2 (since that bit is unknown)
        for k = 1:30
            if x(1,k) ~= 2
@@ -257,16 +253,60 @@ for i = 1:20
        end
        % If the HD of the current row is the lowest, replace HDmin with
        % that and update the person and row
-       if HDtemp < HDmin
+       if HDtemp <= HDmin
            HDmin = HDtemp;
            person = i;
            row = j;
+           if HDmin == 0; % print the persons and rows with the lowest HDmin possible
+               person
+               row
+           end
        end
     end
 end
 % Normalize HDmin to the amount of known bits in testperson (which is 20,
 % because there are 10 unknown bits)
 HDmin = HDmin/20;
+
+
+% Now calculate the normalized HDmin for the comparison of testperson with
+% every row in person 5.
+
+HDtemp = 0;
+load(sprintf('person05.mat'));
+
+for j = 1:20
+   y = iriscode(j,:);
+   % Loop over every element, only add the HD to HDtemp if the element in
+   % testperson is not 2 (since that bit is unknown)
+   for k = 1:30
+       if x(1,k) ~= 2
+           HDtemp = HDtemp + abs(x(1,k)-y(1,k));
+       end
+   end
+end
+HDmin = HDtemp/400 % Normalize HDmin 
+
+% Calculate the set hd_5 just as with setS and setD
+
+hd_5 = zeros(1,1000);
+for i = 1:1000
+    row1 = randi([1,20]);
+    row2 = row1;
+    while(row1 == row2)
+        row2 = randi([1,20]);
+    end
+    load(sprintf('person05.mat',person));
+    
+    hd_5(i) = sum(abs(iriscode(row1,:)-iriscode(row2,:)));
+end
+hd_5 = hd_5/30;
+
+% Calculate the integral of the tail of the distribution from the computed
+% HDmin
+
+normc = normcdf([0:0.001:1],mean(hd_5),std(hd_5));
+1 - normc((HDmin*10000)+1)
 \end{lstlisting}
 
 \end{document}
