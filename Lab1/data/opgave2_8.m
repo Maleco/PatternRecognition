@@ -34,3 +34,6 @@ end
 % because there are 10 unknown bits)
 HDmin = HDmin/20;
 
+normc = normcdf([0:0.001:1],mean(hd_d),std(hd_d));
+plot(normc);
+d = (sum(normc(:) == 0.0000))/1000;d
