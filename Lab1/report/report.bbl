@@ -1,10 +1,29 @@
 \begin{thebibliography}{1}
 
+\bibitem{akkermans2005acoustic}
+Anton~HM Akkermans, Tom~AM Kevenaar, and Daniel~WE Schobben.
+\newblock Acoustic ear recognition for person identification.
+\newblock In {\em Automatic Identification Advanced Technologies, 2005. Fourth
+  IEEE Workshop on}, pages 219--223. IEEE, 2005.
+
+\bibitem{bustard2008robust}
+John~D Bustard and Mark~S Nixon.
+\newblock Robust 2d ear registration and recognition based on sift point
+  matching.
+\newblock In {\em Biometrics: Theory, Applications and Systems, 2008. BTAS
+  2008. 2nd IEEE International Conference on}, pages 1--6. IEEE, 2008.
+
 \bibitem{chang2003comparison}
 Kyong Chang, Kevin~W Bowyer, Sudeep Sarkar, and Barnabas Victor.
 \newblock Comparison and combination of ear and face images in appearance-based
   biometrics.
 \newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
   on}, 25(9):1160--1165, 2003.
+
+\bibitem{lowe1999object}
+David~G Lowe.
+\newblock Object recognition from local scale-invariant features.
+\newblock In {\em Computer vision, 1999. The proceedings of the seventh IEEE
+  international conference on}, volume~2, pages 1150--1157. IEEE, 1999.
 
 \end{thebibliography}

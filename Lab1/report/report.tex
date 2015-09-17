@@ -179,6 +179,8 @@ normc = normcdf([0:0.001:1],mean(hd_s),std(hd_s));
 \end{lstlisting}
 This means that up to 0.72\% is falsely classified as being from two different persons.
 
+
+\newpage
 \section{Assignment 3}
 \subsection{Background}
 The topic of biometric identification has been receiving a lot of attention lately. % Mooie opening xD
@@ -187,13 +189,72 @@ Of these three, fingerprints and iris recognition are considered to be more accu
 while facial featuresare more flexible, e.g.\ for the use in surveillance scenarios.
 A possible improvement for the performance of facial feature identification is the combination of information from multiple sources,
 for instance the ear.
-Ear images can be obtained in a similar maner to face images, 
-and a recent study suggests that they are comparable in recognition power\cite{chang2003comparison},
-and a combination of the sources gives a significant improvement over their individual performance.
-\subsection{Method}
-\subsection{Achieved Results}
-\subsection{Conclusion}
+Ear images can be obtained in a similar manner to face images, 
+and a recent study suggests that they are comparable in recognition power\cite{chang2003comparison} 
+and a combination of these sources gives a significant improvement over their individual performance.
 
+The most common approach for using the ear as identification, is by using 2- or 3-dimensional images.
+These images can be compared by a number of methods e.g.\ PCA (Principal Component Analysis).
+A downside to these approaches is that it requires the images to be of a high quality,
+resulting in large amount of data (and thus needed processing power) as the need for high quality (expensive)
+cameras.
+
+In this small report we will highlight two approaches that pose a different approach.
+The first study\cite{bustard2008robust} poses a new technique that improves the robustness of ear recognition,
+while still using 2-dimensional images. The second study\cite{akkermans2005acoustic} proposes an entirely different approach 
+where ear identification is based on the unique acoustic properties of ears.
+
+\subsection{Method}
+As said, identification by ear based on images usually happens by e.g. PCA, but unfortunately this method is very susceptible to misleading and occlusion (earrings and such).
+\cite{bustard2008robust} make use of a large gallery of (identified) ear images to which they compare probe ear images.
+All the images of the gallery are analyzed for feature points with the SIFT\cite{lowe1999object} method.
+A to be identified image is analyzed in the same way and the gallery is searched for images with corresponding SIFT feature points.
+A temporary model is created from the matches in the database, and the transformation (rotation, angle, etc.) of the ear is calculated.
+By using this transformation data, more matches in the database are searched for, and the temporary model is updated until no more matches are found.
+The temporary model is then compared against the gallery images, and identification happens by selecting the identity of the most corresponding gallery image.
+
+Akkermans and Schobben (2015) made use of the unique acoustic properties of the ear as a method of identification. 
+Three different setup were tested; A headphone with microphones, Earphone pieces with microphones and a mobile telephone with an extra microphone.
+An explanation of the transformation of the received echo after sending in a tonal wave via a speaker, to to a feature vector goes beyond the scope of this 
+report. An interesting point to mention is the fact that they only used low-cost equipment the experiment,
+thereby showing that their suggested method is able to perform without the need of high quality equipment with high costs.
+
+\subsection{Achieved Results}
+Achieved results are reported in percentages of correct identification, both false positives and false negatives fall are considered incorrect identification. 
+The first box in Table 3 displays the results of manually selecting common ear images from the gallery and selecting the best fitting identity for the probe image,
+and the results of the suggested SIFT approach as described in Bustard (2008).
+The second box shows the results of the three setups as described in Akkermans and Schobben (2015).
+\begin{table}
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Method} & \textbf{Recognition rate} \\
+		\hline
+		Manual + PCA & 96\% \\
+		SIFT & 96\% \\
+		\hline
+		Headphone & 98.6\% \\
+		Earphone & 98.1\% \\
+		Mobile phone & 92.8\% \\
+		\hline
+	\end{tabular}
+	\caption{}
+\end{table}
+
+\subsection{Conclusion}
+It it shown that the proposed SIFT approach performs equally to the frequenctly used PCA approach combined with a manual selection of common images from the database.
+Therefore, the SIFT approach seems to be an improvement over the status quo, due to the reduced needs for processing power and quality equipment.
+However, no mention was made about e.g. the time needed to perform the identification. 
+To be able to fully compare the two methods, first all of their characteristics should be known.
+Making use of the acoustic properties of the ear radically differs from the other proposed techniques, 
+but it shows promising results.
+However, the testing conditions were chosen to be as optimal as possible, and further research must show if this performance can also be achieved 
+in less optimal circumstances.
+
+In conclusion we can say that the attention in this field produces ever increasing results, 
+and the use of the ear as identification can certainly be deemed possible in the future.
+However, more research is needed to further improve and test the currently known techniques.
+\newpage
 \bibliographystyle{plain}
 \bibliography{cite}
 
