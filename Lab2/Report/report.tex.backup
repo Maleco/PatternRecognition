@@ -1,0 +1,38 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{caption}
+\usepackage{subcaption}
+
+%\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\alph{subsubsection}}
+
+\title{Pattern Recognition practical 2}
+\author{Maikel Withagen (s1867733) \and Steven Bosch (s1861948)}
+\date{\today}
+\lstset{frame=single, numbers=left,language=Matlab,basicstyle=\small, title=\lstname}
+
+\begin{document}
+
+\maketitle
+
+\section{Covariance matrix}
+\subsection{}
+Using the code given in the appendix we get the following mean vector:
+\begin{equation}
+    \begin{array}{c}
+      5.8000 \\
+      5.0000 \\
+      6.2000
+    \end{array}
+\end{equation}
+
+
+
+\section*{Appendix}
+
+
+\end{document}
