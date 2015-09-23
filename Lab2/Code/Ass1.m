@@ -12,3 +12,7 @@ cov1 = cov(m1);
 
 mean1
 cov1
+
+mvnpdf([5;5;6], mean1, cov1)
+mvnpdf([3;5;7], mean1, cov1)
+mvnpdf([4;6.5;1], mean1, cov1)

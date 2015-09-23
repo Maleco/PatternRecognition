@@ -6,6 +6,7 @@
 \usepackage{fullpage}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{amsmath}
 
 %\renewcommand{\thesubsection}{\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\alph{subsubsection}}
@@ -23,16 +24,66 @@
 \subsection{}
 Using the code given in the appendix we get the following mean vector:
 \begin{equation}
-    \begin{array}{c}
+    \begin{bmatrix}
       5.8000 \\
       5.0000 \\
       6.2000
-    \end{array}
+    \end{bmatrix}
 \end{equation}
+And the following covariance matrix is yielded:
+
+  \begin{equation}
+    \begin{bmatrix}
+      3.2000  &  0.2500 &  -0.4500 \\
+      0.2500  &  2.5000 &  -3.7500 \\
+    -0.4500 &  -3.7500 &   5.7000
+    \end{bmatrix}
+\end{equation}
+
+\subsection{}
+We computed the following probability densities:
+\begin{lstlisting}
+>> mvnpdf([5;5;6], mean1, cov1)
+ans =    0.0543
+>> mvnpdf([3;5;7], mean1, cov1)
+ans =   6.1287e-04
+>> mvnpdf([4;6.5;1], mean1, cov1)
+ans =   7.0300e-29
+\end{lstlisting}
+
+\section{Covariance matrix, analytically}
+We use the following equation to determine the covariance matrices:
+\begin{equation}
+cov(x,y) = \frac{1}{n-1} \sum_{i=1}^{n} (x_i-x_{avg})(y_i - y_{avg})
+\end{equation}
+
+\subsection{}
+\begin{align}
+cov(1,1) = \frac{1}{2-1} (a-\frac{a+c}{2})(c-\frac{a+c}{2} \\
+& = (a^2 - (a^2 + c)) + (c^2 - (a + c^2)) \\
+& = -c -a
+\end{align}
 
 
 
 \section*{Appendix}
+Code for assignment 1:
+\begin{lstlisting}
+v1 = [4,5,6];
+v2 = [6,3,9];
+v3 = [8,7,3];
+v4 = [7,4,8];
+v5 = [4,6,5];
+
+m1 = [v1;v2;v3;v4;v5];
+
+mean1 = [mean(m1(:,1)); mean(m1(:,2)); mean(m1(:,3))];
+
+cov1 = cov(m1);
+
+mean1
+cov1
+\end{lstlisting}
 
 
 \end{document}
