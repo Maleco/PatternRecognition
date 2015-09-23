@@ -41,6 +41,50 @@ And the following covariance matrix is yielded:
 \end{equation}
 
 \subsection{}
+We computed the following probability densities:
+\begin{lstlisting}
+>> mvnpdf([5;5;6], mean1, cov1)
+ans =    0.0543
+>> mvnpdf([3;5;7], mean1, cov1)
+ans =   6.1287e-04
+>> mvnpdf([4;6.5;1], mean1, cov1)
+ans =   7.0300e-29
+\end{lstlisting}
+
+\section{Covariance matrix, analytically}
+Every element in the covariance matrix is determined by:
+\begin{equation}
+\sigma_{ij} = \frac{1}{n-1} \sum_{n=1}^{N} (x_{in}-\mu_{i})(x_{jn} - \mu_{j})
+\end{equation}
+Since $n=2$ for all the covariance matrices calculated below, we leave that factor out (since $\frac{1}{2-1}=1$).
+
+\subsection{}
+First element:
+\begin{align}
+\sigma_{1,1} & = (a-\frac{a+c}{2})^2+(c-\frac{a+c}{2})^2 \\
+& = (a^2 - (a^2 + c)) + (c^2 - (a + c^2)) \\
+& = -c -a
+\end{align}
+Similarly for $cov(2,2)$ we get $-d-b$.
+For the other two elements, $cov(1,2)$ and $cov(2,1)$ which are the same, we get the following:
+\begin{align}
+cov(1,2) & = ((a-\frac{a+c}{2})(b-\frac{b+d}{2})+(c-\frac{a+c}{2})(d-\frac{b+d}{2})) \\
+& = (ab - \frac{ab+ad}{2} - \frac{ab + bc}{2} + \frac{ab + ad + bc + cd}{4}) + (cd - \frac{bc + cd}{2} - \frac{ad + cd}{2} - \frac{ab + ad + bc + cd}{4})\\
+& = (ab - \frac{4ab + 2ad + 2bc}{4} - \frac{ab + ad + bc + cd}{4}) + (cd - \frac{4cd + 2bc + 2ad}{4} - \frac{ab + ad + bc + cd}{4}) \\
+& = (ab - \frac{5ab + 3ad + 3bc + cd}{4}) + (cd - \frac{ab + 3 ad + 3 bc + 5cd}{4}) \\
+& = ab + cd - \frac{3}{2}(ab + ad + bc + cd) \\
+& = -\frac{1}{2}(ab + cd) - \frac{3}{2}(ad + bc)
+\end{align}
+This results in the following matrix:
+  \begin{equation}
+    \begin{bmatrix}
+      -c-a & -\frac{1}{2}(ab+cd)-\frac{3}{2}(ad+bc)\\
+      -\frac{1}{2}(ab+cd)-\frac{3}{2}(ad+bc) & -d-b
+      \\
+    \end{bmatrix}
+\end{equation}
+
+\subsection{}
 
 
 
