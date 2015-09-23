@@ -6,9 +6,5 @@ v5 = [4,6,5];
 
 m1 = [v1;v2;v3;v4;v5];
 
-mean1 = [mean(m1(:,1)); mean(m1(:,2)); mean(m1(:,3))];
-
-cov1 = cov(m1);
-
-mean1
-cov1
+mean1 = [mean(m1(:,1)); mean(m1(:,2)); mean(m1(:,3))]
+cov1 = cov(m1)
