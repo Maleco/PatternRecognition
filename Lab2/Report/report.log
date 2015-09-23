@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.2)  23 SEP 2015 13:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.2)  23 SEP 2015 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -481,33 +481,61 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 46.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./report.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<Ass31.png, id=23, 421.3341pt x 315.8199pt>
+File: Ass31.png Graphic file (type png)
+ <use Ass31.png>
+Package pdftex.def Info: Ass31.png used on input line 146.
+(pdftex.def)             Requested size: 328.82707pt x 246.48792pt.
+ [3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 158.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 158.
+
+<Ass4.png, id=27, 427.1157pt x 318.7107pt>
+File: Ass4.png Graphic file (type png)
+ <use Ass4.png>
+Package pdftex.def Info: Ass4.png used on input line 176.
+(pdftex.def)             Requested size: 328.82707pt x 245.3788pt.
+ [4 <./Ass31.png (PNG copy)>]
+Overfull \hbox (2.08415pt too wide) in paragraph at lines 205--205
+[] 
+ []
+
+[5 <./Ass4.png (PNG copy)>] [6] [7] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 5668 strings out of 493917
- 78560 string characters out of 6157789
- 173301 words of memory out of 5000000
- 8867 multiletter control sequences out of 15000+600000
- 10160 words of font info for 37 fonts, out of 8000000 for 9000
+ 5718 strings out of 493917
+ 79217 string characters out of 6157789
+ 181301 words of memory out of 5000000
+ 8909 multiletter control sequences out of 15000+600000
+ 10813 words of font info for 39 fonts, out of 8000000 for 9000
  788 hyphenation exceptions out of 8191
  38i,8n,40p,239b,1824s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on report.pdf (2 pages, 140366 bytes).
+</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti9.pfb>
+Output written on report.pdf (7 pages, 237399 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

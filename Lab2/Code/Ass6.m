@@ -7,6 +7,7 @@
 % p(customers|spam)/p(customers|non-spam)
 % p(watches|spam)/p(watches|non-spam) p(spam)/p(non-spam) = 
 (0.005/0.0001)*(0.0003/0.000004)*(0.9/0.1)
+1-1/33750
 
 % b) “Did you have fun on vacation? I sure did!”
 % P(spam|Fun,Vacation)/P(non-spam|Fun,Vacation) =

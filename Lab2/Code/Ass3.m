@@ -4,9 +4,9 @@
 mean = [3 4]
 cov = [1 0; 0 2]
 dist = gmdistribution(mean,cov)
-mesh(dist)
+
 inputmatrix = [0 0];
-output;
+
 counter = 1;
 for i = -10:10
     for j = -10:10
@@ -15,9 +15,9 @@ for i = -10:10
         counter = counter + 1;
     end
 end
-% 1. Plot this function on [-10 10] × [-10 10] usin;
+% 1. Plot this function on [-10 10] × [-10 10]Using the mesh function.
 output = reshape(pdf(dist, inputmatrix),[21,21])
-mesh(-10:10,-10:10,output)g the mesh function.
+mesh(-10:10,-10:10,output) % 
 
 % 2. Compute the Mahalanobis distance between the points [10 10]’, [0 0]’, [3 4]’, [6 8]’ and
 % the mean of this density function.
