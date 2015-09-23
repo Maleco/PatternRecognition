@@ -148,7 +148,7 @@ Using the code given in the appendix, we generated the following plot:
  \label{31}
 \end{figure}
 
-\subsection{2D Gaussian pdf, Mahalanobis distance}
+\subsection{}
 We determined the Mahalanobis distances using the following definition:
 \begin{equation}
 r^2=(x-\mu)\Sigma^{-1}(x-\mu)'
@@ -165,11 +165,7 @@ ans =     0
 ans =    17
 \end{lstlisting}
 
-\subsection{Independent identically distributed random binary variables}
-The code in the appendix yields the following plot:
-
-\section{2D Gaussian pdf, Mahalanobis distance}
-\subsection{}
+\section{Independent identically distributed random binary variables}
 Using the code given in the appendix, we generated the following plot:
 \begin{figure}[H]
  \centering
@@ -189,11 +185,49 @@ By tossing a coin 100 times (N) with a 50\% chance to go forward (P),
 the theoretical mean would be N*P or 100*0.5 = 50.
 The variance would be N*P(1-P) = 100*0.5(1-0.5) = 25.
 
-\subsection{Multivariate normal density, discriminant functions, minimum error rate classification, unequal priors, dichotomizer}
+\section{Multivariate normal density, discriminant functions, minimum error rate classification, unequal priors, dichotomizer}
+\subsection{}
+We propose the following discriminant functions for minimum error rate classification (here $\vec x$ stands for the x,y-vector and $\vec\mu$ for the $\mu$-vector.). The first function is:
+\begin{equation}
+g_1(x, y)=-\frac{1}{2}(\vec x-\vec\mu_1)^t\Sigma_1^{-1}(\vec x-\vec\mu_1)-\frac{d}{2}\ln(2\pi)-\frac{1}{2}\ln|\Sigma_1|+\ln P(\omega_1)
+\end{equation}
+The second discriminant function is:
+\begin{equation}
+g_2(x, y)=-\frac{1}{2}(\vec x-\vec\mu_2)^t\Sigma_2^{-1}(\vec x-\vec\mu_2)-\frac{d}{2}\ln(2\pi)-\frac{1}{2}\ln|\Sigma_2|+\ln P(\omega_2)
+\end{equation}
+If we fill in the known values we get a simplified function ($d=2$):
+\begin{equation}
+g_1(x, y)=
+-\frac{1}{2}[x-3, y-5] 
+\left[\begin{array}{lr}1 & 0 \\0 & 0.25 \end{array}\right] 
+\left[x-3 \atop y-5\right]-\ln(2\pi)-\frac{1}{2}\ln(4)+\ln (0.3)
+\end{equation}
+\begin{equation}
+g_2(x, y)=-\frac{1}{2}[x-2,y-1]
+\left[\begin{array}{lr}0.5 & 0 \\0 & 1 \end{array}\right] 
+\left[x-2 \atop y-1\right]-\ln(2\pi)-\frac{1}{2}\ln(2)+\ln (0.7)
+\end{equation}
+After matrix multiplication this gives:
+\begin{equation}
+g_1(x, y)= \frac{-4x^2+24x-y^2+10y-61}{8}
+-\ln(2\pi)-\frac{1}{2}\ln(4)+\ln (0.3)
+\end{equation}
+\begin{equation}
+g_2(x, y)= \frac{-x^2+4x-2y^2+4y-6}{4}
+-\ln(2\pi)-\frac{1}{2}\ln(2)+\ln (0.7)
+\end{equation}
+
+The classifier assigns a feature matrix (x,y) to the class of which the discriminant function yields the highest value.
+
+\subsection{}
+The decision boundary is determined by $g_1(x,y) = g_2(x,y)$. When we fill in the equation, it can be written as:
+
+\begin{equation}
+\frac{3}{8}y^2 - \frac{1}{4}y = -\frac{1}{4}x^2+2x-\frac{49}{8} -6.27612
+\end{equation}
 
 
-
-\subsection{Naive Bayesian rule}
+\section{Naive Bayesian rule}
 Following the Naive Bayes rules as shown on the slides (so calculating the ratio):
 
 \subsubsection{``We offer our dear customers a wide selection of classy watches''}
