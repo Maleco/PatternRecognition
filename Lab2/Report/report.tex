@@ -12,7 +12,7 @@
 \renewcommand{\thesubsubsection}{\alph{subsubsection}}
 
 \title{Pattern Recognition practical 2}
-\author{Maikel Withagen (s1867733) \and Steven Bosch (s1861948)}
+\author{Group 24: \and Maikel Withagen (s1867733) \and Steven Bosch (s1861948)}
 \date{\today}
 \lstset{frame=single, numbers=left,language=Matlab,basicstyle=\small, title=\lstname}
 
@@ -94,7 +94,6 @@ Element 1,1:
 As we can see, the $k$s are all removed in the simplification, due to writing sums like $a+k$ as the fraction $\frac{2a+2k}{2}$ and subtracting fractions with $2k$ in the numerator, resulting in the $k$s being removed.
 Again similarly for $\sigma_{2,2}$ we get $\frac{1}{2}(b-d)^2$.
 For the other two elements, $cov(1,2)$ and $cov(2,1)$ we get the following (the $k$s are removed in the simplification process again):
-
 \begin{align}
 \sigma(1,2) & = ((a+k-\frac{a+c+2k}{2})(b+k-\frac{b+d+2k}{2})+(c+k-\frac{a+c+2k}{2})(d+k-\frac{b+d+2k}{2})) \\
 & = (\frac{a-c}{2}) (\frac{b-d}{2}) + (\frac{c-a}{2}) (\frac{d-b}{2}) \\
@@ -102,7 +101,6 @@ For the other two elements, $cov(1,2)$ and $cov(2,1)$ we get the following (the 
 & = \frac{2ab - 2ad - 2bc + 2cd}{4} \\
 & = \frac{1}{2} (a-c)(b-d)
 \end{align}
-
 Thus in the end we get the same matrix as in the previous section:
 \begin{equation}
     \begin{bmatrix}
@@ -121,7 +119,6 @@ Element 1,1:
 & = \frac{1}{2}k^2(a-c)^2
 \end{align}
 Similarly for $\sigma_{2,2}$ we get $\frac{1}{2}k^2(b-d)^2$.
-
 For the other two elements, $cov(1,2)$ and $cov(2,1)$ we get the following:
 \begin{align}
 \sigma(1,2) & = ((ak-\frac{ak+ck}{2})(bk-\frac{bk+dk}{2})+(ck-\frac{ak+ck}{2})(dk-\frac{bk+dk}{2})) \\
@@ -220,12 +217,13 @@ g_2(x, y)= \frac{-x^2+4x-2y^2+4y-6}{4}
 The classifier assigns a feature matrix (x,y) to the class of which the discriminant function yields the highest value.
 
 \subsection{}
-The decision boundary is determined by $g_1(x,y) = g_2(x,y)$. When we fill in the equation, it can be written as:
+The decision boundary is determined by $g_1(x,y) = g_2(x,y)$. When we fill in the equation and simplify it, we get:
 
 \begin{equation}
 \frac{3}{8}y^2 - \frac{1}{4}y = -\frac{1}{4}x^2+2x-\frac{49}{8} -6.27612
 \end{equation}
 
+Solving this for y yields us $y_1 \approx 0.5.70507*10^{-8}(-3418.41\sqrt{17528259x^2 +140226072x-516069674}-5842753)$ and $y_2 \approx 0.5.70507*10^{-8}(3418.41\sqrt{17528259x^2 +140226072x-516069674}-5842753)$.
 
 \section{Naive Bayesian rule}
 Following the Naive Bayes rules as shown on the slides (so calculating the ratio):
@@ -237,7 +235,7 @@ Following the Naive Bayes rules as shown on the slides (so calculating the ratio
  & = \frac{0.005*0.0003*0.9}{0.0001*0.000004*0.1} \\
  & = 33750
 \end{align}
-So with a ratio of 33750:1 (spam:non-spam) it is very likely that the message can be classified as spam (a probability of approximately 0.99997037037).
+So with a ratio of 33750:1 (spam:non-spam) it is very likely that the message can be classified as spam (a probability of approximately 0.99997).
 
 \subsubsection{``Did you have fun on vacation? I sure did!''}
 \begin{align}
@@ -246,7 +244,7 @@ So with a ratio of 33750:1 (spam:non-spam) it is very likely that the message ca
 & = \frac{0.00015*0.00025*0.9}{0.0007*0.00014*0.1} \\
 & = 3.4439
 \end{align}
-So with a ratio of 3.4439:1 (spam:non-spam) it is likely that the message can be classified as spam (with a probability of approximately 0.7096315224).
+So with a ratio of 3.4439:1 (spam:non-spam) it is likely that the message can be classified as spam (with a probability of approximately 0.70963).
 
 \section*{Appendix}
 \subsection*{Code for assignment 1}
