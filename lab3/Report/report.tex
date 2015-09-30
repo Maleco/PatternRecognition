@@ -56,36 +56,29 @@ Our implementation of the KNN-function is the following:
 \lstinputlisting{../Code/KNN.m}
 
 \subsection{}
-For $k=1$ this yields the following Voronoi diagram:
+For $k={1, 3, 5, 7}$ this implementation yields the following Voronoi diagrams:
 \begin{figure}[H]
- \centering
- \includegraphics[width=\textwidth]{assign2_2_1.png}
- \caption{Voronoi diagram of the data set using KNN (for $k=1$)}
- \label{fig2.1a}
-\end{figure}
-
-For $k=3$ this yields the following Voronoi diagram:
-\begin{figure}[H]
- \centering
- \includegraphics[width=\textwidth]{assign2_2_3.png}
- \caption{Voronoi diagram of the data set using KNN (for $k=3$)}
- \label{fig2.1b}
-\end{figure}
-
-For $k=5$ this yields the following Voronoi diagram:
-\begin{figure}[H]
- \centering
- \includegraphics[width=\textwidth]{assign2_2_5.png}
- \caption{Voronoi diagram of the data set using KNN (for $k=5$)}
- \label{fig2.1c}
-\end{figure}
-
-For $k=7$ this yields the following Voronoi diagram:
-\begin{figure}[H]
- \centering
- \includegraphics[width=\textwidth]{assign2_2_7.png}
- \caption{Voronoi diagram of the data set using KNN (for $k=7$)}
- \label{fig2.1d}
+  \centering
+  \begin{subfigure}{.48\textwidth}
+    \includegraphics[width=1\linewidth]{assign2_2_1.png}
+    \caption{Voronoi diagram of the data set using KNN (for $k=1$)}
+    \label{fig2.1a}
+  \end{subfigure}
+  \begin{subfigure}{.48\textwidth}
+    \includegraphics[width=1\linewidth]{assign2_2_3.png}
+    \caption{Voronoi diagram of the data set using KNN (for $k=3$)}
+    \label{fig2.1b}
+  \end{subfigure}
+  \begin{subfigure}{.48\textwidth}
+    \includegraphics[width=1\textwidth]{assign2_2_5.png}
+    \caption{Voronoi diagram of the data set using KNN (for $k=5$)}
+    \label{fig2.1c}
+  \end{subfigure}
+  \begin{subfigure}{.48\textwidth}
+    \includegraphics[width=1\textwidth]{assign2_2_7.png}
+    \caption{Voronoi diagram of the data set using KNN (for $k=7$)}
+    \label{fig2.1d}
+  \end{subfigure}
 \end{figure}
 
 \subsection{}
@@ -95,15 +88,17 @@ Our implementation of the leave-one-out cross validation is given in the appendi
  \centering
  \includegraphics[width=\textwidth]{assign2_3.png}
  \caption{Error rate for different values of $k$ using leave-one-out cross validation.}
- \label{fig2.1d}
+ \label{fig2.3}
 \end{figure}
+
+\subsection{}
 
 \section{Parzen windows, posterior probabilities}
 
 \section*{Appendix}
 \lstinputlisting{../Code/assign1_1.m}
 \lstinputlisting{../Code/assign1_2.m}
-\lstinputlisting{../Code/assign2_2.m}
+\lstinputlisting{../Code/KNN.m}
 \lstinputlisting{../Code/assign2_3.m}
 
 \end{document}
