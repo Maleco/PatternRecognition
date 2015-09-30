@@ -51,6 +51,45 @@ Figure \ref{fig1.2} shows the point $(fa, h)$ of the two given binary vectors pl
 \end{figure}
 
 \section{K-nearest neighbor classification}
+\subsection{}
+Our implementation of the KNN-function is the following:
+\lstinputlisting{../Code/KNN.m}
+
+\subsection{}
+For $k=1$ this yields the following Voronoi diagram:
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{assign2_2_1.png}
+ \caption{Voronoi diagram of the data set using KNN (for $k=1$)}
+ \label{fig2.1a}
+\end{figure}
+
+For $k=3$ this yields the following Voronoi diagram:
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{assign2_2_3.png}
+ \caption{Voronoi diagram of the data set using KNN (for $k=3$)}
+ \label{fig2.1b}
+\end{figure}
+
+For $k=5$ this yields the following Voronoi diagram:
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{assign2_2_5.png}
+ \caption{Voronoi diagram of the data set using KNN (for $k=5$)}
+ \label{fig2.1c}
+\end{figure}
+
+For $k=7$ this yields the following Voronoi diagram:
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{assign2_2_7.png}
+ \caption{Voronoi diagram of the data set using KNN (for $k=7$)}
+ \label{fi2.1d}
+\end{figure}
+
+\subsection{}
+
 \section{Parzen windows, posterior probabilities}
 
 \section*{Appendix}
