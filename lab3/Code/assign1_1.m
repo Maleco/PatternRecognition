@@ -24,7 +24,7 @@ plot(x,y2)
 plot(x,y3)
 xlabel('False alarm')
 ylabel('Hit')
-legend('Hits = False alarms', '\mu2 = 7','\mu2 = 9','\mu2 = 11')
+legend('Hits = False alarms', '\mu2 = 7','\mu2 = 9','\mu2 = 11', 'Location', 'east')
 
 % What is the value of the discriminability d for
 % each of these cases?
