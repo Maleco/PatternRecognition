@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.25)  30 SEP 2015 15:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.25)  30 SEP 2015 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -557,7 +557,51 @@ Package pdftex.def Info: assign2_4_b.png used on input line 133.
 (pdftex.def)             Requested size: 328.82707pt x 245.46239pt.
 
 [5 <./assign2_4_1.png> <./assign2_4_3.png> <./assign2_4_5.png> <./assign2_4_7.p
-ng>] (../Code/assign1_1.m
+ng>]
+Runaway argument?
+! Paragraph ended before \@array was complete.
+<to be read again> 
+                   \par 
+l.142 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Misplaced \crcr.
+\endarray ->\crcr 
+                  \egroup \egroup 
+l.143 \end{array}
+                 
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten \endgroup.
+\endarray ->\crcr \egroup 
+                          \egroup 
+l.143 \end{array}
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+\endarray ->\crcr \egroup \egroup 
+                                  
+l.143 \end{array}
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+(../Code/assign1_1.m
 
 ! Package inputenc Error: Unicode char \u8:â\lst@FillFixed@\lst@ECˆ not set up 
 for use with LaTeX.
@@ -821,35 +865,29 @@ or \DeclareInputMath before using this key.
 [6 <./assign2_4_b.png (PNG copy)>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
-) (../Code/assign1_2.m) (../Code/KNN.m)
-[7] (../Code/assign2_3.m) [8] (./report.aux) ) 
+) (../Code/assign1_2.m) (../Code/KNN.m
+[7]) (../Code/assign2_3.m)
+
+! Package Listings Error: File `../Code/assign3_1(.m)' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: m)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.151 \lstinputlisting{../Code/assign3_1.m}
+                                           ^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
 Here is how much of TeX's memory you used:
- 5809 strings out of 493917
- 80721 string characters out of 6157788
- 395354 words of memory out of 5000000
- 8980 multiletter control sequences out of 15000+600000
+ 5806 strings out of 493917
+ 80696 string characters out of 6157788
+ 410354 words of memory out of 5000000
+ 8978 multiletter control sequences out of 15000+600000
  10505 words of font info for 38 fonts, out of 8000000 for 9000
  788 hyphenation exceptions out of 8191
  38i,8n,41p,1090b,2148s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti9.pfb>
-Output written on report.pdf (8 pages, 392312 bytes).
-PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+!  ==> Fatal error occurred, no output PDF file produced!
