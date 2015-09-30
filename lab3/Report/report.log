@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.25)  30 SEP 2015 12:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.25)  30 SEP 2015 14:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -492,7 +492,34 @@ File: assign1_2b.png Graphic file (type png)
 Package pdftex.def Info: assign1_2b.png used on input line 48.
 (pdftex.def)             Requested size: 469.75502pt x 279.92725pt.
 
-(../Code/assign1_1.m
+(../Code/KNN.m [2 <./assign1_2b.png (PNG copy)>])
+<assign2_2_1.png, id=25, 427.5975pt x 319.1925pt>
+File: assign2_2_1.png Graphic file (type png)
+ <use assign2_2_1.png>
+Package pdftex.def Info: assign2_2_1.png used on input line 62.
+(pdftex.def)             Requested size: 469.75502pt x 350.65987pt.
+
+<assign2_2_3.png, id=26, 427.5975pt x 319.1925pt>
+File: assign2_2_3.png Graphic file (type png)
+ <use assign2_2_3.png>
+Package pdftex.def Info: assign2_2_3.png used on input line 70.
+(pdftex.def)             Requested size: 469.75502pt x 350.65987pt.
+
+[3 <./assign2_2_1.png (PNG copy)>]
+<assign2_2_5.png, id=30, 427.5975pt x 319.1925pt>
+File: assign2_2_5.png Graphic file (type png)
+ <use assign2_2_5.png>
+Package pdftex.def Info: assign2_2_5.png used on input line 78.
+(pdftex.def)             Requested size: 469.75502pt x 350.65987pt.
+
+[4 <./assign2_2_3.png (PNG copy)>]
+<assign2_2_7.png, id=34, 427.5975pt x 319.1925pt>
+File: assign2_2_7.png Graphic file (type png)
+ <use assign2_2_7.png>
+Package pdftex.def Info: assign2_2_7.png used on input line 86.
+(pdftex.def)             Requested size: 469.75502pt x 350.65987pt.
+
+[5 <./assign2_2_5.png (PNG copy)>] (../Code/assign1_1.m
 
 ! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@\lst@EC� not set up 
 for use with LaTeX.
@@ -695,7 +722,6 @@ l.9 ... in the interval [μ 1 − 3σ; μ 2 + 3σ]
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[2 <./assign1_2b.png (PNG copy)>]
 
 ! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
 with LaTeX.
@@ -754,17 +780,18 @@ l.11 % curve for the cases μ 2 = 9 and μ
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
+[6 <./assign2_2_7.png (PNG copy)>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
-) (../Code/assign1_2.m) [3] (./report.aux) ) 
+) (../Code/assign1_2.m) [7] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 5704 strings out of 493917
- 79119 string characters out of 6157788
- 417354 words of memory out of 5000000
- 8892 multiletter control sequences out of 15000+600000
+ 5744 strings out of 493917
+ 79686 string characters out of 6157788
+ 391354 words of memory out of 5000000
+ 8925 multiletter control sequences out of 15000+600000
  10505 words of font info for 38 fonts, out of 8000000 for 9000
  788 hyphenation exceptions out of 8191
- 38i,6n,41p,853b,2142s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,6n,41p,853b,2148s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
@@ -779,10 +806,10 @@ ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti9.pfb>
-Output written on report.pdf (3 pages, 206199 bytes).
+Output written on report.pdf (7 pages, 262096 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 90 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

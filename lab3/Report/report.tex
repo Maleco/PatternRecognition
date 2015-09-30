@@ -53,13 +53,13 @@ Figure \ref{fig1.2} shows the point $(fa, h)$ of the two given binary vectors pl
 \section{K-nearest neighbor classification}
 \subsection{}
 Our implementation of the KNN-function is the following:
-\lstinputlisting{../Code/assign2_1}
+\lstinputlisting{../Code/KNN.m}
 
 \subsection{}
 For $k=1$ this yields the following Voronoi diagram:
 \begin{figure}[H]
  \centering
- \includegraphics[width=\textwidth]{assign2_1a.png}
+ \includegraphics[width=\textwidth]{assign2_2_1.png}
  \caption{Voronoi diagram of the data set using KNN (for $k=1$)}
  \label{fig2.1a}
 \end{figure}
@@ -67,7 +67,7 @@ For $k=1$ this yields the following Voronoi diagram:
 For $k=3$ this yields the following Voronoi diagram:
 \begin{figure}[H]
  \centering
- \includegraphics[width=\textwidth]{assign2_1b.png}
+ \includegraphics[width=\textwidth]{assign2_2_3.png}
  \caption{Voronoi diagram of the data set using KNN (for $k=3$)}
  \label{fig2.1b}
 \end{figure}
@@ -75,7 +75,7 @@ For $k=3$ this yields the following Voronoi diagram:
 For $k=5$ this yields the following Voronoi diagram:
 \begin{figure}[H]
  \centering
- \includegraphics[width=\textwidth]{assign2_1c.png}
+ \includegraphics[width=\textwidth]{assign2_2_5.png}
  \caption{Voronoi diagram of the data set using KNN (for $k=5$)}
  \label{fig2.1c}
 \end{figure}
@@ -83,17 +83,27 @@ For $k=5$ this yields the following Voronoi diagram:
 For $k=7$ this yields the following Voronoi diagram:
 \begin{figure}[H]
  \centering
- \includegraphics[width=\textwidth]{assign2_1d.png}
+ \includegraphics[width=\textwidth]{assign2_2_7.png}
  \caption{Voronoi diagram of the data set using KNN (for $k=7$)}
- \label{fi2.1d}
+ \label{fig2.1d}
 \end{figure}
 
 \subsection{}
+Our implementation of the leave-one-out cross validation is given in the appendix. Figure \ref{fig2.3} gives the error rates we acquired for the diffferent values for $k$ using our implementation. The figure shows that a $k$ of 3 or 5 yields the best performance with an error rate of around 0.23.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{assign2_3.png}
+ \caption{Error rate for different values of $k$ using leave-one-out cross validation.}
+ \label{fig2.1d}
+\end{figure}
 
 \section{Parzen windows, posterior probabilities}
 
 \section*{Appendix}
 \lstinputlisting{../Code/assign1_1.m}
 \lstinputlisting{../Code/assign1_2.m}
+\lstinputlisting{../Code/assign2_2.m}
+\lstinputlisting{../Code/assign2_3.m}
 
 \end{document}
