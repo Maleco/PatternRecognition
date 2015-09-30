@@ -56,47 +56,79 @@ Our implementation of the KNN-function is the following:
 \lstinputlisting{../Code/KNN.m}
 
 \subsection{}
-For $k=1$ this yields the following Voronoi diagram:
+For $k={1, 3, 5, 7}$ this implementation yields the classification grid shown in figure \ref{fig2.1}:
 \begin{figure}[H]
   \centering
   \begin{subfigure}{.48\textwidth}
-    \includegraphics[width=.45\linewidth]{assign2_2_1.png}
-    \caption{Voronoi diagram of the data set using KNN (for $k=1$)}
+    \includegraphics[width=1\linewidth]{assign2_2_1.png}
+    \caption{Classification grid of the data set using KNN (for $k=1$)}
     \label{fig2.1a}
   \end{subfigure}
   \begin{subfigure}{.48\textwidth}
-    \includegraphics[width=.45\linewidth]{assign2_2_3.png}
-    \caption{Voronoi diagram of the data set using KNN (for $k=3$)}
+    \includegraphics[width=1\linewidth]{assign2_2_3.png}
+    \caption{Classification grid of the data set using KNN (for $k=3$)}
     \label{fig2.1b}
   \end{subfigure}
-\end{figure}
-
-For $k=3$ this yields the following Voronoi diagram:
-
-For $k=5$ this yields the following Voronoi diagram:
-\begin{figure}[H]
- \centering
- \includegraphics[width=.6\textwidth]{assign2_2_5.png}
- \caption{Voronoi diagram of the data set using KNN (for $k=5$)}
- \label{fig2.1c}
-\end{figure}
-
-For $k=7$ this yields the following Voronoi diagram:
-\begin{figure}[H]
- \centering
- \includegraphics[width=.6\textwidth]{assign2_2_7.png}
- \caption{Voronoi diagram of the data set using KNN (for $k=7$)}
- \label{fig2.1d}
+  \begin{subfigure}{.48\textwidth}
+    \includegraphics[width=1\textwidth]{assign2_2_5.png}
+    \caption{Classification grid of the data set using KNN (for $k=5$)}
+    \label{fig2.1c}
+  \end{subfigure}
+  \begin{subfigure}{.48\textwidth}
+    \includegraphics[width=1\textwidth]{assign2_2_7.png}
+    \caption{Classification grid of the data set using KNN (for $k=7$)}
+    \label{fig2.1d}
+  \end{subfigure}
+  \caption{Classification grids for different $k$s}
+  \label{fig2.1}
 \end{figure}
 
 \subsection{}
-Our implementation of the leave-one-out cross validation is given in the appendix. Figure \ref{fig2.3} gives the error rates we acquired for the diffferent values for $k$ using our implementation. The figure shows that a $k$ of 3 or 5 yields the best performance with an error rate of around 0.23.
+Our implementation of the leave-one-out cross validation is given in the appendix. Figure \ref{fig2.3} gives the error rates we acquired for the diffferent values for $k$ using our implementation. The figure shows that a $k$ of 3 or 5 yields the best performance with an error rate of around 0.23. 
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{assign2_3.png}
  \caption{Error rate for different values of $k$ using leave-one-out cross validation.}
  \label{fig2.3}
+\end{figure}
+
+\subsection{}
+To do classification for four classes we changed the parameter of classes to 4 and added the new classes to the plots. This resulted in the classification grids shown in figure \ref{fig2.4_a}. Cross validation with four classes yields the error rates given in figure \ref{fig2.4b}. The figures show that again most of the points get classified correctly. This time we find an optimum at only a k of 5 (not of 3 as well, as was the case with two classes). The average error rate does seem to be higher than with two classes though. This seems logical, because with random data you would expect that with more classes there is a higher probability of a data point being classified into the wrong class. This is however, totally dependent on the data. If the actual data represent four well divided classes, the classification would of course go better when you would actually use four classes, because when you would just use two, the data might be distributed over the two classes in such a way that there is not such a clear separation boundary as with four classes. 
+
+In normal circumstances however, the classifier data would be seperated into logical groups instead of random groups like we do now. Then a difference in classifying performance would be logically explainable, because the data would actually represent groups already.
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.48\textwidth}
+    \includegraphics[width=.8\linewidth]{assign2_4_1.png}
+    \caption{Classification grid of the data set using KNN (for $k=1$)}
+    \label{fig2.4a}
+  \end{subfigure}
+  \begin{subfigure}{.48\textwidth}
+    \includegraphics[width=.8\linewidth]{assign2_4_3.png}
+    \caption{Classification grid of the data set using KNN (for $k=3$)}
+    \label{fig2.4b}
+  \end{subfigure}
+  \begin{subfigure}{.48\textwidth}
+    \includegraphics[width=.8\textwidth]{assign2_4_5.png}
+    \caption{Classification grid of the data set using KNN (for $k=5$)}
+    \label{fig2.4c}
+  \end{subfigure}
+  \begin{subfigure}{.48\textwidth}
+    \includegraphics[width=.8\textwidth]{assign2_4_7.png}
+    \caption{Classification grid of the data set using KNN (for $k=7$)}
+    \label{fig2.4d}
+  \end{subfigure}
+  \caption{Classification grids for different $k$s}
+  \label{fig2.4_a}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=.7\textwidth]{assign2_4_b.png}
+ \caption{Error rate for different values of $k$ using leave-one-out cross validation.}
+ \label{fig2.4_b}
 \end{figure}
 
 \section{Parzen windows, posterior probabilities}

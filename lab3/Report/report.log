@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.25)  30 SEP 2015 15:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.25)  30 SEP 2015 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -517,13 +517,47 @@ File: assign2_2_7.png Graphic file (type png)
 Package pdftex.def Info: assign2_2_7.png used on input line 78.
 (pdftex.def)             Requested size: 225.4804pt x 168.31401pt.
 
-<assign2_3.png, id=29, 1445.4pt x 736.25063pt>
+[3 <./assign2_2_1.png (PNG copy)> <./assign2_2_3.png (PNG copy)> <./assign2_2_5
+.png (PNG copy)> <./assign2_2_7.png (PNG copy)>]
+<assign2_3.png, id=33, 1445.4pt x 736.25063pt>
 File: assign2_3.png Graphic file (type png)
  <use assign2_3.png>
-Package pdftex.def Info: assign2_3.png used on input line 89.
+Package pdftex.def Info: assign2_3.png used on input line 95.
 (pdftex.def)             Requested size: 469.75502pt x 239.27861pt.
- [3 <./assign2_2_1.png (PNG copy)> <./assign2_2_3.png (PNG copy)> <./assign2_2_
-5.png (PNG copy)> <./assign2_2_7.png (PNG copy)>] (../Code/assign1_1.m
+
+<assign2_4_1.png, id=34, 600.74437pt x 614.295pt>
+File: assign2_4_1.png Graphic file (type png)
+ <use assign2_4_1.png>
+Package pdftex.def Info: assign2_4_1.png used on input line 108.
+(pdftex.def)             Requested size: 180.385pt x 184.44926pt.
+
+<assign2_4_3.png, id=35, 600.74437pt x 614.295pt>
+File: assign2_4_3.png Graphic file (type png)
+ <use assign2_4_3.png>
+Package pdftex.def Info: assign2_4_3.png used on input line 113.
+(pdftex.def)             Requested size: 180.385pt x 184.44926pt.
+
+<assign2_4_5.png, id=36, 600.74437pt x 614.295pt>
+File: assign2_4_5.png Graphic file (type png)
+ <use assign2_4_5.png>
+Package pdftex.def Info: assign2_4_5.png used on input line 118.
+(pdftex.def)             Requested size: 180.385pt x 184.44926pt.
+
+<assign2_4_7.png, id=37, 600.74437pt x 614.295pt>
+File: assign2_4_7.png Graphic file (type png)
+ <use assign2_4_7.png>
+Package pdftex.def Info: assign2_4_7.png used on input line 123.
+(pdftex.def)             Requested size: 180.385pt x 184.44926pt.
+
+[4 <./assign2_3.png (PNG copy)>]
+<assign2_4_b.png, id=41, 427.5975pt x 319.1925pt>
+File: assign2_4_b.png Graphic file (type png)
+ <use assign2_4_b.png>
+Package pdftex.def Info: assign2_4_b.png used on input line 133.
+(pdftex.def)             Requested size: 328.82707pt x 245.46239pt.
+
+[5 <./assign2_4_1.png> <./assign2_4_3.png> <./assign2_4_5.png> <./assign2_4_7.p
+ng>] (../Code/assign1_1.m
 
 ! Package inputenc Error: Unicode char \u8:â\lst@FillFixed@\lst@ECˆ not set up 
 for use with LaTeX.
@@ -784,19 +818,19 @@ l.11 % curve for the cases Î¼ 2 = 9 and Î¼
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[4 <./assign2_3.png (PNG copy)>]
+[6 <./assign2_4_b.png (PNG copy)>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
 ) (../Code/assign1_2.m) (../Code/KNN.m)
-(../Code/assign2_3.m [5]) [6] (./report.aux) ) 
+[7] (../Code/assign2_3.m) [8] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 5773 strings out of 493917
- 80135 string characters out of 6157788
+ 5809 strings out of 493917
+ 80721 string characters out of 6157788
  395354 words of memory out of 5000000
- 8949 multiletter control sequences out of 15000+600000
+ 8980 multiletter control sequences out of 15000+600000
  10505 words of font info for 38 fonts, out of 8000000 for 9000
  788 hyphenation exceptions out of 8191
- 38i,8n,41p,853b,2148s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,41p,1090b,2148s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
@@ -812,10 +846,10 @@ onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti9.pfb>
-Output written on report.pdf (6 pages, 300557 bytes).
+Output written on report.pdf (8 pages, 392312 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
