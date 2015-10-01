@@ -84,7 +84,11 @@ For $k={1, 3, 5, 7}$ this implementation yields the classification grid shown in
 \end{figure}
 
 \subsection{}
-Our implementation of the leave-one-out cross validation is given in the appendix. Figure \ref{fig2.3} gives the error rates we acquired for the diffferent values for $k$ using our implementation. The figure shows that a $k$ of 3 or 5 yields the best performance with an error rate of around 0.23. 
+Our implementation of the leave-one-out cross validation is given in the appendix. Figure \ref{fig2.3} gives the error rates we acquired for the diffferent values for $k$ using our implementation. The figure shows that a $k$ of 3 or 5 yields the best performance with an error rate of around 0.23. It is not illogical that the optimal $k$ is such a value. 
+
+On the one hand a $k$ of 1 performs worse, because it does not account for outliers. With a $k$ of 1 outliers would classify a number of data points incorrectly, while increasing $k$ to 3 would already correct for that, because it is very unlikely that two outliers would be that close to each other that they would together misclassify a data point (you could even argue whether they would actually be outliers if they are close to each other). 
+
+On the other hand when $k$ would become too high, data points are prone to be misclassified when they are closer to the decision boundary (for example when there are multiple points of the other class on the other side of the decision boundary which would be taken into account).
 
 \begin{figure}[H]
  \centering
@@ -132,11 +136,78 @@ In normal circumstances however, the classifier data would be seperated into log
 \end{figure}
 
 \section{Parzen windows, posterior probabilities}
+\subsection{}
+We computed the following densities using the code given in the appendix (note that both the file assign3.m and phi.m were used):
+\begin{table}[H]
+ \centering
+ \caption{The posterior probabilities for the three point for every class ($h=1$}
+ \begin{tabular}{c|c|c|c}
+  Point & Class 1 & Class 2 & Class 3 \\
+  \hline
+  $x_1$ & $2.7e^{-3}$ & $1.0e^{-2}$ & $8.4e^{-3}$ \\
+  $x_2$ & $3.2e^{-3}$ & $1.0e^{-2}$ & $4.8e^{-3}$ \\
+  $x_3$ & $4.6e^{-5}$ & $2.3e^{-5}$ & $1.6e^{-6}$ \\
+ \end{tabular}
+ \label{tab3.1}
+\end{table}
+
+\subsection{}
+Using \autoref{tab3.1} we can classify the points as follows (the highest posterior probability determines their class):
+\begin{itemize}
+ \item $x_1$: class 2
+ \item $x_2$: class 2
+ \item $x_3$: class 1
+\end{itemize}
+
+\subsection{}
+We computed the following densities using the code given in the appendix:
+\begin{table}[H]
+ \centering
+ \caption{The posterior probabilities for the three point for every class ($h=2$}
+ \begin{tabular}{c|c|c|c}
+  Point & Class 1 & Class 2 & Class 3 \\
+  \hline
+  $x_1$ & $8.4e^{-4}$ & $2.0e^{-3}$ & $1.9e^{-3}$ \\
+  $x_2$ & $9.0e^{-4}$ & $2.1e^{-3}$ & $1.7e^{-3}$ \\
+  $x_3$ & $2.2e^{-4}$ & $3.7e^{-4}$ & $1.7e^{-4}$ \\
+ \end{tabular}
+ \label{tab3.2}
+\end{table}
+This yields the following classification:
+\begin{itemize}
+ \item $x_1$: class 2
+ \item $x_2$: class 2
+ \item $x_3$: class 2
+\end{itemize}
+
+\subsection{}
+Using our implementation for KNN from assignment 2 we get the following classes for the three points (using $k=1$):
+\begin{itemize}
+ \item $x_1$: class 3
+ \item $x_2$: class 1
+ \item $x_3$: class 1
+\end{itemize}
+
+
+
+\subsection{}
+Using $k=5$ our KNN-implementation yields the following classes:
+\begin{itemize}
+ \item $x_1$: class 3
+ \item $x_2$: class 2
+ \item $x_3$: class 1
+\end{itemize}
+
+The different results for the Parzen window approach and the KNN-approach yield quite different outcomes. Within both of the algorithms the results for the different parameter settings do overlap for 2 of the three points, but between the results of the algorithms we only see overlap of one point. 
+
+This is possible because the methods both define their respective `influence regions'. In the KNN-method the amount of nearest neighbors ($k$) defines the radius of the region in which neighbors have influence on the data point that needs to be classified. So the KNN `looks' in a circle (euclidean) or diamond (Manhattan) around the data point. On the other hand the Parzen window method uses squares around the to be classified points. This means that other points could fall into that region and influence the classification of a point than with using KNN, explaining why differences in classification can occur. You would expect that these differences would become more prevalent when $h$ and $k$ become larger, because the relative difference between the two areas becomes larger as well. We do not see this from our experiment though, but of course we only compared three data points classified on the basis of very few data points in total, so this does not 
 
 \section*{Appendix}
 \lstinputlisting{../Code/assign1_1.m}
 \lstinputlisting{../Code/assign1_2.m}
 \lstinputlisting{../Code/KNN.m}
 \lstinputlisting{../Code/assign2_3.m}
+\lstinputlisting{../Code/assign3.m}
+\lstinputlisting{../Code/phi.m}
 
 \end{document}

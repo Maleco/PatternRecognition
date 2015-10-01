@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.25)  30 SEP 2015 17:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.2)  1 OCT 2015 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -390,77 +390,163 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
-) (./report.aux)
-\openout1 = `report.aux'.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-\c@lstlisting=\count112
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
-\scratchdimen=\dimen125
-\scratchbox=\box32
-\nofMPsegments=\count114
-\nofMParguments=\count115
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count116
-\MPscratchDim=\dimen126
-\MPnumerator=\count117
-\makeMPintoPDFobject=\count118
-\everyMPtoPDFconversion=\toks26
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-)))
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen125
+\Hy@linkcounter=\count112
+\Hy@pagecounter=\count113
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count114
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count115
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen126
+\Fld@menulength=\count116
+\Field@Width=\dimen127
+\Fld@charsize=\dimen128
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count117
+\c@Item=\count118
+\c@Hfootnote=\count119
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count120
+\c@bookmark@seq@number=\count121
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip47
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+) (./report.aux)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+\c@lstlisting=\count122
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count123
+\scratchdimen=\dimen129
+\scratchbox=\box32
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count126
+\MPscratchDim=\dimen130
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
+\everyMPtoPDFconversion=\toks26
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
@@ -471,136 +557,122 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring OFF on input line 29.
 
-Overfull \hbox (14.54437pt too wide) in paragraph at lines 32--32
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count129
+)
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
+
+(./report.out) (./report.out)
+\@outlinefile=\write3
+\openout3 = `report.out'.
+
+
+Overfull \hbox (14.54437pt too wide) in paragraph at lines 33--33
 []\OT1/cmr/bx/n/14.4 Classification er-ror, hit/-false alarm rates, ROC curve,
  []
 
-<assign1_1.png, id=1, 665.6067pt x 382.3083pt>
+<assign1_1.png, id=65, 665.6067pt x 382.3083pt>
 File: assign1_1.png Graphic file (type png)
  <use assign1_1.png>
-Package pdftex.def Info: assign1_1.png used on input line 38.
+Package pdftex.def Info: assign1_1.png used on input line 39.
 (pdftex.def)             Requested size: 469.75502pt x 269.81906pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./assign1_1.png (PNG copy)
 >]
-<assign1_2b.png, id=13, 704.6325pt x 419.8887pt>
+<assign1_2b.png, id=82, 704.6325pt x 419.8887pt>
 File: assign1_2b.png Graphic file (type png)
  <use assign1_2b.png>
-Package pdftex.def Info: assign1_2b.png used on input line 48.
+Package pdftex.def Info: assign1_2b.png used on input line 49.
 (pdftex.def)             Requested size: 469.75502pt x 279.92725pt.
 
 (../Code/KNN.m [2 <./assign1_2b.png (PNG copy)>])
-<assign2_2_1.png, id=25, 427.5975pt x 319.1925pt>
+<assign2_2_1.png, id=109, 427.5975pt x 319.1925pt>
 File: assign2_2_1.png Graphic file (type png)
  <use assign2_2_1.png>
-Package pdftex.def Info: assign2_2_1.png used on input line 63.
+Package pdftex.def Info: assign2_2_1.png used on input line 64.
 (pdftex.def)             Requested size: 225.4804pt x 168.31401pt.
 
-<assign2_2_3.png, id=26, 427.5975pt x 319.1925pt>
+<assign2_2_3.png, id=110, 427.5975pt x 319.1925pt>
 File: assign2_2_3.png Graphic file (type png)
  <use assign2_2_3.png>
-Package pdftex.def Info: assign2_2_3.png used on input line 68.
+Package pdftex.def Info: assign2_2_3.png used on input line 69.
 (pdftex.def)             Requested size: 225.4804pt x 168.31401pt.
 
-<assign2_2_5.png, id=27, 427.5975pt x 319.1925pt>
+<assign2_2_5.png, id=111, 427.5975pt x 319.1925pt>
 File: assign2_2_5.png Graphic file (type png)
  <use assign2_2_5.png>
-Package pdftex.def Info: assign2_2_5.png used on input line 73.
+Package pdftex.def Info: assign2_2_5.png used on input line 74.
 (pdftex.def)             Requested size: 225.4804pt x 168.31401pt.
 
-<assign2_2_7.png, id=28, 427.5975pt x 319.1925pt>
+<assign2_2_7.png, id=112, 427.5975pt x 319.1925pt>
 File: assign2_2_7.png Graphic file (type png)
  <use assign2_2_7.png>
-Package pdftex.def Info: assign2_2_7.png used on input line 78.
+Package pdftex.def Info: assign2_2_7.png used on input line 79.
 (pdftex.def)             Requested size: 225.4804pt x 168.31401pt.
 
 [3 <./assign2_2_1.png (PNG copy)> <./assign2_2_3.png (PNG copy)> <./assign2_2_5
 .png (PNG copy)> <./assign2_2_7.png (PNG copy)>]
-<assign2_3.png, id=33, 1445.4pt x 736.25063pt>
+<assign2_3.png, id=124, 1445.4pt x 736.25063pt>
 File: assign2_3.png Graphic file (type png)
  <use assign2_3.png>
-Package pdftex.def Info: assign2_3.png used on input line 95.
+Package pdftex.def Info: assign2_3.png used on input line 96.
 (pdftex.def)             Requested size: 469.75502pt x 239.27861pt.
 
-<assign2_4_1.png, id=34, 600.74437pt x 614.295pt>
+<assign2_4_1.png, id=127, 600.74437pt x 614.295pt>
 File: assign2_4_1.png Graphic file (type png)
  <use assign2_4_1.png>
-Package pdftex.def Info: assign2_4_1.png used on input line 108.
+Package pdftex.def Info: assign2_4_1.png used on input line 109.
 (pdftex.def)             Requested size: 180.385pt x 184.44926pt.
 
-<assign2_4_3.png, id=35, 600.74437pt x 614.295pt>
+<assign2_4_3.png, id=128, 600.74437pt x 614.295pt>
 File: assign2_4_3.png Graphic file (type png)
  <use assign2_4_3.png>
-Package pdftex.def Info: assign2_4_3.png used on input line 113.
+Package pdftex.def Info: assign2_4_3.png used on input line 114.
 (pdftex.def)             Requested size: 180.385pt x 184.44926pt.
 
-<assign2_4_5.png, id=36, 600.74437pt x 614.295pt>
+<assign2_4_5.png, id=129, 600.74437pt x 614.295pt>
 File: assign2_4_5.png Graphic file (type png)
  <use assign2_4_5.png>
-Package pdftex.def Info: assign2_4_5.png used on input line 118.
+Package pdftex.def Info: assign2_4_5.png used on input line 119.
 (pdftex.def)             Requested size: 180.385pt x 184.44926pt.
 
-<assign2_4_7.png, id=37, 600.74437pt x 614.295pt>
+<assign2_4_7.png, id=130, 600.74437pt x 614.295pt>
 File: assign2_4_7.png Graphic file (type png)
  <use assign2_4_7.png>
-Package pdftex.def Info: assign2_4_7.png used on input line 123.
+Package pdftex.def Info: assign2_4_7.png used on input line 124.
 (pdftex.def)             Requested size: 180.385pt x 184.44926pt.
 
 [4 <./assign2_3.png (PNG copy)>]
-<assign2_4_b.png, id=41, 427.5975pt x 319.1925pt>
+<assign2_4_b.png, id=137, 427.5975pt x 319.1925pt>
 File: assign2_4_b.png Graphic file (type png)
  <use assign2_4_b.png>
-Package pdftex.def Info: assign2_4_b.png used on input line 133.
+Package pdftex.def Info: assign2_4_b.png used on input line 134.
 (pdftex.def)             Requested size: 328.82707pt x 245.46239pt.
 
 [5 <./assign2_4_1.png> <./assign2_4_3.png> <./assign2_4_5.png> <./assign2_4_7.p
-ng>]
-Runaway argument?
-! Paragraph ended before \@array was complete.
-<to be read again> 
-                   \par 
-l.142 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+ng>] [6 <./assign2_4_b.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 175.
 
-! Misplaced \crcr.
-\endarray ->\crcr 
-                  \egroup \egroup 
-l.143 \end{array}
-                 
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
-! Extra }, or forgotten \endgroup.
-\endarray ->\crcr \egroup 
-                          \egroup 
-l.143 \end{array}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten \endgroup.
-\endarray ->\crcr \egroup \egroup 
-                                  
-l.143 \end{array}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 175.
+ [7]
 (../Code/assign1_1.m
 
 ! Package inputenc Error: Unicode char \u8:â\lst@FillFixed@\lst@ECˆ not set up 
@@ -631,14 +703,9 @@ l.1 % 1. Choose a value of x âˆ—
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 2.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
 
-
 ! Package inputenc Error: Unicode char \u8:â\lst@FillFixed@\lst@ECˆ not set up 
 for use with LaTeX.
 
@@ -862,32 +929,76 @@ l.11 % curve for the cases Î¼ 2 = 9 and Î¼
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[6 <./assign2_4_b.png (PNG copy)>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
-) (../Code/assign1_2.m) (../Code/KNN.m
-[7]) (../Code/assign2_3.m)
+) (../Code/assign1_2.m [8]) (../Code/KNN.m) (../Code/assign2_3.m [9])
+(../Code/assign3.m
 
-! Package Listings Error: File `../Code/assign3_1(.m)' not found.
+! Package inputenc Error: Unicode char \u8:Ï\lst@FillFixed@ not set up for use 
+with LaTeX.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: m)
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...e result by a normalization factor (h 2Ï€)
+                                                   3 which essentially is th...
 
-Enter file name: 
-! Emergency stop.
-<read *> 
-         
-l.151 \lstinputlisting{../Code/assign3_1.m}
-                                           ^^M
-*** (cannot \read from terminal in nonstop modes)
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
- 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...e result by a normalization factor (h 2Ï€)
+                                                   3 which essentially is th...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+) (../Code/phi.m [10])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
+ (./report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 88A76C129EA77D1B8EA07A49F6EAEB57;843.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
+ ) 
 Here is how much of TeX's memory you used:
- 5806 strings out of 493917
- 80696 string characters out of 6157788
- 410354 words of memory out of 5000000
- 8978 multiletter control sequences out of 15000+600000
+ 9552 strings out of 493917
+ 137248 string characters out of 6157789
+ 529047 words of memory out of 5000000
+ 12495 multiletter control sequences out of 15000+600000
  10505 words of font info for 38 fonts, out of 8000000 for 9000
  788 hyphenation exceptions out of 8191
- 38i,8n,41p,1090b,2148s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 36i,10n,41p,1056b,2356s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on report.pdf (11 pages, 409939 bytes).
+PDF statistics:
+ 412 PDF objects out of 1000 (max. 8388607)
+ 368 compressed objects within 4 object streams
+ 200 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+

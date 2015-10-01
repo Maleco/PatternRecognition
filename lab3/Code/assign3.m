@@ -26,15 +26,10 @@ for point = 1:3
     
     X = ['For point ',num2str(point),' the prob densities are: ',num2str(cat1),' ',num2str(cat2),' ',num2str(cat3)];
     disp(X)
-    
 
-    % Give an estimate of the priors P 1 , P 2 and P 3 (don’t think too hard about this).
-    % The priors are 10/30 for each category, so p = 1/3
     
-    % Using the obtained values of the priors and the densities of the three categories in the
-    % concerned point x, compute the posterior probabilities of the categories for that point.
-    % Do this for the three points x given above.
-    X = ['For point ',num2str(point),' the post densities are: ',num2str(cat1/3),' ',num2str(cat2/3),' ',num2str(cat3/3)];
+    % Compute the posterior probabilities of the categories for that every point.
+    X = ['For point ',num2str(point),' the post probabilities are: ',num2str(cat1/3),' ',num2str(cat2/3),' ',num2str(cat3/3)];
     disp(X)
     
 end
