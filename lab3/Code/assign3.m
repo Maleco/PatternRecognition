@@ -32,5 +32,22 @@ for point = 1:3
     X = ['For point ',num2str(point),' the post probabilities are: ',num2str(cat1/3),' ',num2str(cat2/3),' ',num2str(cat3/3)];
     disp(X)
     
+    % Now for the k-means
+    data = [x_w1;x_w2;x_w3];
+    class_labels = floor( (0:length(data)-1) * 3 / length(data) );
+    KNN(points(point,:), 5, data, class_labels+1)
+    
 end
+x = cell(30,1);
 
+for i = 1:30
+    if ( i <= 10)
+        x{i} = 'yellow';
+    end
+    if (i <= 20 && i > 10)
+        x{i} = 'blue';
+    end  
+    if (i > 20)
+        x{i} = 'green';
+    end
+end

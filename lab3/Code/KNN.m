@@ -1,7 +1,4 @@
 function [class] = KNN( X, K, data, class_labels)
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
-
 % Calculate distance to each point ([distance class])
 distances = zeros(length(data), ndims(data));
 for row = 1:length(data)
