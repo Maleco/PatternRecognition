@@ -5,11 +5,7 @@
 % fa = integral 6 to inf for dist 1 = 1 - integral -inf to 6 = 
 1 - normcdf(6, 5, 2)
 
-% Plot the point (fa, h) in a graph with horizontal axis fa and vertical axis h. 
-% Choose a few other values of x ∗ in the interval [μ 1 − 3σ; μ 2 + 3σ] (-1 ; 13) 
-% and plot the corresponding (fa, h) points too. Repeat the computation of a ROC 
-% curve for the cases μ 2 = 9 and μ 2 = 11 and plot all three ROC curves in the same 
-% diagram. 
+% Plot the point (fa, h) in a graph with horizontal axis fa and vertical axis h. Choose a few other values of x ∗ in the interval [μ 1 − 3σ; μ 2 + 3σ] (-1 ; 13) and plot the corresponding (fa, h) points too. Repeat the computation of a ROC curve for the cases μ 2 = 9 and μ 2 = 11 and plot all three ROC curves in the same diagram. 
 x = []; y1 = []; y2 = []; y3 = [];
 for xStar = -1:0.1:13
     x(end+1) = (1 - normcdf(xStar, 5, 2));

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.2)  1 OCT 2015 14:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.2)  1 OCT 2015 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,20 +512,20 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 \c@lstlisting=\count122
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -560,7 +560,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -570,23 +570,23 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count129
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 
 (./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
 
-Overfull \hbox (14.54437pt too wide) in paragraph at lines 33--33
+Overfull \hbox (14.54437pt too wide) in paragraph at lines 34--34
 []\OT1/cmr/bx/n/14.4 Classification er-ror, hit/-false alarm rates, ROC curve,
  []
 
 <assign1_1.png, id=65, 665.6067pt x 382.3083pt>
 File: assign1_1.png Graphic file (type png)
  <use assign1_1.png>
-Package pdftex.def Info: assign1_1.png used on input line 39.
+Package pdftex.def Info: assign1_1.png used on input line 40.
 (pdftex.def)             Requested size: 469.75502pt x 269.81906pt.
  [1
 
@@ -595,83 +595,83 @@ Package pdftex.def Info: assign1_1.png used on input line 39.
 <assign1_2b.png, id=82, 704.6325pt x 419.8887pt>
 File: assign1_2b.png Graphic file (type png)
  <use assign1_2b.png>
-Package pdftex.def Info: assign1_2b.png used on input line 49.
+Package pdftex.def Info: assign1_2b.png used on input line 50.
 (pdftex.def)             Requested size: 469.75502pt x 279.92725pt.
 
-(../Code/KNN.m [2 <./assign1_2b.png (PNG copy)>])
+(../Code/KNN.m) [2 <./assign1_2b.png (PNG copy)>]
 <assign2_2_1.png, id=109, 427.5975pt x 319.1925pt>
 File: assign2_2_1.png Graphic file (type png)
  <use assign2_2_1.png>
-Package pdftex.def Info: assign2_2_1.png used on input line 64.
+Package pdftex.def Info: assign2_2_1.png used on input line 65.
 (pdftex.def)             Requested size: 225.4804pt x 168.31401pt.
 
 <assign2_2_3.png, id=110, 427.5975pt x 319.1925pt>
 File: assign2_2_3.png Graphic file (type png)
  <use assign2_2_3.png>
-Package pdftex.def Info: assign2_2_3.png used on input line 69.
+Package pdftex.def Info: assign2_2_3.png used on input line 70.
 (pdftex.def)             Requested size: 225.4804pt x 168.31401pt.
 
 <assign2_2_5.png, id=111, 427.5975pt x 319.1925pt>
 File: assign2_2_5.png Graphic file (type png)
  <use assign2_2_5.png>
-Package pdftex.def Info: assign2_2_5.png used on input line 74.
+Package pdftex.def Info: assign2_2_5.png used on input line 75.
 (pdftex.def)             Requested size: 225.4804pt x 168.31401pt.
 
 <assign2_2_7.png, id=112, 427.5975pt x 319.1925pt>
 File: assign2_2_7.png Graphic file (type png)
  <use assign2_2_7.png>
-Package pdftex.def Info: assign2_2_7.png used on input line 79.
+Package pdftex.def Info: assign2_2_7.png used on input line 80.
 (pdftex.def)             Requested size: 225.4804pt x 168.31401pt.
 
 [3 <./assign2_2_1.png (PNG copy)> <./assign2_2_3.png (PNG copy)> <./assign2_2_5
 .png (PNG copy)> <./assign2_2_7.png (PNG copy)>]
-<assign2_3.png, id=124, 1445.4pt x 736.25063pt>
+<assign2_3.png, id=121, 1445.4pt x 736.25063pt>
 File: assign2_3.png Graphic file (type png)
  <use assign2_3.png>
-Package pdftex.def Info: assign2_3.png used on input line 96.
+Package pdftex.def Info: assign2_3.png used on input line 97.
 (pdftex.def)             Requested size: 469.75502pt x 239.27861pt.
 
-<assign2_4_1.png, id=127, 600.74437pt x 614.295pt>
+<assign2_4_1.png, id=124, 600.74437pt x 614.295pt>
 File: assign2_4_1.png Graphic file (type png)
  <use assign2_4_1.png>
-Package pdftex.def Info: assign2_4_1.png used on input line 109.
+Package pdftex.def Info: assign2_4_1.png used on input line 110.
 (pdftex.def)             Requested size: 180.385pt x 184.44926pt.
 
-<assign2_4_3.png, id=128, 600.74437pt x 614.295pt>
+<assign2_4_3.png, id=125, 600.74437pt x 614.295pt>
 File: assign2_4_3.png Graphic file (type png)
  <use assign2_4_3.png>
-Package pdftex.def Info: assign2_4_3.png used on input line 114.
+Package pdftex.def Info: assign2_4_3.png used on input line 115.
 (pdftex.def)             Requested size: 180.385pt x 184.44926pt.
 
-<assign2_4_5.png, id=129, 600.74437pt x 614.295pt>
+<assign2_4_5.png, id=126, 600.74437pt x 614.295pt>
 File: assign2_4_5.png Graphic file (type png)
  <use assign2_4_5.png>
-Package pdftex.def Info: assign2_4_5.png used on input line 119.
+Package pdftex.def Info: assign2_4_5.png used on input line 120.
 (pdftex.def)             Requested size: 180.385pt x 184.44926pt.
 
-<assign2_4_7.png, id=130, 600.74437pt x 614.295pt>
+<assign2_4_7.png, id=127, 600.74437pt x 614.295pt>
 File: assign2_4_7.png Graphic file (type png)
  <use assign2_4_7.png>
-Package pdftex.def Info: assign2_4_7.png used on input line 124.
+Package pdftex.def Info: assign2_4_7.png used on input line 125.
 (pdftex.def)             Requested size: 180.385pt x 184.44926pt.
 
 [4 <./assign2_3.png (PNG copy)>]
-<assign2_4_b.png, id=137, 427.5975pt x 319.1925pt>
+<assign2_4_b.png, id=134, 427.5975pt x 319.1925pt>
 File: assign2_4_b.png Graphic file (type png)
  <use assign2_4_b.png>
-Package pdftex.def Info: assign2_4_b.png used on input line 134.
+Package pdftex.def Info: assign2_4_b.png used on input line 135.
 (pdftex.def)             Requested size: 328.82707pt x 245.46239pt.
 
 [5 <./assign2_4_1.png> <./assign2_4_3.png> <./assign2_4_5.png> <./assign2_4_7.p
 ng>] [6 <./assign2_4_b.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 175.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 181.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 175.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 181.
  [7]
 (../Code/assign1_1.m
 
@@ -713,8 +713,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 % Choose a few other values of x ∗ 
-                                         in the interval [μ 1 − 3σ; μ 2...
+l.8 ...axis h. Choose a few other values of x ∗ 
+                                                  in the interval [μ 1 − ...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -728,8 +728,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 % Choose a few other values of x ∗ 
-                                         in the interval [μ 1 − 3σ; μ 2...
+l.8 ...axis h. Choose a few other values of x ∗ 
+                                                  in the interval [μ 1 − ...
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -742,7 +742,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 ... other values of x ∗ in the interval [μ 
+l.8 ... other values of x ∗ in the interval [μ 
                                                   1 − 3σ; μ 2 + 3σ] (-1...
 
 Your command was ignored.
@@ -757,7 +757,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 ... other values of x ∗ in the interval [μ 
+l.8 ... other values of x ∗ in the interval [μ 
                                                   1 − 3σ; μ 2 + 3σ] (-1...
 
 You need to provide a definition with \DeclareInputText 
@@ -771,8 +771,9 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 ... values of x ∗ in the interval [μ 1 − 
-                                                  3σ; μ 2 + 3σ] (-1 ; 13)
+l.8 ... values of x ∗ in the interval [μ 1 − 
+                                                  3σ; μ 2 + 3σ] (-1 ; 13)...
+
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -785,8 +786,9 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 ... values of x ∗ in the interval [μ 1 − 
-                                                  3σ; μ 2 + 3σ] (-1 ; 13)
+l.8 ... values of x ∗ in the interval [μ 1 − 
+                                                  3σ; μ 2 + 3σ] (-1 ; 13)...
+
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
@@ -798,8 +800,9 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 ...ues of x ∗ in the interval [μ 1 − 3σ;
-                                                   μ 2 + 3σ] (-1 ; 13)
+l.8 ...ues of x ∗ in the interval [μ 1 − 3σ;
+                                                   μ 2 + 3σ] (-1 ; 13) and...
+
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -812,8 +815,9 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 ...ues of x ∗ in the interval [μ 1 − 3σ;
-                                                   μ 2 + 3σ] (-1 ; 13)
+l.8 ...ues of x ∗ in the interval [μ 1 − 3σ;
+                                                   μ 2 + 3σ] (-1 ; 13) and...
+
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
@@ -825,8 +829,9 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 ...of x ∗ in the interval [μ 1 − 3σ; μ 
-                                                  2 + 3σ] (-1 ; 13)
+l.8 ...of x ∗ in the interval [μ 1 − 3σ; μ 
+                                                  2 + 3σ] (-1 ; 13) and plo...
+
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -839,8 +844,9 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 ...of x ∗ in the interval [μ 1 − 3σ; μ 
-                                                  2 + 3σ] (-1 ; 13)
+l.8 ...of x ∗ in the interval [μ 1 − 3σ; μ 
+                                                  2 + 3σ] (-1 ; 13) and plo...
+
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
@@ -852,35 +858,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 ... in the interval [μ 1 − 3σ; μ 2 + 3σ]
-                                                   (-1 ; 13)
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 ... in the interval [μ 1 − 3σ; μ 2 + 3σ]
-                                                   (-1 ; 13)
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
-with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 % curve for the cases μ 
-                              2 = 9 and μ 2 = 11 and plot all three ROC cur...
+l.8 ... in the interval [μ 1 − 3σ; μ 2 + 3σ]
+                                                   (-1 ; 13) and plot the co...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -894,8 +873,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.11 % curve for the cases μ 
-                              2 = 9 and μ 2 = 11 and plot all three ROC cur...
+l.8 ... in the interval [μ 1 − 3σ; μ 2 + 3σ]
+                                                   (-1 ; 13) and plot the co...
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -908,8 +887,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.11 % curve for the cases μ 2 = 9 and μ 
-                                           2 = 11 and plot all three ROC cur...
+l.8 ...omputation of a ROC curve for the cases μ 
+                                                  2 = 9 and μ 2 = 11 and pl...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -923,14 +902,43 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.11 % curve for the cases μ 2 = 9 and μ 
-                                           2 = 11 and plot all three ROC cur...
+l.8 ...omputation of a ROC curve for the cases μ 
+                                                  2 = 9 and μ 2 = 11 and pl...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char \u8:�\lst@FillFixed@ not set up for use 
+with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 ... a ROC curve for the cases μ 2 = 9 and μ 
+                                                  2 = 11 and plot all three ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 ... a ROC curve for the cases μ 2 = 9 and μ 
+                                                  2 = 11 and plot all three ...
 
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
 ) (../Code/assign1_2.m [8]) (../Code/KNN.m) (../Code/assign2_3.m [9])
 (../Code/assign3.m
 
@@ -962,43 +970,52 @@ l.17 ...e result by a normalization factor (h 2π)
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-) (../Code/phi.m [10])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
+[10]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 44.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 44.
+) (../Code/phi.m)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 237.
+
+[11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 237.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 237.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 237.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 88A76C129EA77D1B8EA07A49F6EAEB57;843.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 237.
  ) 
 Here is how much of TeX's memory you used:
- 9552 strings out of 493917
- 137248 string characters out of 6157789
- 529047 words of memory out of 5000000
- 12495 multiletter control sequences out of 15000+600000
+ 9582 strings out of 493917
+ 137722 string characters out of 6157789
+ 466097 words of memory out of 5000000
+ 12511 multiletter control sequences out of 15000+600000
  10505 words of font info for 38 fonts, out of 8000000 for 9000
  788 hyphenation exceptions out of 8191
- 36i,10n,41p,1056b,2356s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,9n,41p,1056b,1795s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on report.pdf (11 pages, 409939 bytes).
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on report.pdf (11 pages, 418755 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 368 compressed objects within 4 object streams
- 200 named destinations out of 1000 (max. 500000)
+ 430 PDF objects out of 1000 (max. 8388607)
+ 385 compressed objects within 4 object streams
+ 211 named destinations out of 1000 (max. 500000)
  181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
