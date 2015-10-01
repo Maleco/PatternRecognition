@@ -1,7 +1,7 @@
 clear all;
 load lab3_2.mat;
 
-K=1;
+K=7;
 samples=64;
 data = lab3_2;
 nr_of_classes = 2;
@@ -21,6 +21,8 @@ end;
 
 % Show the results in a figure
 imshow(result,[0 nr_of_classes-1],'InitialMagnification','fit')
+xlabel('x','FontSize', 18)
+ylabel('y','FontSize', 18)
 hold on;
 title([int2str(K) '-NN, ' int2str(nr_of_classes) ' classes']);
 

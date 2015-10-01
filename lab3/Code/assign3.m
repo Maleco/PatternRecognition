@@ -5,7 +5,7 @@ points = [
     -1.7 -1.7 -1.7
     ];
 
-h = 1;
+h = 2;
 for point = 1:3
     cat1 = 0;cat2 = 0;cat3 = 0;
     for x = 1:10
@@ -24,18 +24,22 @@ for point = 1:3
     cat2 = cat2 / length(x_w2);
     cat3 = cat3 / length(x_w3);
     
-    X = ['For point ',num2str(point),' the prob densities are: ',num2str(cat1),' ',num2str(cat2),' ',num2str(cat3)];
-    disp(X)
+    %X = ['For point ',num2str(point),' the prob densities are: ',num2str(cat1),' ',num2str(cat2),' ',num2str(cat3)];
+    %disp(X)
 
     
     % Compute the posterior probabilities of the categories for that every point.
-    X = ['For point ',num2str(point),' the post probabilities are: ',num2str(cat1/3),' ',num2str(cat2/3),' ',num2str(cat3/3)];
+    sum = cat1/3 + cat2/3 + cat3/3;
+    post1 = (cat1/3) / sum;
+    post2 = (cat2/3) / sum;
+    post3 = (cat3/3) / sum;
+    X = ['For point ',num2str(point),' the post probabilities are: ',num2str(post1),' ',num2str(post2),' ',num2str(post3)];
     disp(X)
     
     % Now for the k-means
-    data = [x_w1;x_w2;x_w3];
-    class_labels = floor( (0:length(data)-1) * 3 / length(data) );
-    KNN(points(point,:), 5, data, class_labels+1)
+%     data = [x_w1;x_w2;x_w3];
+%     class_labels = floor( (0:length(data)-1) * 3 / length(data) );
+%     KNN(points(point,:), 5, data, class_labels+1)
     
 end
 x = cell(30,1);
