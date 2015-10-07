@@ -38,9 +38,6 @@ Using the code given in the appendix we created the scatterplot in figure \ref{f
  \label{fig1.1}
 \end{figure}
 
-The plot shows that there are at least three prototypes needed to approach a fairly well classification of these data. Two for set A, which should probably be located around $(3,4.5)$ and $(7.5, 5.5)$, and one for set B somewhere around $(5,5)$. 
-
-\subsection{}
 
 
 \section*{Appendix}
