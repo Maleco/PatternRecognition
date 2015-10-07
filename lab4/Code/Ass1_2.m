@@ -95,7 +95,9 @@ plot(w(1:w_A,2), w(1:w_A,3), 'bp', 'markersize', 15);
 plot(w(w_A+1:size(w,1),2), w(w_A+1:size(w,1),3), 'rp', 'markersize', 15);
 
 figure;
-plot(E_1)
+plot(E_1/200)
+xlabel('Epochs')
+ylabel('Error rate')
 hold on;
-plot(E_2);
+plot(E_2/200);
 legend('Error Class 1', 'Error Class 2');
