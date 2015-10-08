@@ -59,14 +59,19 @@ for epoch = 1:nrEpochs
         if w(rowMin,end) == data(point, end)
             % Move the row closer to the data point
             w(rowMin,1:2) = w(rowMin,1:2) + eta * (data(point,1:2) - w(rowMin,1:2));
-            lambda = lambda - etaL * abs((data(point,1:2) - w(rowMin,1:2)));
-            lambda = lambda / sum(lambda);
+            lambda = lambda - etaL * abs((data(point,1:2) - w(rowMin,1:2)));            
         else
             w(rowMin,1:2) = w(rowMin,1:2) - eta * (data(point,1:2) - w(rowMin,1:2));
-            lambda = lambda + etaL * abs((data(point,1:2) - w(rowMin,1:2)));
-            lambda = lambda / sum(lambda);
+            lambda = lambda + etaL * abs((data(point,1:2) - w(rowMin,1:2)));            
         end
         
+        if lambda(1) < 0
+            lambda(1) = 0;
+        end
+        if lambda(2) < 0
+            lambda(2) = 0;
+        end
+        lambda = lambda / sum(lambda);        
     end
     
     % Testing
@@ -102,9 +107,6 @@ plot(E_1/200)
 hold on;
 plot(E_2/200);
 plot(E/200);
-subplot(3,1,3)
-plot(lambdaHist(1,:));
-plot(lambdaHist(2,:));
 legend('Training Error Class 1', 'Training Error Class 2', 'Total Training Error');
 xlabel('Epochs')
 ylabel('Training Error rate')
