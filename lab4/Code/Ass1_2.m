@@ -19,7 +19,7 @@ w_B = 1;
 w = zeros(w_A + w_B, ndims(data)+1);
 
 eta = 0.01;
-nrEpochs = 50;
+nrEpochs = 500;
 
 E_1 = zeros(1,nrEpochs);
 E_2 = zeros(1,nrEpochs);
@@ -63,6 +63,15 @@ for epoch = 1:nrEpochs
             end
         end
     end
+    E = E_1 + E_2;
+    
+    if (epoch > 10 && var(E(:,epoch-4:epoch)) < 0.05)
+        epoch
+        E_1(:,epoch+1:end) = [];
+        E_2(:,epoch+1:end) = [];
+        E(:,epoch+1:end) = [];
+        break
+    end
 end
 
 plot(w(1:w_A,1), w(1:w_A,2), 'bp', 'markersize', 15);
@@ -70,8 +79,9 @@ plot(w(w_A+1:size(w,1),1), w(w_A+1:size(w,1),2), 'rp', 'markersize', 15);
 
 figure;
 plot(E_1/200)
-xlabel('Epochs')
-ylabel('Error rate')
 hold on;
 plot(E_2/200);
-legend('Error Class 1', 'Error Class 2');
+plot(E/200);
+legend('Error Class 1', 'Error Class 2', 'Total Error');
+xlabel('Epochs')
+ylabel('Error rate')
