@@ -1,3 +1,7 @@
+load('data_lvq_A') % matA
+load('data_lvq_B') % matB
+
+close all
 figure;
 plot(matA(:,1),matA(:,2), 'bp', 'markersize', 2);
 hold on;
@@ -5,94 +9,64 @@ plot(matB(:,1),matB(:,2), 'rp', 'markersize', 2);
 xlabel('x'); ylabel('y');
 legend('Set A', 'Set B');
 
+data = [matA ; matB];
+data_labels = (floor( (0:length(data)-1) * 2 / length(data))).';
+data = [data data_labels];
+
+% The prototypes
 w_A = 2;
 w_B = 1;
+w = zeros(w_A + w_B, ndims(data)+1);
+
 eta = 0.01;
-nrEpochs = 200;
+nrEpochs = 50;
+
 E_1 = zeros(1,nrEpochs);
 E_2 = zeros(1,nrEpochs);
-w = zeros(w_A + w_B, 3);
-
-classA = matA;
-classB = matB;
-
 
 % Randomly initialize the prototypes between the minimum and maximum values
+% last value being their class
 for i = 1 : size(w,1)
     if i <= w_A
-        w(i, 1)  = 1;
-        for j = 1 : ndims(classA);
-            w(i, j+1) = mean(classA(:,j)) + rand()*2*std(classA(:,j))-std(classA(:,j));
-        end
+        w(i,:) = [mean(matA) + rand()*2*std(matA)-std(matA) 0];
     else
-        w(i, 1) = 2;
-        for j = 1 : ndims(classB);
-            w(i, j+1) = mean(classB(:,j)) + rand()*2*std(classB(:,j))-std(classB(:,j));
-        end
+        w(i,:) = [mean(matB) + rand()*2*std(matB)-std(matB) 1];
     end
 end
 
-plot(w(1:w_A,2), w(1:w_A,3), 'b+', 'markersize', 15);
-plot(w(w_A+1:size(w,1),2), w(w_A+1:size(w,1),3), 'r+', 'markersize', 15);
+plot(w(1:w_A,1), w(1:w_A,2), 'b+', 'markersize', 15);
+plot(w(w_A+1:size(w,1),1), w(w_A+1:size(w,1),2), 'r+', 'markersize', 15);
 
 for epoch = 1:nrEpochs
-    % Loop through class A
-    for i = 1 : size(classA, 1)
-        % minEuc = sqrt(max(classA(:,2))^2 + max(classA(:,3))^2);
-        pdist2(classA(i,:), w(:,2:3));
-        % Find the row with the nearest prototype
-        rowMin = find(pdist2(classA(i,:), w(:,2:3)) == min(pdist2(classA(i,:), w(:,2:3))),1);
+    % Training
+    for point = 1 : size(data,1)
+         % Find the row with the nearest prototype
+        rowMin = find(pdist2(data(point,1:2), w(:,1:2)) == min(pdist2(data(point,1:2), w(:,1:2))),1);
         % If the classes of the data point and the nearest prototype are the same
-        if w(rowMin,1) == 1
+        if w(rowMin,end) == data(point, end)
             % Move the row closer to the data point
-            w(rowMin,2:3) = w(rowMin,2:3) + eta * (classA(i,:) - w(rowMin,2:3));
-        else w(rowMin,2:3) = w(rowMin,2:3) - eta * (classA(i,:) - w(rowMin,2:3));
+            w(rowMin,1:2) = w(rowMin,1:2) + eta * (data(point,1:2) - w(rowMin,1:2));
+        else
+            w(rowMin,1:2) = w(rowMin,1:2) - eta * (data(point,1:2) - w(rowMin,1:2));
         end
     end
-    
-    % Now for class B
-    for i = 1 : size(classB, 1)
-        % minEuc = sqrt(max(classA(:,2))^2 + max(classA(:,3))^2);
-        pdist2(classB(i,:), w(:,2:3));
+       
+    % Testing
+    for point = 1 : size(data,1)
         % Find the row with the nearest prototype
-        rowMin = find(pdist2(classB(i,:), w(:,2:3)) == min(pdist2(classB(i,:), w(:,2:3))),1);
-        % If the classes of the data point and the nearest prototype are the same
-        if w(rowMin,1) == 2
-            % Move the row closer to the data point
-            w(rowMin,2:3) = w(rowMin,2:3) + eta * (classB(i,:) - w(rowMin,2:3));
-        else w(rowMin,2:3) = w(rowMin,2:3) - eta * (classB(i,:) - w(rowMin,2:3));
+        rowMin = find(pdist2(data(point,1:2), w(:,1:2)) == min(pdist2(data(point,1:2), w(:,1:2))),1);
+        if w(rowMin,end) ~= data(point, end)
+            if point <= size(matA,1)
+                E_1(epoch) = E_1(epoch) + 1;
+            else
+                E_2(epoch) = E_2(epoch) + 1;
+            end
         end
     end
-    
-    % Now calc the error
-    % Loop through class A
-    for i = 1 : size(classA, 1)
-        % minEuc = sqrt(max(classA(:,2))^2 + max(classA(:,3))^2);
-        pdist2(classA(i,:), w(:,2:3));
-        % Find the row with the nearest prototype
-        rowMin = find(pdist2(classA(i,:), w(:,2:3)) == min(pdist2(classA(i,:), w(:,2:3))),1);
-        % If the classes of the data point and the nearest prototype are the same
-        if w(rowMin,1) ~= 1
-           E_1(epoch) = E_1(epoch) + 1;
-        end
-    end
-    
-    % Now for class B
-    for i = 1 : size(classB, 1)
-        % minEuc = sqrt(max(classA(:,2))^2 + max(classA(:,3))^2);
-        pdist2(classB(i,:), w(:,2:3));
-        % Find the row with the nearest prototype
-        rowMin = find(pdist2(classB(i,:), w(:,2:3)) == min(pdist2(classB(i,:), w(:,2:3))),1);
-        % If the classes of the data point and the nearest prototype are the same
-        if w(rowMin,1) ~= 2
-            E_2(epoch) = E_2(epoch) + 1;
-        end
-    end
-    
 end
 
-plot(w(1:w_A,2), w(1:w_A,3), 'bp', 'markersize', 15);
-plot(w(w_A+1:size(w,1),2), w(w_A+1:size(w,1),3), 'rp', 'markersize', 15);
+plot(w(1:w_A,1), w(1:w_A,2), 'bp', 'markersize', 15);
+plot(w(w_A+1:size(w,1),1), w(w_A+1:size(w,1),2), 'rp', 'markersize', 15);
 
 figure;
 plot(E_1/200)
