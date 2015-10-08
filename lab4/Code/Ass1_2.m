@@ -2,8 +2,8 @@ load('data_lvq_A') % matA
 load('data_lvq_B') % matB
 
 close all
-subplot(1,2,1)
-plot(matA(:,1),matA(:,2), 'bp', 'markersize', 2);
+subplot(2,1,1)
+plot(matA(:,1),matA(:,2), 'b^', 'markersize', 2);
 hold on;
 plot(matB(:,1),matB(:,2), 'rp', 'markersize', 2);
 xlabel('x'); ylabel('y');
@@ -13,8 +13,8 @@ data_labels = (floor( (0:length(data)-1) * 2 / length(data))).';
 data = [data data_labels];
 
 % The prototypes
-w_A = 1;
-w_B = 1;
+w_A = 2;
+w_B = 2;
 w = zeros(w_A + w_B, ndims(data)+1);
 
 eta = 0.01;
@@ -77,11 +77,11 @@ plot(w(w_A+1:size(w,1),1), w(w_A+1:size(w,1),2), 'rP', 'markersize', 12);
 lgnd = legend('Set A', 'Set B','Protypes A (init)', 'Protypes B (init)','Protypes A (final)', 'Protypes B (final)');
 set(lgnd, 'interpreter','latex', 'fontsize', 15);
 
-subplot(1,2,2)
-plot(E_1/200)
+subplot(2,1,2)
+plot(E_1/200, '--')
 hold on;
-plot(E_2/200);
+plot(E_2/200, '-.');
 plot(E/200);
-legend('Training error Class 1', 'Training error Class 2', 'Total training Error');
+legend('Training error Class A', 'Training error Class B', 'Total training Error');
 xlabel('Epochs')
 ylabel('Training Error rate')
