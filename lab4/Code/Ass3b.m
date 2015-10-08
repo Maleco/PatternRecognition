@@ -19,12 +19,15 @@ for fold = 1:K
     w_A = 2;
     w_B = 1;
     w = zeros(w_A + w_B, ndims(data)+1);
+    lambda = [0.5 0.5];
     
     eta = 0.01;
+    etaL = 0.01;
     nrEpochs = 500;
     
     E_1 = zeros(1,nrEpochs);
     E_2 = zeros(1,nrEpochs);
+    lambdaHist = zeros(2,nrEpochs);
     
     % Randomly initialize the prototypes between the minimum and maximum values
     % last value being their class
@@ -37,19 +40,39 @@ for fold = 1:K
     end
     
     for epoch = 1:nrEpochs
+        % Save the old lambda values
+        lambdaHist(:,epoch) = lambda.';
         % Training
-        for point = 1 : size(train_data,1)
-            % Find the row with the nearest prototype
-            rowMin = find(pdist2(train_data(point,1:2), w(:,1:2)) == min(pdist2(train_data(point,1:2), w(:,1:2))),1);
-            % If the classes of the train_data point and the nearest prototype are the same
-            if w(rowMin,end) == train_data(point, end)
-                % Move the row closer to the train_data point
-                w(rowMin,1:2) = w(rowMin,1:2) + eta * (train_data(point,1:2) - w(rowMin,1:2));
-            else
-                w(rowMin,1:2) = w(rowMin,1:2) - eta * (train_data(point,1:2) - w(rowMin,1:2));
+        for point = 1 : size(data,1)
+            % Calculate the distances for each prototype to the point
+            dist = zeros(1,size(w,1));
+            for prot = 1:size(w,1)
+                for dim = 1:size(matA,2)
+                    dist(prot) = dist(prot) + (lambda(dim) * (w(prot, dim) - data(point, dim))^2);
+                end
             end
+            
+            % Find the row with the nearest prototype
+            rowMin = find(dist == min(dist),1);
+            % If the classes of the data point and the nearest prototype are the same
+            
+            if w(rowMin,end) == data(point, end)
+                % Move the row closer to the data point
+                w(rowMin,1:2) = w(rowMin,1:2) + eta * (data(point,1:2) - w(rowMin,1:2));
+                lambda = lambda - etaL * abs((data(point,1:2) - w(rowMin,1:2)));
+            else
+                w(rowMin,1:2) = w(rowMin,1:2) - eta * (data(point,1:2) - w(rowMin,1:2));
+                lambda = lambda + etaL * abs((data(point,1:2) - w(rowMin,1:2)));
+            end
+            
+            if lambda(1) < 0
+                lambda(1) = 0;
+            end
+            if lambda(2) < 0
+                lambda(2) = 0;
+            end
+            lambda = lambda / sum(lambda);
         end
-        
         % Testing
         for point = 1 : size(train_data,1)
             % Find the row with the nearest prototype
@@ -69,6 +92,7 @@ for fold = 1:K
             E_1(:,epoch+1:end) = [];
             E_2(:,epoch+1:end) = [];
             E(:,epoch+1:end) = [];
+              lambdaHist(:,epoch+1:end) = [];
             break
         end
     end
@@ -86,4 +110,3 @@ end
 
 % The mean error rate over the 10 folds
 mean(E_K)/200
-    
