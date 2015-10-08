@@ -39,18 +39,8 @@ plot(w(w_A+1:size(w,1),1), w(w_A+1:size(w,1),2), 'r+', 'markersize', 12);
 for epoch = 1:nrEpochs
     % Training
     for point = 1 : size(data,1)
-        % Calculate the distances for each prototype to the point
-        dist = zeros(1,size(w,1));
-        for prot = 1:size(w,1)
-            for dim = 1:size(matA,2)
-                dist(prot) = dist(prot) + (lambda(dim) * (w(prot, dim) - data(point, dim))^2);
-            end
-        end
-        
-         % Find the row with the nearest prototype
-        rowMin = find(dist == min(dist),1);
-         % Find the row with the nearest prototype
-        %rowMin = find(pdist2(data(point,1:2), w(:,1:2)) == min(pdist2(data(point,1:2), w(:,1:2))),1);
+        % Find the row with the nearest prototype
+        rowMin = find(pdist2(data(point,1:2), w(:,1:2)) == min(pdist2(data(point,1:2), w(:,1:2))),1);
         % If the classes of the data point and the nearest prototype are the same
         if w(rowMin,end) == data(point, end)
             % Move the row closer to the data point
