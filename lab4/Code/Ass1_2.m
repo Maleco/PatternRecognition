@@ -2,12 +2,11 @@ load('data_lvq_A') % matA
 load('data_lvq_B') % matB
 
 close all
-figure;
+subplot(1,2,1)
 plot(matA(:,1),matA(:,2), 'bp', 'markersize', 2);
 hold on;
 plot(matB(:,1),matB(:,2), 'rp', 'markersize', 2);
 xlabel('x'); ylabel('y');
-legend('Set A', 'Set B');
 
 data = [matA ; matB];
 data_labels = (floor( (0:length(data)-1) * 2 / length(data))).';
@@ -34,8 +33,8 @@ for i = 1 : size(w,1)
     end
 end
 
-plot(w(1:w_A,1), w(1:w_A,2), 'b+', 'markersize', 15);
-plot(w(w_A+1:size(w,1),1), w(w_A+1:size(w,1),2), 'r+', 'markersize', 15);
+plot(w(1:w_A,1), w(1:w_A,2), 'b*', 'markersize', 12);
+plot(w(w_A+1:size(w,1),1), w(w_A+1:size(w,1),2), 'r+', 'markersize', 12);
 
 for epoch = 1:nrEpochs
     % Training
@@ -66,7 +65,6 @@ for epoch = 1:nrEpochs
     E = E_1 + E_2;
     
     if (epoch > 10 && var(E(:,epoch-4:epoch)) < 0.05)
-        epoch
         E_1(:,epoch+1:end) = [];
         E_2(:,epoch+1:end) = [];
         E(:,epoch+1:end) = [];
@@ -74,14 +72,16 @@ for epoch = 1:nrEpochs
     end
 end
 
-plot(w(1:w_A,1), w(1:w_A,2), 'bp', 'markersize', 15);
-plot(w(w_A+1:size(w,1),1), w(w_A+1:size(w,1),2), 'rp', 'markersize', 15);
+plot(w(1:w_A,1), w(1:w_A,2), 'bh', 'markersize', 12);
+plot(w(w_A+1:size(w,1),1), w(w_A+1:size(w,1),2), 'rP', 'markersize', 12);
+lgnd = legend('Set A', 'Set B','Protypes A (init)', 'Protypes B (init)','Protypes A (final)', 'Protypes B (final)');
+set(lgnd, 'interpreter','latex', 'fontsize', 15);
 
-figure;
+subplot(1,2,2)
 plot(E_1/200)
 hold on;
 plot(E_2/200);
 plot(E/200);
 legend('Training error Class 1', 'Training error Class 2', 'Total training Error');
 xlabel('Epochs')
-ylabel('Error rate')
+ylabel('Training Error rate')
