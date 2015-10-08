@@ -28,7 +28,7 @@ title=\lstname
 \renewcommand{\thesubsection}{\arabic{subsection}}
 \begin{document}
 \section{Assignment 1}
-\subsection{}
+\subsection{Supervised learning: LVQ1}
 Using the code given in the appendix we created the scatterplot in figure \ref{fig1.1}.
 
 \begin{figure}[H]
@@ -51,7 +51,7 @@ The code in the appendix shows our implementation of the LVQ1 algorithm. We acqu
  \caption{Classification for 1 prototype for class A and 1 prototype for class B. Plot two gives the corresponding error rates (Class 1 is A and class 2 is B).}
  \label{fig1.12a}
 \end{figure}
-As is expected with only one prototype per class, the prototype for class B is formed quite well, allowing it to correctly classify at least the data points that belong to class B (an error stabilising at around 0.05). However, since class A is distributed in two groups, with B in between them, the prototype for class A is formed in the center of one of the two outer clusters, which means it can only correctly classify that cluster correctly. The other cluster will be incorrectly classified as class B, which follows from the error rate which stabilises at around 0.38, meaning that on average 38 out of 100 data points are incorrectly classified, which is quite high.
+As is expected with only one prototype per class, figure \ref{fig1.12a} shows that the prototype for class B is formed quite well, allowing it to correctly classify at least the data points that belong to class B (an error stabilising at around 0.03). However, since class A is distributed in two groups, with B in between them, the prototype for class A is formed at of one of the two outer clusters, which means it can only correctly classify a part of that cluster correctly. The other cluster will be incorrectly classified as belonging to class B, which follows from its error rate which stabilises at around 0.77, meaning that on average 77 out of 100 data points are incorrectly classified, which is quite high. Ultimately this results in a total error rate that stabilises at around 0.4.
 
 \subsubsection{1 Prototype for class A and 2 prototype for class B}
 
@@ -61,7 +61,7 @@ As is expected with only one prototype per class, the prototype for class B is f
  \caption{Classification for 1 prototype for class A and 2 prototypes for class B. Plot two gives the corresponding error rates (Class 1 is A and class 2 is B).}
  \label{fig1.12b}
 \end{figure}
-In this case we see the same thing happening with the prototype for class A: it ends up in one of the two separated A-clusters. Its error is therefore also similar to that in the previous case. On the other hand we see that the two prototypes for class B, even though the data points belonging to class B are clustered in one big cluster, we see that a second prototype slightly improves the result, giving an error that stabilises near 0. This might be the case because it `catches' some of the last data points that were mixed in with the left-side class A cluster, meaning that it also causes some of the class-B data points in that cluster to be misclassified. This explains the fact that the error of class A has become slightly higher, resulting in a total error that is approximately the same as in the previous case.
+In this case figure \ref{fig1.12b} shows the same thing happening with the prototype for class A: it ends up in one of the two separated A-clusters. Its error is therefore also similar to that in the previous case. On the other hand we see that the two prototypes for class B, even though the data points belonging to class B are clustered in one big cluster, we see that a second prototype slightly improves the result, giving an error that stabilises near 0. This might be the case because it `catches' some of the last data points that were mixed in with the left-side class A cluster, meaning that it also causes some of the class-B data points in that cluster to be misclassified. This explains the fact that the error of class A has become slightly higher, resulting in a total error that is approximately the same as in the previous case.
 
 \subsubsection{2 Prototype for class A and 1 prototype for class B}
 
@@ -71,7 +71,7 @@ In this case we see the same thing happening with the prototype for class A: it 
  \caption{Classification for 2 prototypes for class A and 1 prototype for class B. Plot two gives the corresponding error rates (Class 1 is A and class 2 is B).}
  \label{fig1.12c}
 \end{figure}
-This case we see a much lower error rate than in the previous two cases. This is due to the fact that there are now two prototypes for class A, which can classify the seperated data points much better, since they are grouped into two clusters (one prototype for the left cluster, one for the right). Ultimately this results in a total error that stabilises around 0.22, which is significantly lower than in the previous two cases.
+In this case figure \ref{fig1.12c} shows a much lower error rate than in the previous two cases. This is due to the fact that there are now two prototypes for class A, which can classify the seperated data points much better, since they are grouped into two clusters (one prototype for the left cluster, one for the right). Ultimately this results in a total error that stabilises around 0.22, which is significantly lower than in the previous two cases. However, there are also cases in which this amount of prototypes does not result in this error rate. This is the case when the initialization is such that both prototypes for class A begin somewhere near the same cluster of class A, meaning that they will never get to the other cluster, because they get `pushed away' by the data points belonging to class B. In such a case the result yields about the same error rate as the case discussed in the previous paragraph.
 
 \subsubsection{2 Prototype for class A and 2 prototype for class B}
 
@@ -81,10 +81,23 @@ This case we see a much lower error rate than in the previous two cases. This is
  \caption{Classification for 2 prototypes for class A and 2 prototypes for class B. Plot two gives the corresponding error rates (Class 1 is A and class 2 is B).}
  \label{fig1.12d}
 \end{figure}
+Finally in the case of two prototypes for each class, figure \ref{fig1.12d} shows slightly worse results than for the previous case, with a total error stabilising at approximately 0.23. This has probably to do with the two prototypes for class B now being divided over the one cluster of data points, which causes them to be slightly nearer to the data points that belong to class A. This causes some of those data points to be misclassified, resulting in a slightly higher error.
+
+\bigskip
+\noindent Overall we can state that the case for two prototypes for class A and one for class B yields the best results for this particular data set. This is of course also the intuitve explanation, since any human can immediately see that the clusters are distributed in such a way that this distribution of prototypes is needed.
+
+\subsubsection{Learning rate}
+The code in the appendix gives our implementation for this assignment. The computed mean of the 10 values of the classification error is 0.0365. This is quite a low error rate compared to the error rates that were yielded in assignment 1. 
+
+
+\subsection{Cross validation}
+
 
 \section*{Appendix}
 \lstinputlisting{../Code/Ass1_1.m}
 \lstinputlisting{../Code/Ass1_2.m}
+\lstinputlisting{../Code/Ass2.m}
+\lstinputlisting{../Code/Ass3.m}
 
 
 \maketitle

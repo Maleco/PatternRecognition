@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  8 OCT 2015 12:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  8 OCT 2015 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -578,45 +578,43 @@ LaTeX Info: Redefining \nameref on input line 29.
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
- <Fig1_1.png, id=33, 895.09406pt x 481.8pt>
+ <Fig1_1.png, id=45, 895.09406pt x 481.8pt>
 File: Fig1_1.png Graphic file (type png)
 
 <use Fig1_1.png>
 Package pdftex.def Info: Fig1_1.png used on input line 36.
 (pdftex.def)             Requested size: 469.75502pt x 252.86057pt.
- <Fig12_a1.png, id=34, 1151.80313pt x 733.99219pt>
+ <Fig12_a1.png, id=46, 1445.4pt x 736.25063pt>
 File: Fig12_a1.png Graphic file (type png)
 
 <use Fig12_a1.png>
 Package pdftex.def Info: Fig12_a1.png used on input line 50.
-(pdftex.def)             Requested size: 469.75502pt x 299.34837pt.
+(pdftex.def)             Requested size: 469.75502pt x 239.27861pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Fig1_1.png (PNG copy)>] 
-<Fig12_b.png, id=45, 1172.88188pt x 730.98094pt>
+<Fig12_b.png, id=57, 1445.4pt x 736.25063pt>
 File: Fig12_b.png Graphic file (type png)
 
 <use Fig12_b.png>
 Package pdftex.def Info: Fig12_b.png used on input line 60.
-(pdftex.def)             Requested size: 469.75502pt x 292.76642pt.
+(pdftex.def)             Requested size: 469.75502pt x 239.27861pt.
  [2 <./Fig12_a1.png (PNG copy)>]
-<Fig12_c.png, id=53, 1088.56688pt x 730.98094pt>
+<Fig12_c.png, id=65, 1445.4pt x 736.25063pt>
 File: Fig12_c.png Graphic file (type png)
  <use Fig12_c.png>
 Package pdftex.def Info: Fig12_c.png used on input line 70.
-(pdftex.def)             Requested size: 469.75502pt x 315.44221pt.
- [3 <./Fig12_b.png (PNG copy)>] <Fig12_d.png, id=60, 1113.40968pt x 733.23938pt
->
+(pdftex.def)             Requested size: 469.75502pt x 239.27861pt.
+ [3 <./Fig12_b.png (PNG copy)>] <Fig12_d.png, id=72, 1445.4pt x 736.25063pt>
 File: Fig12_d.png Graphic file (type png)
-
-<use Fig12_d.png>
+ <use Fig12_d.png>
 Package pdftex.def Info: Fig12_d.png used on input line 80.
-(pdftex.def)             Requested size: 469.75502pt x 309.35698pt.
- [4 <./Fig12_c.png (PNG copy)>] (../Code/Ass1_1.m) [5 <./Fig12_d.png (PNG copy)
->] (../Code/Ass1_2.m
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 12.
+(pdftex.def)             Requested size: 469.75502pt x 239.27861pt.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+[4 <./Fig12_c.png (PNG copy)>] (../Code/Ass1_1.m [5 <./Fig12_d.png (PNG copy)>]
+) (../Code/Ass1_2.m
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 12.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
@@ -628,26 +626,26 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 29.
- [6]) [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
-
-(./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
+ [6]) (../Code/Ass2.m
+[7] [8]) (../Code/Ass3.m [9] [10]) [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
+ (./report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 106.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: F253D25B89D7D50AE5F09364E8D21B00;585.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
+(rerunfilecheck)             Checksum: 3BDE9BFD0F9C79DFC918C8A6CD82C3E2;810.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
  ) 
 Here is how much of TeX's memory you used:
- 9377 strings out of 493917
- 134714 string characters out of 6157787
- 455047 words of memory out of 5000000
- 12418 multiletter control sequences out of 15000+600000
+ 9616 strings out of 493917
+ 138194 string characters out of 6157787
+ 475047 words of memory out of 5000000
+ 12433 multiletter control sequences out of 15000+600000
  10813 words of font info for 39 fonts, out of 8000000 for 9000
  788 hyphenation exceptions out of 8191
- 36i,6n,41p,878b,1795s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,6n,41p,955b,2331s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -659,10 +657,10 @@ ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 9.pfb>
-Output written on report.pdf (8 pages, 395974 bytes).
+Output written on report.pdf (12 pages, 433658 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 223 compressed objects within 3 object streams
- 116 named destinations out of 1000 (max. 500000)
- 82 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 538 PDF objects out of 1000 (max. 8388607)
+ 502 compressed objects within 6 object streams
+ 334 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
