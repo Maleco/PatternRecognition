@@ -82,6 +82,6 @@ plot(E_1/200)
 hold on;
 plot(E_2/200);
 plot(E/200);
-legend('Error Class 1', 'Error Class 2', 'Total Error');
+legend('Training error Class 1', 'Training error Class 2', 'Total training Error');
 xlabel('Epochs')
 ylabel('Error rate')

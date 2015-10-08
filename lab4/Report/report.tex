@@ -45,6 +45,22 @@ The code in the appendix shows our implementation of the LVQ1 algorithm. We acqu
 
 \subsubsection{1 Prototype for class A and 1 prototype for class B}
 
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{Fig12_a1.png}
+ \caption{Scatterplot for the two classes.}
+ \label{fig1.12a1}
+\end{figure}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{Fig12_a2.png}
+ \caption{Training error rate to number of epochs.}
+ \label{fig1.12a2}
+\end{figure}
+
+As is expected with only one prototype per class, the prototype for class A is formed quite well, allowing it to correctly classify at least the data points that belong to class A. However, since class B is distributed in two groups, with A in between them, the prototype for class B is formed in the center of one of the two clusters, which means it can only correctly classify that cluster correctly. The other cluster will be incorrectly classified as class A.
+
+\subsubsection{}
 
 \section*{Appendix}
 \lstinputlisting{../Code/Ass1_1.m}
