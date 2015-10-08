@@ -85,5 +85,5 @@ for fold = 1:K
 end
 
 % The mean error rate over the 10 folds
-mean(E_K)/200
+mean(E_K/size(test_data,1))
     

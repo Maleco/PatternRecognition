@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  8 OCT 2015 13:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.16)  8 OCT 2015 14:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,20 +512,20 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 \c@lstlisting=\count122
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -560,7 +560,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -570,97 +570,135 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count129
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 
 (./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
- <Fig1_1.png, id=45, 895.09406pt x 481.8pt>
+
+
+Package hyperref Warning: No autoref name for `lstnumber' on input line 34.
+
+<Fig1_1.png, id=62, 722.7pt x 425.33907pt>
 File: Fig1_1.png Graphic file (type png)
+ <use Fig1_1.png>
+Package pdftex.def Info: Fig1_1.png used on input line 38.
+(pdftex.def)             Requested size: 469.75502pt x 276.4736pt.
 
-<use Fig1_1.png>
-Package pdftex.def Info: Fig1_1.png used on input line 36.
-(pdftex.def)             Requested size: 469.75502pt x 252.86057pt.
- <Fig12_a1.png, id=46, 1445.4pt x 736.25063pt>
+
+Package hyperref Warning: No autoref name for `lstnumber' on input line 46.
+
+<Fig12_a1.png, id=64, 1160.83687pt x 635.37375pt>
 File: Fig12_a1.png Graphic file (type png)
-
-<use Fig12_a1.png>
-Package pdftex.def Info: Fig12_a1.png used on input line 50.
-(pdftex.def)             Requested size: 469.75502pt x 239.27861pt.
+ <use Fig12_a1.png>
+Package pdftex.def Info: Fig12_a1.png used on input line 52.
+(pdftex.def)             Requested size: 469.75502pt x 257.11166pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Fig1_1.png (PNG copy)>] 
-<Fig12_b.png, id=57, 1445.4pt x 736.25063pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Fig1_1.png>]
+<Fig12_b.png, id=79, 1160.83687pt x 635.37375pt>
 File: Fig12_b.png Graphic file (type png)
-
-<use Fig12_b.png>
-Package pdftex.def Info: Fig12_b.png used on input line 60.
-(pdftex.def)             Requested size: 469.75502pt x 239.27861pt.
- [2 <./Fig12_a1.png (PNG copy)>]
-<Fig12_c.png, id=65, 1445.4pt x 736.25063pt>
+ <use Fig12_b.png>
+Package pdftex.def Info: Fig12_b.png used on input line 62.
+(pdftex.def)             Requested size: 469.75502pt x 257.11166pt.
+ [2 <./Fig12_a1.png>] <Fig12_c.png, id=87, 1160.83687pt x 635.37375pt>
 File: Fig12_c.png Graphic file (type png)
  <use Fig12_c.png>
-Package pdftex.def Info: Fig12_c.png used on input line 70.
-(pdftex.def)             Requested size: 469.75502pt x 239.27861pt.
- [3 <./Fig12_b.png (PNG copy)>] <Fig12_d.png, id=72, 1445.4pt x 736.25063pt>
-File: Fig12_d.png Graphic file (type png)
- <use Fig12_d.png>
-Package pdftex.def Info: Fig12_d.png used on input line 80.
-(pdftex.def)             Requested size: 469.75502pt x 239.27861pt.
+Package pdftex.def Info: Fig12_c.png used on input line 72.
+(pdftex.def)             Requested size: 469.75502pt x 257.11166pt.
 
-[4 <./Fig12_c.png (PNG copy)>] (../Code/Ass1_1.m [5 <./Fig12_d.png (PNG copy)>]
-) (../Code/Ass1_2.m
+[3 <./Fig12_b.png>] <Fig12_d.png, id=94, 1160.83687pt x 635.37375pt>
+File: Fig12_d.png Graphic file (type png)
+
+<use Fig12_d.png>
+Package pdftex.def Info: Fig12_d.png used on input line 82.
+(pdftex.def)             Requested size: 469.75502pt x 257.11166pt.
+ [4 <./Fig12_c.png>]
+<Fig12_c_0001.png, id=101, 1166.85938pt x 635.37375pt>
+File: Fig12_c_0001.png Graphic file (type png)
+ <use Fig12_c_0001.png>
+Package pdftex.def Info: Fig12_c_0001.png used on input line 96.
+(pdftex.def)             Requested size: 469.75502pt x 255.78345pt.
+
+[5 <./Fig12_d.png>] <Fig12_c_03.png, id=108, 1166.85938pt x 635.37375pt>
+File: Fig12_c_03.png Graphic file (type png)
+
+<use Fig12_c_03.png>
+Package pdftex.def Info: Fig12_c_03.png used on input line 107.
+(pdftex.def)             Requested size: 469.75502pt x 255.78345pt.
+ [6 <./Fig12_c_0001.png>]
+
+Package hyperref Warning: No autoref name for `lstnumber' on input line 124.
+
+
+Package hyperref Warning: No autoref name for `lstnumber' on input line 129.
+
+<Fig3a.png, id=117, 1160.83687pt x 635.37375pt>
+File: Fig3a.png Graphic file (type png)
+ <use Fig3a.png>
+Package pdftex.def Info: Fig3a.png used on input line 132.
+(pdftex.def)             Requested size: 469.75502pt x 257.11166pt.
+ [7 <./Fig12_c_03.png>]
+
+Package hyperref Warning: No autoref name for `lstnumber' on input line 151.
+
+[8 <./Fig3a.png>] (../Code/Ass1_1.m) (../Code/Ass1_2.m
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 12.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 29.
- [6]) (../Code/Ass2.m
-[7] [8]) (../Code/Ass3.m [9] [10]) [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
- (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 106.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
+ [9]) (../Code/Ass2.m
+[10] [11]) (../Code/Ass3.m [12] [13]) (../Code/Ass3.m [14] [15])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
+ [16]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
+
+(./report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 3BDE9BFD0F9C79DFC918C8A6CD82C3E2;810.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
+(rerunfilecheck)             Checksum: A7A59408B2AED42ED3C7DDA2F5AB74A9;1006.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
- 9616 strings out of 493917
- 138194 string characters out of 6157787
- 475047 words of memory out of 5000000
- 12433 multiletter control sequences out of 15000+600000
- 10813 words of font info for 39 fonts, out of 8000000 for 9000
+ 9769 strings out of 493917
+ 140472 string characters out of 6157787
+ 498097 words of memory out of 5000000
+ 12452 multiletter control sequences out of 15000+600000
+ 9684 words of font info for 35 fonts, out of 8000000 for 9000
  788 hyphenation exceptions out of 8191
- 36i,6n,41p,955b,2331s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-9.pfb>
-Output written on report.pdf (12 pages, 433658 bytes).
+ 36i,6n,41p,955b,1795s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{lstnumber.-3.89} has been referenced but does not
+ exist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on report.pdf (16 pages, 500642 bytes).
 PDF statistics:
- 538 PDF objects out of 1000 (max. 8388607)
- 502 compressed objects within 6 object streams
- 334 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 738 PDF objects out of 1000 (max. 8388607)
+ 693 compressed objects within 7 object streams
+ 467 named destinations out of 1000 (max. 500000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 

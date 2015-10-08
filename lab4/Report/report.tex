@@ -20,16 +20,18 @@ frame=single,
 numbers=left, 
 breaklines=true, 
 language=Matlab,
-basicstyle=\small, 
-title=\lstname
+basicstyle=\footnotesize, 
+title=\lstname,
+showstringspaces=false
 }
 
 \renewcommand{\thesection}{Assignment \arabic{section}}
 \renewcommand{\thesubsection}{\arabic{subsection}}
 \begin{document}
-\section{Assignment 1}
-\subsection{Supervised learning: LVQ1}
-Using the code given in the appendix we created the scatterplot in figure \ref{fig1.1}.
+\maketitle
+
+\section{Supervised learning: LVQ1}
+Using the code given in the appendix(\autoref{code1_1}) we created the scatterplot in figure \ref{fig1.1}.
 
 \begin{figure}[H]
  \centering
@@ -41,7 +43,7 @@ Using the code given in the appendix we created the scatterplot in figure \ref{f
 The plot shows that there are at least three prototypes needed to approach a fairly well classification of these data. Two for set A, which should probably be located around $(3,4.5)$ and $(7.5, 5.5)$, and one for set B somewhere around $(5,5)$. 
 
 \subsection{}
-The code in the appendix shows our implementation of the LVQ1 algorithm. We acquired the following results for the different settings.
+The code in the appendix(\autoref{code1_2}) shows our implementation of the LVQ1 algorithm. We acquired the following results for the different settings.
 
 \subsubsection{1 Prototype for class A and 1 prototype for class B}
 
@@ -87,19 +89,80 @@ Finally in the case of two prototypes for each class, figure \ref{fig1.12d} show
 \noindent Overall we can state that the case for two prototypes for class A and one for class B yields the best results for this particular data set. This is of course also the intuitve explanation, since any human can immediately see that the clusters are distributed in such a way that this distribution of prototypes is needed.
 
 \subsubsection{Learning rate}
+To investigate the influence of the learning rate, we've run a simulation with a higher, and a lower learning rate, 
+both with the same parameters as Assignment 1c.
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{Fig12_c_0001.png}
+ \caption{Classification as Assignment 1c, with $\eta=0.0001$}
+ \label{fig1.12c_0001}
+\end{figure}
+Figure \ref{fig1.12c_0001} shows a simulation with $\eta=0.0001$. The prototype positions and the error rate 
+both suggest that the algorithm was unable to classify with the same performance as simulations with a higher error rate.
+The error value do have stabilized, so it seems that lowering the learning rate ``decreases'' the pull that the data points have 
+on the prototypes, resulting in non-optimal results with most likely local-optimal positions for the prototypes.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{Fig12_c_03.png}
+ \caption{Classification as Assignment 1c, with $\eta=0.03$}
+ \label{fig1.12c_03}
+\end{figure}
+
+Figure \ref{fig1.12c_03} shows a simulation with $\eta=0.03$, only slightly higher then the default value.
+This higher learning rate causing to points to ``pull'' harder on the prototypes. 
+Even for this slight increase in learning rate, we had to decrease our stopping-threshold by a ten-fold, since the prototype positions did not stabilize.
+
+In conclusion, we can say that the learning rate in LVQ1 corresponds to the strength of the ``pull'' that data points have on the prototype positions.
+If this pull is too strong, the prototype positions do not stabilize and will hover around their optimal positions.
+If this pull is too weak, the data points are unable to attract the prototypes to their optimal positions and 
+the prototypes might end up in local, but not the optimal, optima positions.
 
 
-\subsection{Cross validation}
-The code in the appendix gives our implementation for this assignment. The computed mean of the 10 values of the classification error is 0.0365. This is quite a low error rate compared to the error rates that were yielded in assignment 1.2(c), which ended up at a total error of around 0.22. This is explained by the fact that for every training phase the algorithm only tests a subset of 20 to the complete set. The probability of errors occuring in that subset is much lower than in the complete training set. Therefore the total average of the error is smaller as well.
 
-\subsection{Relevance LVQ}
+\section{Cross validation}
+The code in the appendix(\autoref{code2}) gives our implementation for this assignment. The computed mean of the 10 values of the classification error is 0.300. This is slightly higher than the error rates that were yielded in assignment 1.2(c), which ended up at a total error of around 0.22. 
+It is worth mentioning that certain subsets yielded a high error rate in multiple experiments.
+This might suggest that the points in these subsets are important for correct training of the prototypes.
 
+\section{Relevance LVQ}
+The code in the appendix(\autoref{code3a}) has produced the following image:
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{Fig3a.png}
+ \caption{}
+ \label{fig3a}
+\end{figure}
 
+Looking at the final prototypes in \autoref{fig3a}, we can see that their final positions are similar to ones we saw in earlier assignments.
+The final error rate also lies around the same value as earlier.
+This suggests that the prototypes are able to classify with the same performance as in earlier assignments.
+However, an interesting difference is the learning speed of the algorithm. 
+By using a Relevance LVQ, the error rates have stabilized after only $\approx15$ epochs, which is less then earlier results.
+The learning curves for the relevances show a mirrorlike behavior due to the mandatory normalization step.
+Interesting to see is that after some initial movement, their values want to fan out (as was observed in experiments where the normalization step was skipped).
+This fanning out in combination with the normalization step results in two bottom/ceiling values for the learning values (i.e.\ 1.0 and 0.0),
+effectively further adjusting the prototypes only on a single dimension.
+This can be explained by the fact that the ``separation'' lines for the two data set are two vertical lines, 
+so once the prototypes have acquired the correct vertical value (i.e.\ the y-value, learned with lambda 2),
+only corrections in the x-values (i.e.\ lambda 1) are neccesary.
+
+The improvement of this algorithm can also be observed in the K-fold estimation test error, 
+which is $0.0250$, as calculated with the code in the appendix(\autoref{code3b}.
+This value is lower than with the regular LVQ1 algorithm, suggesting that Relevance LVQ has learned to classify even better than LVQ1.
+\newpage
 \section*{Appendix}
-\lstinputlisting{../Code/Ass1_1.m}
-\lstinputlisting{../Code/Ass1_2.m}
-\lstinputlisting{../Code/Ass2.m}
-\lstinputlisting{../Code/Ass3.m}
+\subsection{Code 1.1}
+\lstinputlisting{../Code/Ass1_1.m}{\label{code1_1}}
+\subsection{Code 1.2}
+\lstinputlisting{../Code/Ass1_2.m}{\label{code1_2}}
+\subsection{Code 2}
+\lstinputlisting{../Code/Ass2.m}{\label{code2}}
+\subsection{Code 3a}
+\lstinputlisting{../Code/Ass3.m}{\label{code3a}}
+\subsection{Code 3b}
+\lstinputlisting{../Code/Ass3.m}{\label{code3b}}
+
 
 
 \maketitle

@@ -1,10 +1,14 @@
-\BOOKMARK [1][-]{section.1}{Assignment 1}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Supervised learning: LVQ1}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{}{section.1}% 3
-\BOOKMARK [3][-]{subsubsection.1.2.1}{1 Prototype for class A and 1 prototype for class B}{subsection.1.2}% 4
-\BOOKMARK [3][-]{subsubsection.1.2.2}{1 Prototype for class A and 2 prototype for class B}{subsection.1.2}% 5
-\BOOKMARK [3][-]{subsubsection.1.2.3}{2 Prototype for class A and 1 prototype for class B}{subsection.1.2}% 6
-\BOOKMARK [3][-]{subsubsection.1.2.4}{2 Prototype for class A and 2 prototype for class B}{subsection.1.2}% 7
-\BOOKMARK [3][-]{subsubsection.1.2.5}{Learning rate}{subsection.1.2}% 8
-\BOOKMARK [2][-]{subsection.1.3}{Cross validation}{section.1}% 9
-\BOOKMARK [2][-]{subsection.1.4}{Relevance LVQ}{section.1}% 10
+\BOOKMARK [1][-]{section.1}{Supervised learning: LVQ1}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.1.1}{1 Prototype for class A and 1 prototype for class B}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{1 Prototype for class A and 2 prototype for class B}{subsection.1.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.1.3}{2 Prototype for class A and 1 prototype for class B}{subsection.1.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.1.4}{2 Prototype for class A and 2 prototype for class B}{subsection.1.1}% 6
+\BOOKMARK [3][-]{subsubsection.1.1.5}{Learning rate}{subsection.1.1}% 7
+\BOOKMARK [1][-]{section.2}{Cross validation}{}% 8
+\BOOKMARK [1][-]{section.3}{Relevance LVQ}{}% 9
+\BOOKMARK [2][-]{subsection.3.1}{Code 1.1}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{Code 1.2}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.3}{Code 2}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.4}{Code 3a}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.5}{Code 3b}{section.3}% 14

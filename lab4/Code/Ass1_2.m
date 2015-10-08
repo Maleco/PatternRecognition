@@ -14,11 +14,11 @@ data = [data data_labels];
 
 % The prototypes
 w_A = 2;
-w_B = 2;
+w_B = 1;
 w = zeros(w_A + w_B, ndims(data)+1);
 
-eta = 0.01;
-nrEpochs = 500;
+eta = 0.03;
+nrEpochs = 500000;
 
 E_1 = zeros(1,nrEpochs);
 E_2 = zeros(1,nrEpochs);
@@ -37,6 +37,7 @@ plot(w(1:w_A,1), w(1:w_A,2), 'b*', 'markersize', 12);
 plot(w(w_A+1:size(w,1),1), w(w_A+1:size(w,1),2), 'r+', 'markersize', 12);
 
 for epoch = 1:nrEpochs
+    epoch
     % Training
     for point = 1 : size(data,1)
         % Find the row with the nearest prototype
