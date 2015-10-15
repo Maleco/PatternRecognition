@@ -24,6 +24,7 @@ figure(3)
 plot(D);
 xlabel('k');
 ylabel('D');
+print(sprintf('../Report/Fig3'), '-depsc');
 
 % Plot J and R
 figure (4)
@@ -32,3 +33,6 @@ plot(J);
 plot(R, '--');
 xlabel('k');
 ylabel('Mean error');
+legend('J', 'R');
+
+print(sprintf('../Report/Fig4'), '-depsc');
