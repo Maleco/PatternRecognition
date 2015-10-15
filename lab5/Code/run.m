@@ -64,5 +64,13 @@ mean(error_with)
 std(error_with)
 
 % using an unpaired one-tailed two-sample t-test
-ttest2(error_without, error_with)
+% With should give a smaller average, Without larger ->
+% Tail right = x larger than y
+% The variances are unequal
+[h, p] = ttest2(error_without, error_with, 'Tail', 'right','Vartype','unequal');
+p
+
+% Compare batch Neural Gas with our kmeans
+batchNG(checkerboard,100,500)
+kmeans (checkerboard,100,2,1)
 
