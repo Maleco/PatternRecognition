@@ -37,6 +37,7 @@ else
 end
 
 % Init the first figure
+
 % figure(1)
 % hold on;
 % xlabel('x');
@@ -48,11 +49,11 @@ end
 
 % Perform k-means
 loop = 1;
-loopCounter = 0;
 while(loop == 1)
     loop = 0;
     % Uncomment to show loop counter :D
 %     loopCounter = loopCounter + 1
+
     
     for point = 1 : length(dat)
         dat(point,3) = find(pdist2(dat(point,1:2), prototypes) == min(pdist2(dat(point,1:2), prototypes)),1);
@@ -63,6 +64,7 @@ while(loop == 1)
         if newMean ~= prototypes(prototype,:)
             loop = 1;
         end
+
 %         plot_arrow( prototypes(prototype,1),  prototypes(prototype,2), newMean(:,1), newMean(:, 2));
         prototypes(prototype,:) = newMean;
 %         plot(newMean(1),newMean(2),'Marker', shapes(prototype), 'MarkerSize', 10, 'MarkerFaceColor', 'black')
@@ -78,14 +80,14 @@ for i = 1 : size(prototypes, 1)
 end
 
 % More figure stuff
-% legend('1','2','3')
-if writeOutput == 1
-    print(sprintf('../Report/Fig1_k%d', k), '-depsc');
-end
-%sprintf('Fig1_k%d', k)
+% legend(num2str(1:k))
+% if writeOutput == 1
+%     print(sprintf('../Report/Fig1_k%d', k), '-depsc');
+% end
 % figure(2)
 % hold on;
 % gscatter(dat(:,1),dat(:,2),dat(:,3),[],shapes, 5)
+% 
 
 % 
 % for i = 1 : size(prototypes, 1)
@@ -97,3 +99,4 @@ end
 if writeOutput == 1
     print(sprintf('../Report/Fig2_k%d', k), '-depsc');
 end
+
