@@ -13,7 +13,7 @@ for i = 1:k
     prototypes(i,:) = newPoint;
 end
 
-% Init the first figure
+%Init the first figure
 % figure(1)
 % hold on;
 % xlabel('x');
@@ -52,23 +52,22 @@ for i = 1 : size(prototypes, 1)
     qError = qError + sum(pdist2(prototypes(i,:), dat(dat(:,3) == i,1:2)));
 end
 
-% % More figure stuff
-% legend('1','2','3')
+% More figure stuff
+% legend(num2str(1:k))
 % if writeOutput == 1
 %     print(sprintf('../Report/Fig1_k%d', k), '-depsc');
 % end
-% %sprintf('Fig1_k%d', k)
 % figure(2)
 % hold on;
 % gscatter(dat(:,1),dat(:,2),dat(:,3),[],shapes, 5)
-
-
+% 
+% 
 % for i = 1 : size(prototypes, 1)
 %     plot(prototypes(i,1),prototypes(i,2),'Marker', shapes(i), 'MarkerSize', 13, 'MarkerFaceColor', 'black')
 % end
-
+% 
 % xlabel('x');
 % ylabel('y');
-if writeOutput == 1
-    print(sprintf('../Report/Fig2_k%d', k), '-depsc');
-end
+% if writeOutput == 1
+%     print(sprintf('../Report/Fig2_k%d', k), '-depsc');
+% end
