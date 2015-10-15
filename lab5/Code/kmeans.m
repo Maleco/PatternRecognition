@@ -14,14 +14,14 @@ for i = 1:k
 end
 
 %Init the first figure
-% figure(1)
-% hold on;
-% xlabel('x');
-% ylabel('y');
-% 
-% for i = 1 : size(prototypes, 1)
-%     plot(prototypes(i,1),prototypes(i,2),'Marker', shapes(i), 'MarkerSize', 10, 'MarkerFaceColor', 'black')
-% end
+figure(1)
+hold on;
+xlabel('x');
+ylabel('y');
+
+for i = 1 : size(prototypes, 1)
+    plot(prototypes(i,1),prototypes(i,2),'Marker', shapes(i), 'MarkerSize', 10, 'MarkerFaceColor', 'black')
+end
 
 
 % Perform k-means
@@ -38,9 +38,9 @@ while(loop == 1)
         if newMean ~= prototypes(prototype,:)
             loop = 1;
         end
-        %plot_arrow( prototypes(prototype,1),  prototypes(prototype,2), newMean(:,1), newMean(:, 2));
+        plot_arrow( prototypes(prototype,1),  prototypes(prototype,2), newMean(:,1), newMean(:, 2));
         prototypes(prototype,:) = newMean;
-        %plot(newMean(1),newMean(2),'Marker', shapes(prototype), 'MarkerSize', 10, 'MarkerFaceColor', 'black')
+        plot(newMean(1),newMean(2),'Marker', shapes(prototype), 'MarkerSize', 10, 'MarkerFaceColor', 'black')
     end
     
     
@@ -53,21 +53,21 @@ for i = 1 : size(prototypes, 1)
 end
 
 % More figure stuff
-% legend(num2str(1:k))
-% if writeOutput == 1
-%     print(sprintf('../Report/Fig1_k%d', k), '-depsc');
-% end
-% figure(2)
-% hold on;
-% gscatter(dat(:,1),dat(:,2),dat(:,3),[],shapes, 5)
-% 
-% 
-% for i = 1 : size(prototypes, 1)
-%     plot(prototypes(i,1),prototypes(i,2),'Marker', shapes(i), 'MarkerSize', 13, 'MarkerFaceColor', 'black')
-% end
-% 
-% xlabel('x');
-% ylabel('y');
-% if writeOutput == 1
-%     print(sprintf('../Report/Fig2_k%d', k), '-depsc');
-% end
+legend(strtrim(cellstr(num2str((1:k)'))'));
+if writeOutput == 1
+    print(sprintf('../Report/Fig1_k%d', k), '-depsc');
+end
+figure(2)
+hold on;
+gscatter(dat(:,1),dat(:,2),dat(:,3),[],shapes, 5)
+
+
+for i = 1 : size(prototypes, 1)
+    plot(prototypes(i,1),prototypes(i,2),'Marker', shapes(i), 'MarkerSize', 13, 'MarkerFaceColor', 'black')
+end
+
+xlabel('x');
+ylabel('y');
+if writeOutput == 1
+    print(sprintf('../Report/Fig2_k%d', k), '-depsc');
+end

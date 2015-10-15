@@ -5,8 +5,6 @@ kmax = 20;
 J = zeros(1, kmax);
 R = zeros(1,kmax);
 
-% kmeans(kmeans1,k, 0);
-
 % Run for 1 to kmax clusters
 for k = 1 : kmax
     k
