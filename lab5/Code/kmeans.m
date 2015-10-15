@@ -1,4 +1,4 @@
-function [qError] = kmeans(dat, k)
+function [qError] = kmeans(dat, k, writeOutput)
 % K-means clustering algorithm
 close all;
 shapes = 'op^shx+*dv<>.';
@@ -55,6 +55,10 @@ for i = 1 : length(prototypes)
 end
 % More figure stuff
 legend('1','2','3')
+if writeOutput == 1
+    print(sprintf('../Report/Fig1_k%d', k), '-depsc');
+end
+%sprintf('Fig1_k%d', k)
 figure(2)
 hold on;
 gscatter(dat(:,1),dat(:,2),dat(:,3),[],shapes, 5)
@@ -66,3 +70,6 @@ end
 
 xlabel('x');
 ylabel('y');
+if writeOutput == 1
+    print(sprintf('../Report/Fig2_k%d', k), '-depsc');
+end
