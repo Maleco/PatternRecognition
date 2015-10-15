@@ -1,11 +1,10 @@
 load('kmeans1.mat', 'kmeans1');
+load('checkerboard.mat', 'checkerboard')
 
 error= zeros(1,10);
 kmax = 20;
 J = zeros(1, kmax);
 R = zeros(1,kmax);
-
-% kmeans(kmeans1,k, 0);
 
 % Run for 1 to kmax clusters
 for k = 1 : kmax
@@ -64,6 +63,7 @@ mean(error_with)
 std(error_with)
 
 % using an unpaired one-tailed two-sample t-test
+
 % With should give a smaller average, Without larger ->
 % Tail right = x larger than y
 % The variances are unequal
@@ -72,5 +72,5 @@ p
 
 % Compare batch Neural Gas with our kmeans
 batchNG(checkerboard,100,500)
-kmeans (checkerboard,100,2,1)
+kmeans(checkerboard,100,2,1)
 
