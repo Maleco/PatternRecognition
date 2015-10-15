@@ -53,6 +53,7 @@ qError = 0;
 for i = 1 : length(prototypes)
     qError = qError + sum(pdist2(prototypes(i,:), dat(dat(:,3) == i,1:2)));
 end
+
 % More figure stuff
 legend('1','2','3')
 figure(2)
