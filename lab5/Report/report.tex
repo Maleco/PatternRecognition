@@ -34,7 +34,7 @@ showstringspaces=false
 
 \section{k-means clustering, quantization error, gap statistic}
 \subsection{}
-Using the code given in the Appendix(kmeans.m and runKMeans.m), 
+Using the code given in the Appendix(\ref{kmeans} \ref{run}), 
 we created the plots shown in figures \ref{fig1.1}, \ref{fig1.2} and \ref{fig1.3}.\\
 
 \begin{figure}[H]
@@ -49,7 +49,7 @@ we created the plots shown in figures \ref{fig1.1}, \ref{fig1.2} and \ref{fig1.3
   \quad
   \begin{subfigure}[b]{.45\textwidth}
     \includegraphics[width=\columnwidth]{Fig2_k2.eps}
-    \caption{The final cluster means with their assigned data points)}
+    \caption{The final cluster means with their assigned data points}
     \label{fig1b}
   \end{subfigure}
   \label{fig1.1}
@@ -66,7 +66,7 @@ we created the plots shown in figures \ref{fig1.1}, \ref{fig1.2} and \ref{fig1.3
   \quad
   \begin{subfigure}[b]{.45\textwidth}
     \includegraphics[width=\columnwidth]{Fig2_k4.eps}
-    \caption{The final cluster means with their assigned data points)}
+    \caption{The final cluster means with their assigned data points}
   \end{subfigure}
   \label{fig1.2}
 \end{figure}
@@ -82,7 +82,7 @@ we created the plots shown in figures \ref{fig1.1}, \ref{fig1.2} and \ref{fig1.3
   \quad
   \begin{subfigure}[b]{.45\textwidth}
     \includegraphics[width=\columnwidth]{Fig2_k8.eps}
-    \caption{The final cluster means with their assigned data points)}
+    \caption{The final cluster means with their assigned data points}
   \end{subfigure}
   \label{fig1.3}
 \end{figure}
@@ -90,7 +90,7 @@ we created the plots shown in figures \ref{fig1.1}, \ref{fig1.2} and \ref{fig1.3
 \noindent We (humans) can clearly see that the data form two clusters. Therefore figure \ref{fig1a}, which has a $k$ of 2, shows the quickest convergence to the final cluster centers. Usually it takes about two epochs for the cluster centers to converge, as is shown in the figure. Figure \ref{fig1b} shows that these centers form in the places which the human eye observes to be the correct centers. When we choose $k$ as 4, as shown in figure \ref{fig1.2}, we can see that, dependent on the initialization, sometimes one main cluster gets divided into three subclusters and the other remains one cluster, and sometimes the two clusters get separated into two clusters each. The number of epochs it takes to reach convergence is high compared to a run using $k=2$. This can be explained by the fact that the data are not naturally separated into four clusters but in two, so the distances between the data points within a main cluster are small. This causes the algorithm to take longer to find a convergence, since the cluster centers switch often during the clustering process. Finally figure \ref{fig1.3} shows the clustering for $k = 8$, which takes the longest amount of epochs to converge, because of the same reasoning. It separates both of the clusters into four subclusters. 
 
 \subsection{}
-Using the code given in the appendix (kmeans.m and runKMeans.m) we computed the quantization errors and D-function given in figure \ref{fig2.1}.
+Using the code given in the appendix (\ref{kmeans} \ref{run}) we computed the quantization errors and D-function given in figure \ref{fig2.1}.
 
 \begin{figure}[H]
   \centering
@@ -111,7 +111,7 @@ Using the code given in the appendix (kmeans.m and runKMeans.m) we computed the 
 
 \subsection{}
 \subsubsection{}
-See the part in kmeans.m which is commented ``Kmeans plusplus initialization''.
+See the part in \ref{kmeans} which is commented ``Kmeans plusplus initialization''.
 
 \subsubsection{}
 We computed the following means and standard deviations given in \ref{tab1}.
@@ -128,19 +128,70 @@ We computed the following means and standard deviations given in \ref{tab1}.
 \end{table}
 
 \subsubsection{}
-We calculated the following p-value using a an unpaired one-tailed two-sample t-test (see runKMeans.m at the bottom): $2.3816e^{-5}$. This p-value is significant (<0.05), which means that we have enough certainty to reject the null hypothesis that there is no difference in performance between the two algorithmes. Hence, we assume a difference between the performance of the two algorithmes ($kmeans++$ performs better).
+We calculated the following p-value using a an unpaired one-tailed two-sample t-test (see run.m at the bottom): $2.3816e^{-5}$. This p-value is significant (<0.05), which means that we have enough certainty to reject the null hypothesis that there is no difference in performance between the two algorithmes. Hence, we assume a difference between the performance of the two algorithmes ($kmeans++$ performs better).
 
 \section{Batch Neural gas vs k-means}
 \subsection{}
-Code batchNG.m in the appendix gives our implementation of the Neural gas algorithm.
+Code batchNG.m (\ref{batchNG})in the appendix gives our implementation of the Neural gas algorithm.
 
 \subsection{}
+\begin{figure}[H]
+  \centering
+  \caption{K-Means results}
+    \includegraphics[width=\columnwidth]{Fig2_KMeans.eps}
+    \caption{The final cluster means with their assigned data points and the cluster boundaries}
+  \label{fig2kmeans}
+\end{figure}
+
+\begin{figure}[H]
+  \caption{Batch Neural Gas results on epochs 20, 100, 200 and 500}
+  \centering
+  \begin{subfigure}[b]{.45\textwidth}
+    \includegraphics[width=\columnwidth]{NeuralGas_20.eps}
+    \caption{Epoch 20}
+  \end{subfigure}
+  \quad
+  \begin{subfigure}[b]{.45\textwidth}
+    \includegraphics[width=\columnwidth]{NeuralGas_100}
+    \caption{Epoch 100}
+  \end{subfigure}
+  \quad
+  \begin{subfigure}[b]{.45\textwidth}
+    \includegraphics[width=\columnwidth]{NeuralGas_200.eps}
+    \caption{Epoch 200}
+  \end{subfigure}
+  \quad
+  \begin{subfigure}[b]{.45\textwidth}
+    \includegraphics[width=\columnwidth]{NeuralGas_500.eps}
+    \caption{Epoch 500}
+  \end{subfigure}
+
+  \label{fig2bng}
+\end{figure}
 
 \subsection{}
+The first thing to notice when comparing the two algorithms is their speed.
+KMeans took only 10 epochs to establish a final result.
+We let Batch Neural gas run for 500 epochs, and it still hasn't converged properly.
+In terms of performance, Batch Neural Gas performs much better than KMeans.
+As you can see in Figure \ref{fig2kmeans}, A lot of the perfectly seperable clusters are 
+clustered under a wrong prototype. 
+The horizontal and vertical symmetry of the data-points has caused KMeans to assign two halves of two different clusters under the same prototype.
+Batch Neural Gas (as can be seen in Figure \ref{fig2bng}) slowly converges to the correct positions, 
+thereby mimicing the behavior of a gas and thus living up to its name.
 
+In conclusion we can say that in terms of speed KMeans can be considered faster than Batch Neural Gas.
+However, in terms of performance, Batch Neural Gas outperforms KMeans.
+The best choice of algorithm therefore depends on you personal preference for speed vs performance.
 
+\newpage
 \section*{Appendix}
+\appendix
+\section{kmeans.m}
 \lstinputlisting{../Code/kmeans.m}{\label{kmeans}}
-\lstinputlisting{../Code/runKMeans.m}{\label{runKMeans}}
+\section{run.m}
+\lstinputlisting{../Code/run.m}{\label{run}}
+\section{batchNG.m}
+\lstinputlisting{../Code/batchNG.m}{\label{batchNG}}
 
 \end{document}

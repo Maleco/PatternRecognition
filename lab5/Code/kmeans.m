@@ -3,10 +3,6 @@ function [qError] = kmeans(dat, k, prototypeSelector, writeOutput)
 close all;
 shapes = 'op^shx+*dv<>.';
 
-dat = checkerboard;
-k = 100;
-prototypeSelector = 0;
-writeOutput = 0;
 if prototypeSelector == 0
     % Init the prototypes to a random point
     prototypes = zeros(k,ndims(dat));
@@ -82,17 +78,14 @@ for i = 1 : size(prototypes, 1)
 end
 
 % More figure stuff
-legend(num2str(1:k))
+%legend(num2str(1:k))
 if writeOutput == 1
     print(sprintf('../Report/Fig1_KMeans'), '-depsc');
 end
 figure(2)
 hold on;
-gscatter(dat(:,1),dat(:,2),dat(:,3),[],shapes, 5)
+gscatter(dat(:,1),dat(:,2),dat(:,3),[],shapes, 5, 'off')
 voronoi(prototypes(:,1),prototypes(:,2))
-
-
-
 for i = 1 : size(prototypes, 1)
     plot(prototypes(i,1),prototypes(i,2),'Marker', shapes(max(mod(i,size(shapes,2)),1)), 'MarkerSize', 13, 'MarkerFaceColor', 'black')
 end
