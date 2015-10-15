@@ -19,7 +19,7 @@ hold on;
 xlabel('x');
 ylabel('y');
 
-for i = 1 : length(prototypes)
+for i = 1 : size(prototypes, 1)
     plot(prototypes(i,1),prototypes(i,2),'Marker', shapes(i), 'MarkerSize', 10, 'MarkerFaceColor', 'black')
 end
 
@@ -35,7 +35,7 @@ while(loop == 1)
         dat(point,3) = find(pdist2(dat(point,1:2), prototypes) == min(pdist2(dat(point,1:2), prototypes)),1);
     end
     
-    for prototype = 1 : length(prototypes)
+    for prototype = 1 : size(prototypes, 1)
         newMean = mean(dat(dat(:,3) == prototype,1:2));
         if newMean ~= prototypes(prototype,:)
             loop = 1;
@@ -50,7 +50,7 @@ end
 
 % Calculate the quantization error
 qError = 0;
-for i = 1 : length(prototypes)
+for i = 1 : size(prototypes, 1)
     qError = qError + sum(pdist2(prototypes(i,:), dat(dat(:,3) == i,1:2)));
 end
 % More figure stuff
@@ -64,7 +64,7 @@ hold on;
 gscatter(dat(:,1),dat(:,2),dat(:,3),[],shapes, 5)
 
 
-for i = 1 : length(prototypes)
+for i = 1 : size(prototypes, 1)
     plot(prototypes(i,1),prototypes(i,2),'Marker', shapes(i), 'MarkerSize', 13, 'MarkerFaceColor', 'black')
 end
 
