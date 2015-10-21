@@ -33,7 +33,7 @@ showstringspaces=false
 \begin{document}
 \maketitle
 
-\section*{Assignment 1}
+\section{}
 \subsection{}
 When we take $k=2$ the Minkowski metric is the same as the Euclidean distance between the points, which is used as error function in other clustering methods such as K-means clustering.
 
@@ -81,19 +81,36 @@ Looking at figure \ref{fig1a} we can clearly distinguish four main clusters with
   \label{fig1.1}
 \end{figure}
 
-\section*{Assignment 2}
+\section{}
 \subsection{}
 See section \ref{Minkowski} in the appendix for our implementation.
 
 \subsection{}
 
-\section{title}
+\section{}
+Using the code given in section \ref{Ass3} in the appendix, we computed the following J-values for the different clusterings:
+\begin{table}
+	\centering
+	\caption{$J_e$-values for different clusters}
+	\label{tab1}
+	\begin{tabular}{c|c}
+		Clustering & $J_e$ \\
+		\hline
+		$\{\{x1, x2, x3\}, \{x4, x5\}\}$ & 13.1667\\
+		$\{\{x2, x3, x5\}, \{x1, x4\}\}$ & 20.6667\\
+		$\{\{x4\}, \{x1, x2, x3, x5\}\}$ & 17.7500\\
+		$\{\{x4, x5\}, \{x1, x2, x3\}\}$ & 13.1667\\
+		$\{\{x3, x5\}, \{x1, x2, x4\}\}$ & 22.6667
+	\end{tabular}
+\end{table}
+
 
 \newpage
 \section*{Appendix}
 \appendix
 \section{kmeans.m}
 \lstinputlisting{../Code/Ass1.m}{\label{Minkowski}}
-
+\section{kmeans.m}
+\lstinputlisting{../Code/Ass3.m}{\label{Ass3}}
 
 \end{document}
