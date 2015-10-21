@@ -38,10 +38,12 @@ showstringspaces=false
 When we take $k=2$ the Minkowski metric is the same as the Euclidean distance between the points, which is used as error function in other clustering methods such as K-means clustering.
 
 \subsection{}
-See the code \ref{Minkowski} in the appendix for our implementation.
+See section \ref{Minkowski} in the appendix for our implementation.
 
 \subsection{}
-\begin{figure}[H]
+Looking at figure \ref{fig1a} we can clearly distinguish four main clusters within the data. The figures show that for higher values of t more connections are plotted. This is logical since a higher threshold permits higher distances between two points to be plotted, which overall results in more plotted connections. As for the optimal value of t, 0.05 is clearly too low, because we can see some connections within the clusters, but a lot of points that clearly belong to the clusters are left out because their distance to the other points is too high (see figure \ref{fig1b}). We can still see this for a t of 0.1, but on a smaller scale (see figure \ref{fig1c}). On the other hand a t of 0.25 is clearly too high, because multiple different clusters get connected through outliers, causing multiple clusters to be clustered together (see figure \ref{fig1f}). The same thing happens with a t of 0.2, where the two left clusters are connected (see figure \ref{fig1e}). Since this does not happen for a t of 0.15 and almost all of the points are assigned to a cluster (see figure \ref{fig1d}), this seems to be the optimal value of t. There is one point that does not get assigned to a cluster, so we will have to accept this as an outlier that does not belong to any cluster. 
+
+\begin{figure}
   \centering
   \caption{Minkowski clustering for different threshold values.}
 	\begin{subfigure}[b]{.49\textwidth}
@@ -52,29 +54,29 @@ See the code \ref{Minkowski} in the appendix for our implementation.
 	\begin{subfigure}[b]{.49\textwidth}
 		\includegraphics[width=\columnwidth]{Ass1_5.eps}
 		\caption{}
-		\label{fig1a}
+		\label{fig1b}
 	\end{subfigure}
 	\quad
 	\begin{subfigure}[b]{.49\textwidth}
 		\includegraphics[width=\columnwidth]{Ass1_10.eps}
 		\caption{}
-		\label{fig1b}
+		\label{fig1c}
 	\end{subfigure}
 	\begin{subfigure}[b]{.49\textwidth}
 	   	\includegraphics[width=\columnwidth]{Ass1_15.eps}
 	   	\caption{}
-	   	\label{fig1c}
+	   	\label{fig1d}
 	\end{subfigure}
 	\quad
 	\begin{subfigure}[b]{.49\textwidth}
 	   	\includegraphics[width=\columnwidth]{Ass1_20.eps}
 	   	\caption{}
-	   	\label{fig1d}
+	   	\label{fig1e}
 	\end{subfigure}
 	\begin{subfigure}[b]{.49\textwidth}
 		\includegraphics[width=\columnwidth]{Ass1_25.eps}
 		\caption{}
-		\label{fig1e}
+		\label{fig1f}
 	\end{subfigure}	
   \label{fig1.1}
 \end{figure}

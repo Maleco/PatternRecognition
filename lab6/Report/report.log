@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.15)  21 OCT 2015 14:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.15)  21 OCT 2015 15:30
 entering extended mode
 **report.tex
 (C:\Users\Steven\Documents\GitHub\PatternRecognition\lab6\Report\report.tex
@@ -531,14 +531,7 @@ G,.JBIG2,.JB2,.eps]
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-(C:\Users\Steven\Documents\GitHub\PatternRecognition\lab6\Report\report.aux
-
-LaTeX Warning: Label `fig1a' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig1a' multiply defined.
-
-)
+(C:\Users\Steven\Documents\GitHub\PatternRecognition\lab6\Report\report.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
@@ -554,7 +547,8 @@ LaTeX Font Info:    ... okay on input line 33.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
 \c@lstlisting=\count122
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count123
 \scratchdimen=\dimen129
@@ -596,14 +590,14 @@ Package epstopdf Info: Source file: <Ass1_0.eps>
 (epstopdf)                    size: 15772 bytes
 (epstopdf)             Command: <epstopdf --outfile=Ass1_0-eps-converted-to.pdf
  Ass1_0.eps>
-(epstopdf)             \includegraphics on input line 48.
+(epstopdf)             \includegraphics on input line 50.
 Package epstopdf Info: Output file is already uptodate.
 
-<Ass1_0-eps-converted-to.pdf, id=20, 486.81876pt x 403.5075pt>
+<Ass1_0-eps-converted-to.pdf, id=26, 486.81876pt x 403.5075pt>
 File: Ass1_0-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Ass1_0-eps-converted-to.pdf>
-Package pdftex.def Info: Ass1_0-eps-converted-to.pdf used on input line 48.
+Package pdftex.def Info: Ass1_0-eps-converted-to.pdf used on input line 50.
 (pdftex.def)             Requested size: 230.18253pt x 190.7876pt.
 Package epstopdf Info: Source file: <Ass1_5.eps>
 (epstopdf)                    date: 2015-10-21 14:55:35
@@ -613,14 +607,14 @@ Package epstopdf Info: Source file: <Ass1_5.eps>
 (epstopdf)                    size: 21260 bytes
 (epstopdf)             Command: <epstopdf --outfile=Ass1_5-eps-converted-to.pdf
  Ass1_5.eps>
-(epstopdf)             \includegraphics on input line 53.
+(epstopdf)             \includegraphics on input line 55.
 Package epstopdf Info: Output file is already uptodate.
 
-<Ass1_5-eps-converted-to.pdf, id=21, 486.81876pt x 403.5075pt>
+<Ass1_5-eps-converted-to.pdf, id=27, 486.81876pt x 403.5075pt>
 File: Ass1_5-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Ass1_5-eps-converted-to.pdf>
-Package pdftex.def Info: Ass1_5-eps-converted-to.pdf used on input line 53.
+Package pdftex.def Info: Ass1_5-eps-converted-to.pdf used on input line 55.
 (pdftex.def)             Requested size: 230.18253pt x 190.7876pt.
 Package epstopdf Info: Source file: <Ass1_10.eps>
 (epstopdf)                    date: 2015-10-21 14:55:39
@@ -630,14 +624,14 @@ Package epstopdf Info: Source file: <Ass1_10.eps>
 (epstopdf)                    size: 29623 bytes
 (epstopdf)             Command: <epstopdf --outfile=Ass1_10-eps-converted-to.pd
 f Ass1_10.eps>
-(epstopdf)             \includegraphics on input line 59.
+(epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
 
-<Ass1_10-eps-converted-to.pdf, id=22, 486.81876pt x 403.5075pt>
+<Ass1_10-eps-converted-to.pdf, id=28, 486.81876pt x 403.5075pt>
 File: Ass1_10-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Ass1_10-eps-converted-to.pdf>
-Package pdftex.def Info: Ass1_10-eps-converted-to.pdf used on input line 59.
+Package pdftex.def Info: Ass1_10-eps-converted-to.pdf used on input line 61.
 (pdftex.def)             Requested size: 230.18253pt x 190.7876pt.
 Package epstopdf Info: Source file: <Ass1_15.eps>
 (epstopdf)                    date: 2015-10-21 14:55:45
@@ -647,14 +641,14 @@ Package epstopdf Info: Source file: <Ass1_15.eps>
 (epstopdf)                    size: 38890 bytes
 (epstopdf)             Command: <epstopdf --outfile=Ass1_15-eps-converted-to.pd
 f Ass1_15.eps>
-(epstopdf)             \includegraphics on input line 64.
+(epstopdf)             \includegraphics on input line 66.
 Package epstopdf Info: Output file is already uptodate.
 
-<Ass1_15-eps-converted-to.pdf, id=23, 486.81876pt x 403.5075pt>
+<Ass1_15-eps-converted-to.pdf, id=29, 486.81876pt x 403.5075pt>
 File: Ass1_15-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Ass1_15-eps-converted-to.pdf>
-Package pdftex.def Info: Ass1_15-eps-converted-to.pdf used on input line 64.
+Package pdftex.def Info: Ass1_15-eps-converted-to.pdf used on input line 66.
 (pdftex.def)             Requested size: 230.18253pt x 190.7876pt.
 Package epstopdf Info: Source file: <Ass1_20.eps>
 (epstopdf)                    date: 2015-10-21 14:55:55
@@ -664,14 +658,14 @@ Package epstopdf Info: Source file: <Ass1_20.eps>
 (epstopdf)                    size: 47844 bytes
 (epstopdf)             Command: <epstopdf --outfile=Ass1_20-eps-converted-to.pd
 f Ass1_20.eps>
-(epstopdf)             \includegraphics on input line 70.
+(epstopdf)             \includegraphics on input line 72.
 Package epstopdf Info: Output file is already uptodate.
 
-<Ass1_20-eps-converted-to.pdf, id=24, 486.81876pt x 403.5075pt>
+<Ass1_20-eps-converted-to.pdf, id=30, 486.81876pt x 403.5075pt>
 File: Ass1_20-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Ass1_20-eps-converted-to.pdf>
-Package pdftex.def Info: Ass1_20-eps-converted-to.pdf used on input line 70.
+Package pdftex.def Info: Ass1_20-eps-converted-to.pdf used on input line 72.
 (pdftex.def)             Requested size: 230.18253pt x 190.7876pt.
 Package epstopdf Info: Source file: <Ass1_25.eps>
 (epstopdf)                    date: 2015-10-21 14:56:08
@@ -681,29 +675,29 @@ Package epstopdf Info: Source file: <Ass1_25.eps>
 (epstopdf)                    size: 55248 bytes
 (epstopdf)             Command: <epstopdf --outfile=Ass1_25-eps-converted-to.pd
 f Ass1_25.eps>
-(epstopdf)             \includegraphics on input line 75.
+(epstopdf)             \includegraphics on input line 77.
 Package epstopdf Info: Output file is already uptodate.
 
-<Ass1_25-eps-converted-to.pdf, id=25, 486.81876pt x 403.5075pt>
+<Ass1_25-eps-converted-to.pdf, id=31, 486.81876pt x 403.5075pt>
 File: Ass1_25-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Ass1_25-eps-converted-to.pdf>
-Package pdftex.def Info: Ass1_25-eps-converted-to.pdf used on input line 75.
+Package pdftex.def Info: Ass1_25-eps-converted-to.pdf used on input line 77.
 (pdftex.def)             Requested size: 230.18253pt x 190.7876pt.
- [1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-Overfull \vbox (67.2912pt too high) has occurred while \output is active []
 
 
-[3 <C:/Users/Steven/Documents/GitHub/PatternRecognition/lab6/Report/Ass1_0-eps-
-converted-to.pdf> <C:/Users/Steven/Documents/GitHub/PatternRecognition/lab6/Rep
-ort/Ass1_5-eps-converted-to.pdf> <C:/Users/Steven/Documents/GitHub/PatternRecog
-nition/lab6/Report/Ass1_10-eps-converted-to.pdf> <C:/Users/Steven/Documents/Git
-Hub/PatternRecognition/lab6/Report/Ass1_15-eps-converted-to.pdf> <C:/Users/Stev
-en/Documents/GitHub/PatternRecognition/lab6/Report/Ass1_20-eps-converted-to.pdf
-> <C:/Users/Steven/Documents/GitHub/PatternRecognition/lab6/Report/Ass1_25-eps-
-converted-to.pdf>]
+LaTeX Warning: Float too large for page by 39.83289pt on input line 82.
+
+[1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2 <C:/Users/Steven/Docum
+ents/GitHub/PatternRecognition/lab6/Report/Ass1_0-eps-converted-to.pdf> <C:/Use
+rs/Steven/Documents/GitHub/PatternRecognition/lab6/Report/Ass1_5-eps-converted-
+to.pdf> <C:/Users/Steven/Documents/GitHub/PatternRecognition/lab6/Report/Ass1_1
+0-eps-converted-to.pdf> <C:/Users/Steven/Documents/GitHub/PatternRecognition/la
+b6/Report/Ass1_15-eps-converted-to.pdf> <C:/Users/Steven/Documents/GitHub/Patte
+rnRecognition/lab6/Report/Ass1_20-eps-converted-to.pdf> <C:/Users/Steven/Docume
+nts/GitHub/PatternRecognition/lab6/Report/Ass1_25-eps-converted-to.pdf>]
 (C:\Users\Steven\Documents\GitHub\PatternRecognition\lab6\Code\Ass1.m
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 17.
 
@@ -720,29 +714,25 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 91.
+ [3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 91.
 
 (C:\Users\Steven\Documents\GitHub\PatternRecognition\lab6\Report\report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 91.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 91.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: F6B5528C82073328E542A58ABDFC33BC;168.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 91.
  ) 
 Here is how much of TeX's memory you used:
  9290 strings out of 493921
- 134394 string characters out of 3147279
+ 134396 string characters out of 3147279
  348831 words of memory out of 3000000
- 12447 multiletter control sequences out of 15000+200000
+ 12448 multiletter control sequences out of 15000+200000
  9675 words of font info for 35 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,7n,41p,239b,1835s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,7n,41p,1311b,1835s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTe
@@ -753,9 +743,9 @@ sfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on report.pdf (4 pages, 336330 bytes).
+Output written on report.pdf (3 pages, 339508 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 38 named destinations out of 1000 (max. 500000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
