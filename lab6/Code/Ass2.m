@@ -38,8 +38,12 @@ xlabel('x');ylabel('y');title('Mean');
 print(sprintf('../Report/Ass2_1'), '-depsc');
  
 figure();
-subplot(2,2,1); dendrogram(linkage(squareform(pdist(cluster_data)), 'single'), 270);    title('Min');
-subplot(2,2,2); dendrogram(linkage(squareform(pdist(cluster_data)), 'complete'), 270);title('Max');
-subplot(2,2,3); dendrogram(linkage(squareform(pdist(cluster_data)), 'average'), 270);title('Average');
-subplot(2,2,4); dendrogram(linkage(squareform(pdist(cluster_data)), 'centroid'), 270);title('Mean');
+subplot(2,2,1); dendrogram(linkage(squareform(pdist(cluster_data)), 'single'), 270); 
+xlabel('data points');ylabel('distance');title('Min');
+subplot(2,2,2); dendrogram(linkage(squareform(pdist(cluster_data)), 'complete'), 270);
+xlabel('data points');ylabel('distance');title('Max');
+subplot(2,2,3); dendrogram(linkage(squareform(pdist(cluster_data)), 'average'), 270);
+xlabel('data points');ylabel('distance');title('Average');
+subplot(2,2,4); dendrogram(linkage(squareform(pdist(cluster_data)), 'centroid'), 270);
+xlabel('data points');ylabel('distance');title('Mean');
 print(sprintf('../Report/Ass2_2'), '-depsc');
