@@ -43,7 +43,7 @@ See section \ref{Minkowski} in the appendix for our implementation.
 \subsection{}
 Looking at figure \ref{fig1a} we can clearly distinguish four main clusters within the data. The figures show that for higher values of t more connections are plotted. This is logical since a higher threshold permits higher distances between two points to be plotted, which overall results in more plotted connections. As for the optimal value of t, 0.05 is clearly too low, because we can see some connections within the clusters, but a lot of points that clearly belong to the clusters are left out because their distance to the other points is too high (see figure \ref{fig1b}). We can still see this for a t of 0.1, but on a smaller scale (see figure \ref{fig1c}). On the other hand a t of 0.25 is clearly too high, because multiple different clusters get connected through outliers, causing multiple clusters to be clustered together (see figure \ref{fig1f}). The same thing happens with a t of 0.2, where the two left clusters are connected (see figure \ref{fig1e}). Since this does not happen for a t of 0.15 and almost all of the points are assigned to a cluster (see figure \ref{fig1d}), this seems to be the optimal value of t. There is one point that does not get assigned to a cluster, so we will have to accept this as an outlier that does not belong to any cluster. 
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \caption{Minkowski clustering for different threshold values.}
 	\begin{subfigure}[b]{.49\textwidth}
@@ -89,7 +89,7 @@ See section \ref{Ass2} in the appendix for our implementation.
 	\caption{Agglomerative hierarchical clustering using different distance functions. The big circles are the centroids per cluster.}
 	\label{fig2a}
 \end{figure}
-\nodindent 
+Figure \ref{fig2a} shows the different clusterings the agglomerative hierarchical clustering method yields for different distances. As we can see, the different distances yield similar clusters but not entirely equal. The data points that are in the middle of the graphs get attributed to different clusters, dependening on the distance type used. When we interpret the different clusterings by just looking at the plots, it seems like the minimum and the mean distance yield the best solutions out of the four. But to know for certain an error could be computed to see which distance yields the best results.
 
 \subsection{}
 \begin{figure}
@@ -97,10 +97,16 @@ See section \ref{Ass2} in the appendix for our implementation.
 	\caption{Dendroids for the agglomerative hierarchical clustering using different distance functions.}
 	\label{fig2b}
 \end{figure}
+Figure \ref{fig2b} gives the dendograms for the agglomerative hierarchical clustering using different distance functions. Let us assume four main clusters again. We can extrapolate information about the distances between members of these four clusters from these graphs. For example, the minimum distance dendogram shows us the minimum distances between members of the four main clusters: the nearest members of the first two main clusters shown in the graph (from left to right) lie about 0.75 units apart, whereas the nearest members of the last two main clusters lie very close (in the order of 0.05 units) to each other. The nearest members between the first two clusters and the last two clusters are about 0.25 units apart. 
+
+Similarly we can deduce from the maximum distance graph that the farthest members from the first two main clusters lie about 5 units apart and from the last two main clusters about 3 units. Between the first and last two clusters the farthest members lie about 3 units apart. The average member of the first two clusters lie about 4 units apart and those of the last two clusters about 2 units. The average members between the first and last two clusters lie about 2 units apart.
+
+Finally in the mean graph we can see something different with respect to the previous three. Here the centroid of one cluster is farther away from the three other clusters than their centroids are to each other. So there is one cluster that lies further apart from the other three, whereas the previous three graphs did not show that. This is probably due to the fact the last method uses distances between centroids, which is more robust towards outliers than the other three methods. Therefore the first three graphs do not show this, while the last one does.
 
 \section{}
-Using the code given in section \ref{Ass3} in the appendix, we computed the following J-values for the different clusterings:
-\begin{table}
+\subsection{}
+Using the code given in section \ref{Ass3} in the appendix, we computed the J-values for the different clusterings, shown in figure \ref{tab1}
+\begin{table}[H]
 	\centering
 	\caption{$J_e$-values for different clusters}
 	\label{tab1}
@@ -115,7 +121,8 @@ Using the code given in section \ref{Ass3} in the appendix, we computed the foll
 	\end{tabular}
 \end{table}
 
-
+\subsection{}
+Table \ref{tab1} shows that the clusterings $\{\{x1, x2, x3\}, \{x4, x5\}\}$ and $\{\{x4, x5\}, \{x1, x2, x3\}\}$ minimize the sum-of-squared error. The order of the clusters does not matter (different orderings of a sum yield the same result), as long as they have the same members. That is why these two clusterings yield the same result. 
 
 \newpage
 \section*{Appendix}
