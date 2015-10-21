@@ -1,0 +1,89 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+
+%\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\alph{subsubsection}}
+
+\title{Pattern Recognition Practical 6}
+\author{Group 24: \and Maikel Withagen (s1867733) \and Steven Bosch (s1861948)}
+\date{\today}
+\lstset{
+frame=single, 
+numbers=left, 
+breaklines=true, 
+language=Matlab,
+basicstyle=\footnotesize, 
+title=\lstname,
+showstringspaces=false
+}
+
+\DeclareMathOperator*{\argmax}{arg\!\max}
+
+\renewcommand{\thesection}{Assignment \arabic{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\begin{document}
+\maketitle
+
+\section*{Assignment 1}
+\subsection{}
+When we take $k=2$ the Minkowski metric is the same as the Euclidean distance between the points, which is used as error function in other clustering methods such as K-means clustering.
+
+\subsection{}
+See the code \ref{Minkowski} in the appendix for our implementation.
+
+\subsection{}
+\begin{figure}[H]
+  \centering
+  \caption{Minkowski clustering for different threshold values.}
+	\begin{subfigure}[b]{.49\textwidth}
+		\includegraphics[width=\columnwidth]{Ass1_0.eps}
+		\caption{}
+		\label{fig1a}
+	\end{subfigure}  
+	\begin{subfigure}[b]{.49\textwidth}
+		\includegraphics[width=\columnwidth]{Ass1_5.eps}
+		\caption{}
+		\label{fig1a}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{.49\textwidth}
+		\includegraphics[width=\columnwidth]{Ass1_10.eps}
+		\caption{}
+		\label{fig1b}
+	\end{subfigure}
+	\begin{subfigure}[b]{.49\textwidth}
+	   	\includegraphics[width=\columnwidth]{Ass1_15.eps}
+	   	\caption{}
+	   	\label{fig1c}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{.49\textwidth}
+	   	\includegraphics[width=\columnwidth]{Ass1_20.eps}
+	   	\caption{}
+	   	\label{fig1d}
+	\end{subfigure}
+	\begin{subfigure}[b]{.49\textwidth}
+		\includegraphics[width=\columnwidth]{Ass1_25.eps}
+		\caption{}
+		\label{fig1e}
+	\end{subfigure}	
+  \label{fig1.1}
+\end{figure}
+
+\newpage
+\section*{Appendix}
+\appendix
+\section{kmeans.m}
+\lstinputlisting{../Code/Ass1.m}{\label{Minkowski}}
+
+
+\end{document}
