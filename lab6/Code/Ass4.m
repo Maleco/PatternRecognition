@@ -4,20 +4,38 @@ load('exercise4_data.mat', 'data');
 % Calculate the z-score for every data point
 zdata = zscore(data);
 
-% Compute the dissimilarity matrix
+% Compute the dissimilarity matrices for all the features combined and
+% separately
 D = squareform(pdist(zdata));
-writetable(table(round(D,2)),'../Report/dissMatrixAss4.csv')
+D1 = squareform(pdist(zdata(:,1)));
+D2 = squareform(pdist(zdata(:,2)));
+D3 = squareform(pdist(zdata(:,3)));
+D4 = squareform(pdist(zdata(:,4)));
+D5 = squareform(pdist(zdata(:,5)));
 
-labels = ['S Holland' 'N Holland' ];
+% writetable(table(round(D,2)),'../Report/dissMatrixAss4.csv')
 
-figure();
-subplot(2,2,1); dendrogram(linkage(D, 'single'), 'Orientation','right', 'Labels', ); 
-xlabel('data points');ylabel('distance');title('Min');
-subplot(2,2,2); dendrogram(linkage(D, 'complete'), 'Orientation','right', 'Labels');
-xlabel('data points');ylabel('distance');title('Max');
-subplot(2,2,3); dendrogram(linkage(D, 'average'), 'Orientation','right', 'Labels');
-xlabel('data points');ylabel('distance');title('Average');
-subplot(2,2,4); dendrogram(linkage(D, 'centroid'), 'Orientation','right', 'Labels');
-xlabel('data points');ylabel('distance');title('Mean');
+% Define the labels for the dendograms
+labels = {'S Holland';'N Holland';'Utrecht';'Limburg';'N Brabant';'Gelderland';'Overijssel';'Flevoland';'Groningen';'Zeeland';'Friesland';'Drenthe'};
 
-print(sprintf('../Report/Ass4'), '-depsc');
+% Plot the dendograms for all the features combined and separately
+figure(1);
+subplot(1,2,1); dendrogram(linkage(D, 'single'), 'Orientation','right', 'Labels', labels); 
+xlabel('dissimilarity');ylabel('data points');title('All features');
+subplot(1,2,2); dendrogram(linkage(D1, 'single'), 'Orientation','right', 'Labels', labels);
+xlabel('dissimilarity');ylabel('data points');title('Population');
+print(sprintf('../Report/Ass4a'), '-depsc');
+
+figure(2);
+subplot(1,2,1); dendrogram(linkage(D2, 'single'), 'Orientation','right', 'Labels', labels);
+xlabel('dissimilarity');ylabel('data points');title('Area');
+subplot(1,2,2); dendrogram(linkage(D3, 'single'), 'Orientation','right', 'Labels', labels);
+xlabel('dissimilarity');ylabel('data points');title('Density');
+print(sprintf('../Report/Ass4b'), '-depsc');
+
+figure(3);
+subplot(1,2,1); dendrogram(linkage(D4, 'single'), 'Orientation','right', 'Labels', labels); 
+xlabel('dissimilarity');ylabel('data points');title('GDP');
+subplot(1,2,2); dendrogram(linkage(D5, 'single'), 'Orientation','right', 'Labels', labels); 
+xlabel('dissimilarity');ylabel('data points');title('GDP per cap');
+print(sprintf('../Report/Ass4c'), '-depsc');

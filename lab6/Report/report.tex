@@ -126,12 +126,41 @@ Using the code given in section \ref{Ass3} in the appendix, we computed the J-va
 Table \ref{tab1} shows that the clusterings $\{\{x1, x2, x3\}, \{x4, x5\}\}$ and $\{\{x4, x5\}, \{x1, x2, x3\}\}$ minimize the sum-of-squared error. The order of the clusters does not matter (different orderings of a sum yield the same result), as long as they have the same members. That is why these two clusterings yield the same result. 
 
 \section{}
-\resizebox{\textwidth}{!}{\csvautotabular{dissMatrixAss4.csv}}
+Table \ref{tab4} shows the dissimilarity matrix of the z-transformed data on the twelve provinces in the Netherlands. Figures \ref{fig4a}, \ref{fig4b} and \ref{fig4c} show dendrograms for the data using single linkage (minimum distance) clustering. Let us first look at the first dendrogram, which shows the clustering for all features combined. The dendrogram shows two main clusters and one outlier, South Holland. The first cluster is made up out of Gelderland, North Brabant and North Holland, the second out of the rest. We see that especially the provinces of Flevoland, Limburg, Zeeland, Overijssel, Drenthe and Friesland are close to each other, with Friesland and Drenthe being the closest (0.64 dissimilarity). The most different provinces overall are Flevoland and South Holland (dissimilarity of 5.72).
+
+Looking at the other dendrograms we can explain parts of these results. Especially population seems to have a big impact. South Holland is the most distance away from all of the other clusters. We can see in the data: South Holland has by far the highest population, followed by North Holland, North Brabant and Gelderland, three provinces that get clustered together. All of the other provinces get clustered together as well, although within that cluster we can see a clear distinction between the smaller clusters Overijssel, Limburg and Utrecht, and Drenthe, Friesland, Groningen, Zeeland and Flevoland, the latter having the lowest populations. So populations seems to have a large contribution to the overall clustering.
+
+Area seems to have some effect as well. The provinces seem to be scattered more over the clusters, but at least one aspect does contribute: Gelderland and North Brabant show a clear distinction from the other provinces (they are much larger), so this contributes to the overall clustering in which these two provinces are clustered together. 
+
+Density seems to have a large effect on the overall (all features) clustering, since we see much similar clustering here. Again Limburg, Overijssel, Drenthe, Friesland, Zeeland, Groningen and Flevoland are clustered into one group. There are some extra members though (Gelderland and North Brabant) and one member (Utrecht) is now in another cluster, but we see a lot of similarity, indicating that density has a large contribution on the overall clustering. 
+
+Looking at the GDP dendrogram we can see that South Holland again is not clustered together with other provinces. It's GDP differs by a large degree to the other provinces. Combined with the population difference we saw earlier this explains why South Holland is also an outlier in the main clustering with all the features combined. We also see here that North Brabant and North Holland are immediately combined into one cluster (because they have the exact same GDP: 65.295), which partly explains why they are relatively close in the main clustering. Furthermore we again see a lot of the same provinces close to each other.
+
+Finally the GDP per cap shows that North Brabant and North Holland are again immediately combined, because they have the same GDP per cap.\footnote{NB This is curious, since they do have the same GDP but not the same population.} Also we see Drenthe and Friesland very close to each other, just like in the main clustering.
+
+Overall we see a lot of similar trends in many of features, which was of course to be expected. The dendrograms show some interesting aspects. For example, Gelderland and North Brabant are mostly clustered together because of their area and population. In the other features they differ quite much, but apparently there was just no other province or cluster of provinces that came closer. From the dendrograms we can also deduce some relationships between features. We see that there is a strong relation between population and GDP, which is logical because more people often earn more together than fewer people. Furthermore it looks like there is a relation between population and GDP per cap. This can be explained by the fact that most people move towards areas where they have the perspective of earning the most.
+
+\begin{table}
+	\centering
+	\caption{The dissimilarity matrix of the z-transformed data on the twelve provinces in the Netherlands.}
+	\label{tab4}
+	\resizebox{\textwidth}{!}{\csvautotabular{dissMatrixAss4.csv}}
+\end{table}
 
 \begin{figure}
-	\includegraphics[width=\columnwidth]{Ass4.eps}
+	\includegraphics[width=\columnwidth]{Ass4a.eps}
 	\caption{Dendroids for the agglomerative hierarchical clustering of the provinces using different distance functions.}
-	\label{fig4}
+	\label{fig4a}
+\end{figure}
+\begin{figure}
+	\includegraphics[width=\columnwidth]{Ass4b.eps}
+	\caption{Dendroids for the agglomerative hierarchical clustering of the provinces using different distance functions.}
+	\label{fig4b}
+\end{figure}
+\begin{figure}
+	\includegraphics[width=\columnwidth]{Ass4c.eps}
+	\caption{Dendroids for the agglomerative hierarchical clustering of the provinces using different distance functions.}
+	\label{fig4c}
 \end{figure}
 
 \newpage
