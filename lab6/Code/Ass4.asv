@@ -1,0 +1,7 @@
+close all;
+load('exercise4_data.mat', 'data');
+zdata = zscore(data);
+
+pdist(x)
+
+% mahal(data(:,1),mvnrnd(mean(data(:,1)),std(data(:,1)), size(data(:,1),1)))

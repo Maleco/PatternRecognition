@@ -1,10 +1,12 @@
-
 X = cluster_data;
+
+% Calculate the clusters using linkage with different distance measures
 c_min = cluster(linkage(squareform(pdist(cluster_data)), 'single'), 'maxclust', 4);
 c_max = cluster(linkage(squareform(pdist(cluster_data)), 'complete'), 'maxclust', 4);
 c_avg = cluster(linkage(squareform(pdist(cluster_data)), 'average'), 'maxclust', 4);
 c_mean = cluster(linkage(squareform(pdist(cluster_data)), 'centroid'), 'maxclust', 4);
 
+% Plot the clusters and their centroids
 hold on;
 figure();
 subplot(2,2,1)
@@ -36,7 +38,8 @@ for group = 1:4
 end
 xlabel('x');ylabel('y');title('Mean');
 print(sprintf('../Report/Ass2_1'), '-depsc');
- 
+
+% Plot the dendograms 
 figure();
 subplot(2,2,1); dendrogram(linkage(squareform(pdist(cluster_data)), 'single'), 270); 
 xlabel('data points');ylabel('distance');title('Min');

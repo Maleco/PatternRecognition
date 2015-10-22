@@ -9,6 +9,7 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{epstopdf}
+\usepackage{csvsimple}
 
 %\renewcommand{\thesubsection}{\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\alph{subsubsection}}
@@ -124,6 +125,15 @@ Using the code given in section \ref{Ass3} in the appendix, we computed the J-va
 \subsection{}
 Table \ref{tab1} shows that the clusterings $\{\{x1, x2, x3\}, \{x4, x5\}\}$ and $\{\{x4, x5\}, \{x1, x2, x3\}\}$ minimize the sum-of-squared error. The order of the clusters does not matter (different orderings of a sum yield the same result), as long as they have the same members. That is why these two clusterings yield the same result. 
 
+\section{}
+\resizebox{\textwidth}{!}{\csvautotabular{dissMatrixAss4.csv}}
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{Ass4.eps}
+	\caption{Dendroids for the agglomerative hierarchical clustering of the provinces using different distance functions.}
+	\label{fig4}
+\end{figure}
+
 \newpage
 \section*{Appendix}
 \appendix
@@ -133,5 +143,7 @@ Table \ref{tab1} shows that the clusterings $\{\{x1, x2, x3\}, \{x4, x5\}\}$ and
 \lstinputlisting{../Code/Ass2.m}{\label{Ass2}}
 \section{Assignment 3}
 \lstinputlisting{../Code/Ass3.m}{\label{Ass3}}
+\section{Assignment 4}
+\lstinputlisting{../Code/Ass4.m}{\label{Ass4}}
 
 \end{document}
