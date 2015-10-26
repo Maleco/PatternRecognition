@@ -1,15 +1,18 @@
 close all;
 load('mixedsignals.mat', 'smix');
 
-X = smix;
+% Sphere the signals
+centeredS = bsxfun(@minus, smix.', sum(smix.')/size(smix.', 1)); 
+[eigVectors, eigValues] = eig(cov(centeredS));
+X = eigVectors * (eigValues^-.5) * eigVectors.' * smix;
+
 % Number of weight vectors
-numWeight = 10;
-numplots = size(X, 1) + numWeight;
+numWeight = 500;
 
 % Initialize the weight vector
 w = rand(size(X, 1),numWeight);
 
-threshold = 0.0001;
+threshold = 0.0000000001;
 convergence = 0;
 
 % As long as w is not converged to 1 +- threshold update it according to
@@ -36,39 +39,80 @@ for n = 1:numWeight
     end
 end
 
+% Rounded to 4 decimals to prevent -0.0000 in Matlab
+w = unique(round(w.', 4), 'rows', 'stable').';
+numplots = size(w, 2);
 
 % Calculate the estimated independent  component
 y1 = w.'*X;
 
 % Plot the spearate signals and the estimated independent component in one
-% figure
+
 figure();
 hold on;
-subplot(numplots,1,1);
-plot(smix(1,:));
-xlabel('x');ylabel('y');
+subplot(size(X, 1),1,1);
+plot(spheredS(1,:));
+xlabel('Measurements');ylabel('y');
 title('Signal 1');
 
-subplot(numplots,1,2);
-plot(smix(2,:));
-xlabel('x');ylabel('y');
+subplot(size(X, 1),1,2);
+plot(spheredS(2,:));
+xlabel('Measurements');ylabel('y');
 title('Signal 2');
 
-subplot(numplots,1,3);
-plot(smix(3,:));
-xlabel('x');ylabel('y');
+subplot(size(X, 1),1,3);
+plot(spheredS(3,:));
+xlabel('Measurements');ylabel('y');
 title('Signal 3');
 
-subplot(numplots,1,4);
-plot(smix(4,:));
-xlabel('x');ylabel('y');
+subplot(size(X, 1),1,4);
+plot(spheredS(4,:));
+xlabel('Measurements');ylabel('y');
 title('Signal 4');
 
-for i = 5:numplots
+print(sprintf('../Report/Ass3a'), '-depsc');
+
+figure();
+for i = 1:numplots
     subplot(numplots,1,i);
-    plot(y1(i-4,:), 'lineWidth', 2);
+    plot(y1(i,:), 'lineWidth', 2);
     xlabel('x');ylabel('y');
-    title(['Estimated independent component ' num2str(i-4)]);
+    title(['Estimated independent component ' num2str(i)]);
 end
 
-print(sprintf('../Report/Ass1d'), '-depsc');
+print(sprintf('../Report/Ass3_all'), '-depsc');
+
+% Plot the histograms
+figure();
+hold on;
+subplot(size(smix, 1),1,1);
+hist(spheredS(1,:));
+xlabel('Measurements');ylabel('y');
+title('Signal 1');
+
+subplot(size(smix, 1),1,2);
+hist(spheredS(2,:));
+xlabel('Measurements');ylabel('y');
+title('Signal 2');
+
+subplot(size(smix, 1),1,3);
+hist(spheredS(3,:));
+xlabel('Measurements');ylabel('y');
+title('Signal 3');
+
+subplot(size(smix, 1),1,4);
+hist(spheredS(4,:));
+xlabel('Measurements');ylabel('y');
+title('Signal 4');
+
+print(sprintf('../Report/Ass3_hist1'), '-depsc');
+
+figure();
+for i = 1:numplots
+    subplot(numplots,1,i);
+    hist(y1(i,:));
+    xlabel('x');ylabel('y');
+    title(['Estimated independent component ' num2str(i)]);
+end
+
+print(sprintf('../Report/Ass3_hist2'), '-depsc');
