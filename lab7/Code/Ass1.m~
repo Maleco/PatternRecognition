@@ -1,0 +1,11 @@
+load('mixedsignals.mat', 'smix');
+
+figure(1);
+plot(smix(1,:),smix(2,:), 'b.');
+xlabel('x');ylabel('y');title('Mixed signal x1 and x2');
+print(sprintf('../Report/Ass1a'), '-depsc');
+
+figure(2);
+plot(smix(3,:),smix(4,:), 'b.');
+xlabel('x');ylabel('y');title('Mixed signal x3 and x4');
+print(sprintf('../Report/Ass1b'), '-depsc');

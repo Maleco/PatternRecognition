@@ -1,0 +1,22 @@
+close all; 
+load('mixedsignals.mat', 'smix');
+X = smix;
+
+% Initialize the weight vector
+w = rand(size(X, 1),1);
+
+threshold = 0.95;
+convergence = 0;
+while convergence < threshold
+    g = tanh(X.' * w);
+    g_accent = 1 - g.^2;
+    w_plus = X * g / size(X, 1) - sum(g_accent)/size(X, 1) * w;
+    w_plus = w_plus / norm(w_plus);
+    convergence = dot(w, w_plus);
+    w = w_plus;
+end
+
+y1 = w.'*X;
+
+figure
+plot(smix(1,:))
