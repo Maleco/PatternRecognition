@@ -3,7 +3,7 @@ load('mixedsignals.mat', 'smix');
 
 X = smix;
 % Number of weight vectors
-numWeight = 4;
+numWeight = 10;
 numplots = size(X, 1) + numWeight;
 
 % Initialize the weight vector
@@ -71,4 +71,4 @@ for i = 5:numplots
     title(['Estimated independent component ' num2str(i-4)]);
 end
 
-print(sprintf('../Report/Ass3'), '-depsc');
+print(sprintf('../Report/Ass3_10'), '-depsc');
