@@ -42,33 +42,33 @@ y1 = w.'*X;
 
 % Plot the spearate signals and the estimated independent component in one
 % figure
-figure();
-hold on;
-subplot(numplots,1,1);
-plot(smix(1,:));
-xlabel('x');ylabel('y');
-title('Signal 1');
-
-subplot(numplots,1,2);
-plot(smix(2,:));
-xlabel('x');ylabel('y');
-title('Signal 2');
-
-subplot(numplots,1,3);
-plot(smix(3,:));
-xlabel('x');ylabel('y');
-title('Signal 3');
-
-subplot(numplots,1,4);
-plot(smix(4,:));
-xlabel('x');ylabel('y');
-title('Signal 4');
-
-for i = 5:numplots
-    subplot(numplots,1,i);
-    plot(y1(i-4,:), 'lineWidth', 2);
-    xlabel('x');ylabel('y');
-    title(['Estimated independent component ' num2str(i-4)]);
-end
-
-print(sprintf('../Report/Ass3_10'), '-depsc');
+% figure();
+% hold on;
+% subplot(numplots,1,1);
+% plot(smix(1,:));
+% xlabel('x');ylabel('y');
+% title('Signal 1');
+% 
+% subplot(numplots,1,2);
+% plot(smix(2,:));
+% xlabel('x');ylabel('y');
+% title('Signal 2');
+% 
+% subplot(numplots,1,3);
+% plot(smix(3,:));
+% xlabel('x');ylabel('y');
+% title('Signal 3');
+% 
+% subplot(numplots,1,4);
+% plot(smix(4,:));
+% xlabel('x');ylabel('y');
+% title('Signal 4');
+% 
+% for i = 5:numplots
+%     subplot(numplots,1,i);
+%     plot(y1(i-4,:), 'lineWidth', 2);
+%     xlabel('x');ylabel('y');
+%     title(['Estimated independent component ' num2str(i-4)]);
+% end
+% 
+% print(sprintf('../Report/Ass3_10'), '-depsc');
